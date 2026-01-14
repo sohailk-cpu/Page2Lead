@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Landing Page Portfolio & Case Studies - Page2Lead</title>
+    <meta name="description" content="See our landing page portfolio with real results. 47% more leads, 320% increase in bookings, and 68% lower cost per lead.">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #25D366;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: #333;
+        }
+        
+        nav a {
+            margin-left: 20px;
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #f0fff4 0%, #f0f9ff 100%);
+            padding: 100px 0 60px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: #111;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .stats-bar {
+            background: white;
+            padding: 30px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 50px;
+        }
+        
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #25D366;
+            margin-bottom: 5px;
+        }
+        
+        .portfolio {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .portfolio-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .portfolio-image {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .portfolio-card:hover .portfolio-image img {
+            transform: scale(1.05);
+        }
+        
+        .portfolio-content {
+            padding: 30px;
+        }
+        
+        .result-badge {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .result-stats {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .result-stats div {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        
+        .cta-button {
+            background: #25D366;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .testimonials {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .testimonial-card {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .testimonial-text {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        
+        .client-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .client-avatar {
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        
+        footer {
+            background: #111;
+            color: white;
+            padding: 50px 0 20px;
+            text-align: center;
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <i class="fas fa-rocket"></i> 
+                <span>Page2Lead</span>
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <h1>Real Results, Real Businesses</h1>
+            <p>See how we helped businesses increase leads, bookings, and revenue with high-converting landing pages.</p>
+            <a href="https://wa.me/918290948499" class="cta-button" target="_blank">
+                <i class="fas fa-calendar"></i> Book Portfolio Review
+            </a>
+        </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-container">
+                <div>
+                    <div class="stat-number">47%</div>
+                    <p>More Leads on Average</p>
+                </div>
+                <div>
+                    <div class="stat-number">320%</div>
+                    <p>Increase in Bookings</p>
+                </div>
+                <div>
+                    <div class="stat-number">68%</div>
+                    <p>Lower Cost Per Lead</p>
+                </div>
+                <div>
+                    <div class="stat-number">2.1s</div>
+                    <p>Average Page Load Time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Recent Projects</h2>
+                <p>Case studies with measurable results</p>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- Project 1 -->
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Yoga Studio Landing Page">
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="result-badge">320% Increase in Bookings</span>
+                        <h3>Yoga Studio Landing Page</h3>
+                        <p>Designed a conversion-focused landing page for a yoga studio in Mumbai. Targeted local clients looking for wellness services.</p>
+                        
+                        <div class="result-stats">
+                            <div>
+                                <span>Before:</span>
+                                <span>5 signups/month</span>
+                            </div>
+                            <div>
+                                <span>After:</span>
+                                <span>21 signups/month</span>
+                            </div>
+                            <div>
+                                <span>Conversion Rate:</span>
+                                <span>2% → 8.7%</span>
+                            </div>
+                        </div>
+                        
+                        <a href="https://wa.me/918290948499?text=I saw your Yoga Studio case study. Can we discuss something similar?" 
+                           class="cta-button" target="_blank">
+                            <i class="fas fa-eye"></i> Want Similar Results?
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Digital Marketing Agency">
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="result-badge">47% More Leads</span>
+                        <h3>Digital Marketing Agency</h3>
+                        <p>Created a lead generation landing page for a digital marketing agency. Focused on service-based business lead capture.</p>
+                        
+                        <div class="result-stats">
+                            <div>
+                                <span>Before:</span>
+                                <span>15 leads/month</span>
+                            </div>
+                            <div>
+                                <span>After:</span>
+                                <span>22 leads/month</span>
+                            </div>
+                            <div>
+                                <span>Cost Per Lead:</span>
+                                <span>₹850 → ₹270</span>
+                            </div>
+                        </div>
+                        
+                        <a href="https://wa.me/918290948499?text=I saw your Digital Marketing Agency case study. Can we discuss?" 
+                           class="cta-button" target="_blank">
+                            <i class="fas fa-eye"></i> Want Similar Results?
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Coaching Business">
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="result-badge">12 Consultations in 1 Week</span>
+                        <h3>Life Coaching Business</h3>
+                        <p>Designed a landing page for a life coach targeting professionals seeking career guidance and personal development.</p>
+                        
+                        <div class="result-stats">
+                            <div>
+                                <span>Email List:</span>
+                                <span>+300 subscribers</span>
+                            </div>
+                            <div>
+                                <span>Consultations:</span>
+                                <span>12 booked in 7 days</span>
+                            </div>
+                            <div>
+                                <span>Revenue:</span>
+                                <span>₹84,000 in first month</span>
+                            </div>
+                        </div>
+                        
+                        <a href="https://wa.me/918290948499?text=I saw your Coaching Business case study. Can we discuss?" 
+                           class="cta-button" target="_blank">
+                            <i class="fas fa-eye"></i> Want Similar Results?
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Client Testimonials</h2>
+                <p>Hear what our clients have to say</p>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-text">
+                    "I was skeptical at first, but Page2Lead delivered beyond expectations. Our landing page converted at 12% compared to our old website's 3%. The ROI was immediate. If you're serious about getting more leads, work with them."
+                </div>
+                <div class="client-info">
+                    <div class="client-avatar">RS</div>
+                    <div style="text-align: left;">
+                        <h4>Raj Sharma</h4>
+                        <p style="color: #666;">Owner, Digital Marketing Agency</p>
+                        <p style="color: #25D366; font-size: 0.9rem;">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            5.0 Rating
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="background: #25D366; color: white; padding: 80px 0; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Want Results Like These?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;">
+                Let's discuss how we can create a high-converting landing page for your business.
+            </p>
+            <a href="https://wa.me/918290948499" class="cta-button" style="background: white; color: #25D366;" target="_blank">
+                <i class="fas fa-rocket"></i> Start Your Project
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div style="margin-bottom: 30px;">
+                <a href="index.html" class="logo" style="font-size: 2rem; color: white;">
+                    <i class="fas fa-rocket"></i> 
+                    <span style="color: white;">Page2Lead</span>
+                </a>
+                <p style="margin-top: 20px; color: #aaa;">Turning visitors into customers since 2023</p>
+            </div>
+            
+            <div style="margin-bottom: 30px;">
+                <a href="tel:+918290948499" style="color: white; text-decoration: none; margin: 0 15px;">
+                    <i class="fas fa-phone"></i> +91 82909 48499
+                </a>
+                <a href="mailto:contact@page2lead.com" style="color: white; text-decoration: none; margin: 0 15px;">
+                    <i class="fas fa-envelope"></i> contact@page2lead.com
+                </a>
+            </div>
+            
+            <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #333; color: #999; font-size: 0.9rem;">
+                <p>© 2024 Page2Lead. All rights reserved. | <a href="index.html" style="color: #25D366;">Home</a> | <a href="services.html" style="color: #25D366;">Services</a> | <a href="portfolio.html" style="color: #25D366;">Portfolio</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/918290948499" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Portfolio item click tracking
+        document.querySelectorAll('.portfolio-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                if(e.target.tagName === 'A') return;
+                const link = this.querySelector('.cta-button');
+                if(link) {
+                    window.open(link.href, '_blank');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
