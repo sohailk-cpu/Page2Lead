@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Design Services & Pricing - Page2Lead</title>
+    <meta name="description" content="Professional landing page design services starting at ₹4,999. Get high-converting pages that generate real leads. Free audit available.">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #25D366;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: #333;
+        }
+        
+        nav a {
+            margin-left: 20px;
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #f0fff4 0%, #f0f9ff 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #111;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .pricing {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 10px;
+            padding: 40px 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+            border: 2px solid #ddd;
+        }
+        
+        .pricing-card.popular {
+            border-color: #25D366;
+            transform: scale(1.05);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #25D366;
+            color: white;
+            padding: 5px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        
+        .price {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #111;
+            margin: 20px 0;
+        }
+        
+        .price span {
+            font-size: 1rem;
+            color: #666;
+        }
+        
+        .features {
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .features li i {
+            color: #25D366;
+        }
+        
+        .cta-button {
+            background: #25D366;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .services-list {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .service-item {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(37, 211, 102, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #25D366;
+            flex-shrink: 0;
+        }
+        
+        footer {
+            background: #111;
+            color: white;
+            padding: 50px 0 20px;
+            text-align: center;
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .pricing-card.popular {
+                transform: none;
+            }
+            
+            .service-item {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <i class="fas fa-rocket"></i> 
+                <span>Page2Lead</span>
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <h1>Professional Landing Page Design Services</h1>
+            <p>We create high-converting landing pages that turn visitors into paying customers. No monthly fees. One-time payment. Guaranteed results.</p>
+            <a href="https://wa.me/918290948499" class="cta-button" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp for Free Consultation
+            </a>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>Simple, Transparent Pricing</h2>
+                <p>One-time fee. No hidden charges. No monthly subscriptions.</p>
+            </div>
+            
+            <div class="pricing-cards">
+                <!-- Basic Package -->
+                <div class="pricing-card">
+                    <h3>Basic Landing Page</h3>
+                    <div class="price">₹4,999 <span>/ one-time</span></div>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> 1 High-Converting Landing Page</li>
+                        <li><i class="fas fa-check"></i> Mobile-Optimized Design</li>
+                        <li><i class="fas fa-check"></i> Contact Form Integration</li>
+                        <li><i class="fas fa-check"></i> Basic SEO Setup</li>
+                        <li><i class="fas fa-check"></i> 7-Day Support</li>
+                    </ul>
+                    <a href="https://wa.me/918290948499?text=Hi! I'm interested in Basic Landing Page package (₹4,999)" 
+                       class="cta-button" target="_blank">
+                        <i class="fas fa-shopping-cart"></i> Get This Package
+                    </a>
+                </div>
+                
+                <!-- Popular Package -->
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Pro Landing Page</h3>
+                    <div class="price">₹9,999 <span>/ one-time</span></div>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> Everything in Basic +</li>
+                        <li><i class="fas fa-check"></i> Advanced Copywriting</li>
+                        <li><i class="fas fa-check"></i> A/B Testing Setup</li>
+                        <li><i class="fas fa-check"></i> Analytics Integration</li>
+                        <li><i class="fas fa-check"></i> 30-Day Optimization Support</li>
+                        <li><i class="fas fa-check"></i> Priority Delivery (48h)</li>
+                    </ul>
+                    <a href="https://wa.me/918290948499?text=Hi! I'm interested in Pro Landing Page package (₹9,999)" 
+                       class="cta-button" target="_blank">
+                        <i class="fas fa-bolt"></i> Get This Package
+                    </a>
+                </div>
+                
+                <!-- Custom Package -->
+                <div class="pricing-card">
+                    <h3>Custom Package</h3>
+                    <div class="price">Custom</div>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> Multiple Landing Pages</li>
+                        <li><i class="fas fa-check"></i> Complete Funnel Design</li>
+                        <li><i class="fas fa-check"></i> Email Marketing Integration</li>
+                        <li><i class="fas fa-check"></i> CRM Setup</li>
+                        <li><i class="fas fa-check"></i> Monthly Reporting</li>
+                    </ul>
+                    <a href="https://wa.me/918290948499?text=Hi! I need a Custom Landing Page package" 
+                       class="cta-button" target="_blank">
+                        <i class="fas fa-headset"></i> Discuss Project
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES LIST -->
+    <section class="services-list">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Complete Service List</h2>
+                <p>Everything you need to convert visitors into customers</p>
+            </div>
+            
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-pencil-alt"></i>
+                </div>
+                <div>
+                    <h3>Conversion Copywriting</h3>
+                    <p>We write compelling headlines and copy that addresses objections and builds trust with your visitors.</p>
+                </div>
+            </div>
+            
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <div>
+                    <h3>UI/UX Design</h3>
+                    <p>Clean, conversion-focused design that guides visitors toward your call-to-action.</p>
+                </div>
+            </div>
+            
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div>
+                    <h3>Mobile-First Design</h3>
+                    <p>70% of traffic comes from mobile. We design for thumbs, not just desktops.</p>
+                </div>
+            </div>
+            
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div>
+                    <h3>Speed Optimization</h3>
+                    <p>Pages that load in under 2 seconds. No bloated code that slows down your site.</p>
+                </div>
+            </div>
+            
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div>
+                    <h3>Analytics Setup</h3>
+                    <p>Track every click and conversion. Know exactly what's working and what's not.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section style="background: #25D366; color: white; padding: 80px 0; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Ready to Get More Leads?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;">
+                Book a free 15-minute consultation call. No pressure. Just honest advice.
+            </p>
+            <a href="https://wa.me/918290948499" class="cta-button" style="background: white; color: #25D366;" target="_blank">
+                <i class="fas fa-calendar-check"></i> Book Free Call
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div style="margin-bottom: 30px;">
+                <a href="index.html" class="logo" style="font-size: 2rem; color: white;">
+                    <i class="fas fa-rocket"></i> 
+                    <span style="color: white;">Page2Lead</span>
+                </a>
+                <p style="margin-top: 20px; color: #aaa;">High-converting landing pages for small businesses</p>
+            </div>
+            
+            <div style="margin-bottom: 30px;">
+                <a href="tel:+918290948499" style="color: white; text-decoration: none; margin: 0 15px;">
+                    <i class="fas fa-phone"></i> +91 82909 48499
+                </a>
+                <a href="mailto:contact@page2lead.com" style="color: white; text-decoration: none; margin: 0 15px;">
+                    <i class="fas fa-envelope"></i> contact@page2lead.com
+                </a>
+            </div>
+            
+            <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #333; color: #999; font-size: 0.9rem;">
+                <p>© 2024 Page2Lead. All rights reserved. | <a href="index.html" style="color: #25D366;">Home</a> | <a href="services.html" style="color: #25D366;">Services</a> | <a href="portfolio.html" style="color: #25D366;">Portfolio</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/918290948499" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Form submission for contact
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
