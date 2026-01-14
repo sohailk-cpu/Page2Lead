@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Design Blog - Tips & Strategies - Page2Lead</title>
+    <meta name="description" content="Learn landing page design tips, conversion optimization strategies, and how to get more leads from your website. Free guides and tutorials.">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #25D366;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: #333;
+        }
+        
+        nav a {
+            margin-left: 20px;
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #f0fff4 0%, #f0f9ff 100%);
+            padding: 100px 0 60px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: #111;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .search-box {
+            max-width: 500px;
+            margin: 30px auto;
+            position: relative;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #ddd;
+            border-radius: 50px;
+            font-size: 16px;
+        }
+        
+        .search-box button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            background: #25D366;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        
+        .blog {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .blog-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .blog-content {
+            padding: 30px;
+        }
+        
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .blog-meta i {
+            color: #25D366;
+        }
+        
+        .blog-tag {
+            display: inline-block;
+            background: rgba(37, 211, 102, 0.1);
+            color: #25D366;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .blog-excerpt {
+            color: #666;
+            margin: 15px 0;
+        }
+        
+        .read-more {
+            color: #25D366;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .popular-posts {
+            background: white;
+            padding: 80px 0;
+        }
+        
+        .popular-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .popular-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .popular-number {
+            width: 40px;
+            height: 40px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .newsletter {
+            background: #25D366;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .newsletter-form {
+            max-width: 500px;
+            margin: 30px auto;
+        }
+        
+        .newsletter-form input {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        
+        .subscribe-btn {
+            background: white;
+            color: #25D366;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+        }
+        
+        footer {
+            background: #111;
+            color: white;
+            padding: 50px 0 20px;
+            text-align: center;
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .popular-item {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <i class="fas fa-rocket"></i> 
+                <span>Page2Lead</span>
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <h1>Landing Page Design Blog</h1>
+            <p>Learn how to create high-converting landing pages, get more leads, and grow your business with our expert tips and strategies.</p>
+            
+            <div class="search-box">
+                <input type="text" placeholder="Search blog posts...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG POSTS -->
+    <section class="blog">
+        <div class="container">
+            <div class="section-title">
+                <h2>Latest Articles</h2>
+                <p>Fresh insights on landing page design and conversion optimization</p>
+            </div>
+            
+            <div class="blog-grid">
+                <!-- Article 1 -->
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Landing Page Mistakes">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> Jan 14, 2024</span>
+                            <span><i class="far fa-clock"></i> 5 min read</span>
+                        </div>
+                        <span class="blog-tag">Beginners Guide</span>
+                        <h3>10 Landing Page Mistakes Killing Your Conversions</h3>
+                        <p class="blog-excerpt">Avoid these common mistakes that are silently killing your conversion rates. Learn how to fix them and start getting more leads today.</p>
+                        <a href="#" class="read-more">
+                            Read Full Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Article 2 -->
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mobile Optimization">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> Jan 10, 2024</span>
+                            <span><i class="far fa-clock"></i> 7 min read</span>
+                        </div>
+                        <span class="blog-tag">Mobile Design</span>
+                        <h3>Mobile-First Landing Pages: Why 70% of Your Traffic Depends on It</h3>
+                        <p class="blog-excerpt">70% of website traffic comes from mobile devices. Learn how to design landing pages that convert on mobile first.</p>
+                        <a href="#" class="read-more">
+                            Read Full Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Article 3 -->
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Copywriting Tips">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> Jan 5, 2024</span>
+                            <span><i class="far fa-clock"></i> 8 min read</span>
+                        </div>
+                        <span class="blog-tag">Copywriting</span>
+                        <h3>Landing Page Copy That Converts: Psychology-Based Writing Tips</h3>
+                        <p class="blog-excerpt">Learn the psychology behind converting copy. How to write headlines and body text that addresses objections and builds trust.</p>
+                        <a href="#" class="read-more">
+                            Read Full Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Article 4 -->
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Speed Optimization">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> Dec 28, 2023</span>
+                            <span><i class="far fa-clock"></i> 6 min read</span>
+                        </div>
+                        <span class="blog-tag">Performance</span>
+                        <h3>Speed Optimization: Why Fast Landing Pages Convert Better</h3>
+                        <p class="blog-excerpt">53% of visitors leave if a page takes more than 3 seconds to load. Learn how to optimize your landing page speed for better conversions.</p>
+                        <a href="#" class="read-more">
+                            Read Full Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Article 5 -->
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="A/B Testing">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> Dec 20, 2023</span>
+                            <span><i class="far fa-clock"></i> 9 min read</span>
+                        </div>
+                        <span class="blog-tag">Testing</span>
+                        <h3>A/B Testing Your Landing Page: Step-by-Step Guide for Beginners</h3>
+                        <p class="blog-excerpt">Learn how to run effective A/B tests on your landing page. Small changes that can lead to big conversion improvements.</p>
+                        <a href="#" class="read-more">
+                            Read Full Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Article 6 -->
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Case Study">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> Dec 15, 2023</span>
+                            <span><i class="far fa-clock"></i> 10 min read</span>
+                        </div>
+                        <span class="blog-tag">Case Study</span>
+                        <h3>Case Study: How We Increased Yoga Studio Bookings by 320%</h3>
+                        <p class="blog-excerpt">Detailed breakdown of how we redesigned a yoga studio landing page and achieved a 320% increase in class bookings.</p>
+                        <a href="#" class="read-more">
+                            Read Full Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POPULAR POSTS -->
+    <section class="popular-posts">
+        <div class="container">
+            <div class="section-title">
+                <h2>Most Popular Articles</h2>
+                <p>Readers love these posts</p>
+            </div>
+            
+            <div class="popular-list">
+                <div class="popular-item">
+                    <div class="popular-number">1</div>
+                    <div>
+                        <h3>Landing Page vs Website: Which One Do You Really Need?</h3>
+                        <p style="color: #666; margin-top: 5px;">Understand the difference and choose the right solution for your business.</p>
+                    </div>
+                </div>
+                
+                <div class="popular-item">
+                    <div class="popular-number">2</div>
+                    <div>
+                        <h3>How Much Should a Landing Page Cost? (India Pricing Guide)</h3>
+                        <p style="color: #666; margin-top: 5px;">Complete guide to landing page pricing in India. What to expect and what to avoid.</p>
+                    </div>
+                </div>
+                
+                <div class="popular-item">
+                    <div class="popular-number">3</div>
+                    <div>
+                        <h3>Free Tools for Landing Page Design and Optimization</h3>
+                        <p style="color: #666; margin-top: 5px;">20+ free tools that can help you design, test, and optimize your landing pages.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Get Weekly Landing Page Tips</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;">
+                Join 2,500+ marketers and business owners getting actionable tips every week.
+            </p>
+            
+            <div class="newsletter-form">
+                <input type="email" placeholder="Your email address">
+                <button class="subscribe-btn">
+                    <i class="fas fa-paper-plane"></i> Subscribe Now
+                </button>
+                <p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.8;">No spam. Unsubscribe anytime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div style="margin-bottom: 30px;">
+                <a href="index.html" class="logo" style="font-size: 2rem; color: white;">
+                    <i class="fas fa-rocket"></i> 
+                    <span style="color: white;">Page2Lead</span>
+                </a>
+                <p style="margin-top: 20px; color: #aaa;">Your guide to better landing pages and more leads</p>
+            </div>
+            
+            <div style="margin-bottom: 30px;">
+                <a href="tel:+918290948499" style="color: white; text-decoration: none; margin: 0 15px;">
+                    <i class="fas fa-phone"></i> +91 82909 48499
+                </a>
+                <a href="mailto:contact@page2lead.com" style="color: white; text-decoration: none; margin: 0 15px;">
+                    <i class="fas fa-envelope"></i> contact@page2lead.com
+                </a>
+            </div>
+            
+            <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #333; color: #999; font-size: 0.9rem;">
+                <p>© 2024 Page2Lead. All rights reserved. | <a href="index.html" style="color: #25D366;">Home</a> | <a href="blog.html" style="color: #25D366;">Blog</a> | <a href="contact.html" style="color: #25D366;">Contact</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/918290948499" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Newsletter subscription
+        document.querySelector('.subscribe-btn').addEventListener('click', function() {
+            const email = document.querySelector('.newsletter-form input').value;
+            if(email && email.includes('@')) {
+                this.innerHTML = '<i class="fas fa-check"></i> Subscribed!';
+                this.style.background = '#4CAF50';
+                document.querySelector('.newsletter-form input').value = '';
+                
+                setTimeout(() => {
+                    this.innerHTML = '<i class="fas fa-paper-plane"></i> Subscribe Now';
+                    this.style.background = '';
+                }, 3000);
+            }
+        });
+        
+        // Blog search
+        document.querySelector('.search-box button').addEventListener('click', function() {
+            const query = document.querySelector('.search-box input').value;
+            if(query) {
+                alert('Searching for: ' + query + '\n(This is a demo. In real website, this would search blog posts.)');
+            }
+        });
+    </script>
+</body>
+</html>
