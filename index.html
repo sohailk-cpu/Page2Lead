@@ -516,6 +516,20 @@
                 }
             });
         });
+
+        // Sitemap create karo
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://sohailk-cpu.github.io/Page2Lead/</loc>
+    <lastmod>2024-01-14</lastmod>
+    <priority>1.0</priority>
+  </url>
+</urlset>`;
+
+// Sitemap submit karo Google ke liye
+fetch('https://www.google.com/ping?sitemap=https://sohailk-cpu.github.io/Page2Lead/sitemap.xml')
+  .then(() => console.log('Sitemap submitted to Google'));
     </script>
 </body>
 </html>
