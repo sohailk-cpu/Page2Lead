@@ -266,6 +266,33 @@
         
         /* RESPONSIVE */
         @media (max-width: 768px) {
+            @media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: #333;
+        cursor: pointer;
+    }
+}
+            
             .hero h1 {
                 font-size: 1.8rem;
             }
@@ -284,18 +311,28 @@
     </style>
 </head>
 <body>
-    <!-- HEADER -->
-    <header>
-        <div class="container header-content">
-            <div class="logo">
-                <i class="fas fa-rocket"></i> 
-                <span>Page2Lead</span>
-            </div>
-            <a href="https://wa.me/918290948499" class="cta-button" target="_blank">
-                <i class="fab fa-whatsapp"></i> WhatsApp Now
-            </a>
-        </div>
-    </header>
+<!-- HEADER SECTION -->
+<header>
+    <div class="container header-content">
+        <a href="#" class="logo">
+            <i class="fas fa-rocket"></i> 
+            <span>Page2Lead</span>
+        </a>
+        
+        <!-- YEH NAVIGATION ADD KARO -->
+        <nav class="nav-links">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="services.html"><i class="fas fa-cogs"></i> Services</a>
+            <a href="portfolio.html"><i class="fas fa-briefcase"></i> Portfolio</a>
+            <a href="blog.html"><i class="fas fa-blog"></i> Blog</a>
+            <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+        
+        <a href="https://wa.me/918290948499" class="cta-button" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp Now
+        </a>
+    </div>
+</header>
 
     <!-- HERO SECTION -->
     <section class="hero">
@@ -410,22 +447,49 @@
                 Send your website URL. I'll analyze it and give you 3 actionable tips to improve conversions - absolutely FREE!
             </p>
             
-            <div class="contact-form">
-                <form id="auditForm">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="url" class="form-control" placeholder="Your Website URL (if any)">
-                    </div>
-                    <button type="submit" class="submit-btn">
-                        <i class="fas fa-award"></i> Get Free Audit
-                    </button>
-                </form>
-            </div>
+<form id="contactForm" action="https://formspree.io/f/xreebbvr" method="POST">
+
+<!-- NEW FORM (Yeh use karo) -->
+<form id="contactForm" action="https://formspree.io/f/xreebbvr" method="POST">
+    <!-- Hidden fields for Formspree -->
+    <input type="hidden" name="_subject" value="New Contact from Page2Lead Website">
+    <input type="hidden" name="_replyto" value="%email%">
+    
+    <div class="form-group">
+        <label for="name">Your Name *</label>
+        <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" class="form-control" placeholder="john@example.com" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" class="form-control" placeholder="+91 98765 43210">
+    </div>
+    
+    <div class="form-group">
+        <label for="service">Service Interested In</label>
+        <select id="service" name="service" class="form-control">
+            <option value="">Select a service</option>
+            <option value="basic">Basic Landing Page (₹4,999)</option>
+            <option value="pro">Pro Landing Page (₹9,999)</option>
+            <option value="custom">Custom Package</option>
+            <option value="audit">Free Landing Page Audit</option>
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <label for="message">Tell us about your project *</label>
+        <textarea id="message" name="message" class="form-control" rows="5" placeholder="I need a landing page for my coaching business..." required></textarea>
+    </div>
+    
+    <button type="submit" class="submit-btn">
+        <i class="fas fa-paper-plane"></i> Send Message
+    </button>
+</form>
             
             <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.2);">
                 <p style="font-size: 1.1rem;">
