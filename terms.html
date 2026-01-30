@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Page2Lead</title>
+    <meta name="description" content="Terms of Service for Page2Lead. Read our terms and conditions for using our landing page design services.">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        :root {
+            --primary: #25D366;
+            --primary-dark: #1DA851;
+            --secondary: #128C7E;
+            --dark: #111;
+            --light: #f8f9fa;
+            --gray: #666;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: var(--white);
+            padding: 20px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo span {
+            color: var(--dark);
+        }
+        
+        .back-btn {
+            background: var(--primary);
+            color: var(--white);
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+        
+        .back-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, #f0fff4 0%, #e6f7ff 100%);
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+            font-weight: 800;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Content Section */
+        .content-section {
+            padding: 80px 0;
+            background: var(--white);
+        }
+        
+        .content-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .content-section h2 {
+            font-size: 2rem;
+            margin: 40px 0 20px;
+            color: var(--dark);
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        .content-section h2:first-child {
+            margin-top: 0;
+        }
+        
+        .content-section h3 {
+            font-size: 1.4rem;
+            margin: 30px 0 15px;
+            color: var(--dark);
+        }
+        
+        .content-section p {
+            margin-bottom: 20px;
+            color: var(--gray);
+            line-height: 1.8;
+        }
+        
+        .content-section ul, 
+        .content-section ol {
+            margin: 20px 0 30px 40px;
+        }
+        
+        .content-section li {
+            margin-bottom: 10px;
+            color: var(--gray);
+            line-height: 1.7;
+        }
+        
+        .content-section strong {
+            color: var(--dark);
+        }
+        
+        .highlight-box {
+            background: rgba(37, 211, 102, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .warning-box {
+            background: rgba(255, 193, 7, 0.1);
+            border-left: 4px solid #ffc107;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .update-date {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 40px 0;
+            text-align: center;
+            border: 2px solid #e0e0e0;
+        }
+        
+        .payment-terms {
+            background: var(--light);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border: 2px solid #e0e0e0;
+        }
+        
+        .refund-terms {
+            background: rgba(220, 53, 69, 0.1);
+            border-left: 4px solid #dc3545;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 20px 0;
+            padding: 20px;
+            background: var(--light);
+            border-radius: 10px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .contact-info i {
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        /* Table Styles */
+        .terms-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+        }
+        
+        .terms-table th,
+        .terms-table td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .terms-table th {
+            background: rgba(37, 211, 102, 0.1);
+            color: var(--dark);
+            font-weight: 600;
+        }
+        
+        .terms-table tr:nth-child(even) {
+            background: var(--light);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 100px 0 60px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .content-section {
+                padding: 60px 0;
+            }
+            
+            .content-section h2 {
+                font-size: 1.7rem;
+            }
+            
+            .content-section h3 {
+                font-size: 1.2rem;
+            }
+            
+            .content-section ul,
+            .content-section ol {
+                margin-left: 20px;
+            }
+            
+            .terms-table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .back-btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <i class="fas fa-rocket"></i>
+                <span>Page2Lead</span>
+            </a>
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Terms of Service</h1>
+            <p>Please read these terms and conditions carefully before using our landing page design services.</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="container content-container">
+            <div class="update-date">
+                <p><strong>Last Updated:</strong> January 15, 2024</p>
+                <p>These Terms of Service govern your use of the Page2Lead website and services. By accessing or using our Service, you agree to be bound by these Terms.</p>
+            </div>
+
+            <h2>1. Acceptance of Terms</h2>
+            <p>By accessing and using Page2Lead ("Service"), you accept and agree to be bound by the terms and provision of this agreement. In addition, when using this Service, you shall be subject to any posted guidelines or rules applicable.</p>
+            
+            <div class="warning-box">
+                <p><strong>Important:</strong> If you do not agree to these Terms, please do not use our Service. Your continued use of the Service constitutes your acceptance of these Terms.</p>
+            </div>
+
+            <h2>2. Services Description</h2>
+            <p>Page2Lead provides professional landing page design and development services. Our services include but are not limited to:</p>
+            <ul>
+                <li>Landing page design and development</li>
+                <li>Conversion rate optimization</li>
+                <li>Mobile-responsive design</li>
+                <li>Basic SEO setup</li>
+                <li>Analytics integration</li>
+                <li>Form integration</li>
+                <li>A/B testing setup</li>
+            </ul>
+
+            <h2>3. Client Responsibilities</h2>
+            <p>As a client of Page2Lead, you agree to:</p>
+            <ul>
+                <li>Provide accurate and complete information about your business and requirements</li>
+                <li>Provide all necessary content (text, images, logos) in a timely manner</li>
+                <li>Make decisions and provide feedback promptly</li>
+                <li>Adhere to the payment schedule</li>
+                <li>Use the services only for lawful purposes</li>
+            </ul>
+
+            <h2>4. Payment Terms</h2>
+            
+            <div class="payment-terms">
+                <h3>Payment Schedule</h3>
+                <p>Our payment terms are as follows:</p>
+                <ul>
+                    <li><strong>50% advance payment</strong> - Required to begin work on your project</li>
+                    <li><strong>50% final payment</strong> - Due upon completion before final delivery</li>
+                </ul>
+                
+                <h3>Accepted Payment Methods</h3>
+                <ul>
+                    <li>Bank Transfer (NEFT/IMPS)</li>
+                    <li>UPI Payments</li>
+                    <li>Credit/Debit Cards (via payment gateway)</li>
+                </ul>
+            </div>
+
+            <h2>5. Project Timeline and Delivery</h2>
+            
+            <table class="terms-table">
+                <thead>
+                    <tr>
+                        <th>Service Package</th>
+                        <th>Delivery Time</th>
+                        <th>Revisions Included</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Basic Landing Page</td>
+                        <td>2-3 business days</td>
+                        <td>2 rounds of revisions</td>
+                    </tr>
+                    <tr>
+                        <td>Pro Landing Page</td>
+                        <td>5-7 business days</td>
+                        <td>4 rounds of revisions</td>
+                    </tr>
+                    <tr>
+                        <td>Custom Package</td>
+                        <td>1-2 weeks (varies)</td>
+                        <td>As per agreement</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p><strong>Note:</strong> Delivery times may vary based on project complexity and client responsiveness. Delays in providing content or feedback will affect the project timeline.</p>
+
+            <h2>6. Intellectual Property Rights</h2>
+            
+            <div class="highlight-box">
+                <h3>Ownership Transfer</h3>
+                <p>Upon full payment, ownership of the final design files is transferred to you. However:</p>
+                <ul>
+                    <li>We retain the right to display the work in our portfolio</li>
+                    <li>We retain ownership of our proprietary code and frameworks</li>
+                    <li>Third-party assets (stock images, fonts) may have their own licenses</li>
+                </ul>
+            </div>
+
+            <h3>Client Content</h3>
+            <p>You represent and warrant that:</p>
+            <ul>
+                <li>You own or have the necessary rights to all content you provide</li>
+                <li>Your content does not infringe on any third-party rights</li>
+                <li>You have permission to use any images, logos, or branding materials</li>
+            </ul>
+
+            <h2>7. Revisions and Changes</h2>
+            <p>Each package includes a specific number of revision rounds:</p>
+            <ul>
+                <li>Revisions must be requested within the support period</li>
+                <li>Major changes after approval may incur additional charges</li>
+                <li>Additional revisions beyond the included rounds are available at ₹999 per round</li>
+            </ul>
+
+            <h2>8. Refund and Cancellation Policy</h2>
+            
+            <div class="refund-terms">
+                <h3>Refund Policy</h3>
+                <p>Our refund policy is designed to be fair to both parties:</p>
+                <ul>
+                    <li><strong>Before work begins:</strong> 100% refund of advance payment</li>
+                    <li><strong>After work begins:</strong> Refund proportional to work completed, minus ₹999 administrative fee</li>
+                    <li><strong>After delivery:</strong> No refunds, but we'll work to fix any issues</li>
+                </ul>
+                
+                <h3>Cancellation Policy</h3>
+                <p>Clients may cancel a project at any time:</p>
+                <ul>
+                    <li>Written cancellation notice required</li>
+                    <li>Refund calculated based on work completed</li>
+                    <li>All project files become our property upon cancellation</li>
+                </ul>
+            </div>
+
+            <h2>9. Confidentiality</h2>
+            <p>We respect your privacy and will:</p>
+            <ul>
+                <li>Keep all client information confidential</li>
+                <li>Not disclose project details to third parties</li>
+                <li>Use secure methods for file transfer and communication</li>
+                <li>Delete sensitive information upon project completion if requested</li>
+            </ul>
+
+            <h2>10. Limitation of Liability</h2>
+            <p>Page2Lead shall not be liable for:</p>
+            <ul>
+                <li>Any indirect, incidental, or consequential damages</li>
+                <li>Loss of profits, data, or business opportunities</li>
+                <li>Issues arising from third-party services or platforms</li>
+                <li>Client's failure to implement recommended changes</li>
+            </ul>
+            
+            <p>Our maximum liability shall not exceed the total amount paid for the specific service.</p>
+
+            <h2>11. Service Warranties</h2>
+            <p>We warrant that:</p>
+            <ul>
+                <li>Our services will be performed with reasonable skill and care</li>
+                <li>Delivered landing pages will be mobile-responsive</li>
+                <li>All code will follow current web standards</li>
+                <li>We will fix any bugs or errors for 30 days post-delivery</li>
+            </ul>
+
+            <h2>12. Force Majeure</h2>
+            <p>Neither party shall be liable for any failure or delay in performance under these Terms due to causes beyond its reasonable control, including but not limited to: acts of God, war, terrorism, civil unrest, pandemic, government actions, internet failures, or natural disasters.</p>
+
+            <h2>13. Termination</h2>
+            <p>We may terminate or suspend your access to our Service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.</p>
+            <p>Upon termination, your right to use the Service will immediately cease.</p>
+
+            <h2>14. Governing Law</h2>
+            <p>These Terms shall be governed and construed in accordance with the laws of India, without regard to its conflict of law provisions.</p>
+            <p>Any disputes shall be subject to the exclusive jurisdiction of the courts in Mumbai, India.</p>
+
+            <h2>15. Changes to Terms</h2>
+            <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. What constitutes a material change will be determined at our sole discretion.</p>
+            <p>By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms.</p>
+
+            <h2>16. Severability</h2>
+            <p>If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect.</p>
+
+            <h2>17. Entire Agreement</h2>
+            <p>These Terms constitute the entire agreement between us regarding our Service, and supersede and replace any prior agreements we might have had between us regarding the Service.</p>
+
+            <h2>18. Contact Information</h2>
+            <p>If you have any questions about these Terms, please contact us:</p>
+            
+            <div class="contact-info">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <p><strong>By email:</strong> contact@page2lead.com</p>
+                </div>
+            </div>
+            
+            <div class="contact-info">
+                <i class="fas fa-phone"></i>
+                <div>
+                    <p><strong>By phone:</strong> +91 82909 48499</p>
+                </div>
+            </div>
+            
+            <div class="contact-info">
+                <i class="fas fa-globe"></i>
+                <div>
+                    <p><strong>Through our website:</strong> <a href="contact.html" style="color: var(--primary);">Contact Page</a></p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <p><strong>Important Notice:</strong> These Terms of Service are a legal agreement between you and Page2Lead. By using our services, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you do not agree, please do not use our services.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <a href="index.html" class="logo" style="font-size: 32px; color: var(--white); margin-bottom: 20px; display: inline-block;">
+                        <i class="fas fa-rocket"></i>
+                        <span>Page2Lead</span>
+                    </a>
+                    <p style="color: #aaa; margin-top: 20px; max-width: 300px;">Professional landing page design services with clear terms and conditions.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 style="color: var(--white); margin-bottom: 20px;">Legal</h3>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 style="color: var(--white); margin-bottom: 20px;">Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 style="color: var(--white); margin-bottom: 20px;">Contact</h3>
+                    <p style="color: #aaa; margin-bottom: 10px;">
+                        <i class="fas fa-phone"></i> +91 82909 48499
+                    </p>
+                    <p style="color: #aaa; margin-bottom: 10px;">
+                        <i class="fas fa-envelope"></i> contact@page2lead.com
+                    </p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2024 Page2Lead. All rights reserved. | <a href="privacy.html" style="color: var(--primary);">Privacy Policy</a> | <a href="terms.html" style="color: var(--primary);">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
