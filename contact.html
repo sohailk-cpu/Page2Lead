@@ -5,315 +5,497 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Page2Lead - Get Free Landing Page Audit</title>
     <meta name="description" content="Contact Page2Lead for landing page design services. Get free audit, consultation, and quote. WhatsApp: +91 82909 48499">
+    <meta name="keywords" content="contact landing page designer, free audit, consultation call, get quote, landing page help">
     
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="Contact Page2Lead - Get Free Landing Page Audit">
+    <meta property="og:description" content="Get free landing page audit and consultation. Contact us for high-converting landing page design services.">
+    <meta property="og:image" content="https://sohailk-cpu.github.io/Page2Lead/images/contact-og.jpg">
+    <meta property="og:url" content="https://sohailk-cpu.github.io/Page2Lead/contact.html">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Page Specific CSS -->
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
+        /* Contact Page Specific Styles */
+        .hero-section {
+            padding: 180px 0 100px;
+            background: linear-gradient(135deg, #f0fff4 0%, #e6f7ff 100%);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
         }
         
-        body {
-            background: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.05;
         }
         
-        .container {
-            max-width: 1200px;
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 0 20px;
         }
         
-        header {
-            background: white;
-            padding: 15px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #25D366;
-            text-decoration: none;
-        }
-        
-        .logo span {
-            color: #333;
-        }
-        
-        nav a {
-            margin-left: 20px;
-            color: #333;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        .hero {
-            background: linear-gradient(135deg, #f0fff4 0%, #f0f9ff 100%);
-            padding: 100px 0 60px;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 2.8rem;
+        .hero-content h1 {
+            font-size: 3.5rem;
             margin-bottom: 20px;
-            color: #111;
+            color: var(--dark);
+            line-height: 1.2;
+            font-weight: 800;
         }
         
-        .hero p {
-            font-size: 1.2rem;
-            color: #555;
-            max-width: 700px;
-            margin: 0 auto 30px;
+        .hero-content h1 span {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         
+        .hero-content p {
+            font-size: 1.3rem;
+            color: var(--gray);
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+        
+        /* Contact Section */
         .contact-section {
-            padding: 80px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        
-        .section-title h2 {
-            font-size: 2.2rem;
-            margin-bottom: 15px;
+            padding: 100px 0;
+            background: var(--light);
         }
         
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 50px;
+            gap: 60px;
+            margin-top: 60px;
         }
         
         .contact-info {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background: var(--white);
+            border-radius: 20px;
+            padding: 50px 40px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .contact-info:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
         
         .info-item {
             display: flex;
             align-items: flex-start;
-            gap: 20px;
-            margin-bottom: 30px;
-            padding-bottom: 30px;
+            gap: 25px;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
             border-bottom: 1px solid #eee;
         }
         
+        .info-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
         .info-icon {
-            width: 50px;
-            height: 50px;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--white);
+            flex-shrink: 0;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+        }
+        
+        .info-content h3 {
+            margin-bottom: 10px;
+            color: var(--dark);
+            font-size: 1.4rem;
+        }
+        
+        .info-content p {
+            color: var(--gray);
+            margin-bottom: 5px;
+            line-height: 1.7;
+        }
+        
+        .contact-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .contact-number:hover {
+            color: var(--secondary);
+        }
+        
+        /* Contact Form */
+        .contact-form-container {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 50px 40px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .contact-form-container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .contact-form-container h3 {
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            color: var(--dark);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 18px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-size: 16px;
+            transition: var(--transition);
+            background: var(--light);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: var(--white);
+            box-shadow: 0 0 0 4px rgba(37, 211, 102, 0.1);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Quick Contact Section */
+        .quick-contact-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .quick-contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.05;
+        }
+        
+        .quick-contact-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .quick-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .quick-btn {
+            background: var(--white);
+            color: var(--primary);
+            padding: 25px 30px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: var(--transition);
+            text-align: left;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .quick-btn:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        
+        .quick-icon {
+            width: 60px;
+            height: 60px;
             background: rgba(37, 211, 102, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
-            color: #25D366;
+            font-size: 1.8rem;
+            color: var(--primary);
             flex-shrink: 0;
         }
         
-        .contact-form {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        /* FAQ Section */
+        .faq-section {
+            padding: 100px 0;
+            background: var(--white);
         }
         
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        
-        .form-control:focus {
-            outline: none;
-            border-color: #25D366;
-            box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.1);
-        }
-        
-        .submit-btn {
-            background: #25D366;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-        
-        .quick-contact {
-            background: #25D366;
-            color: white;
-            padding: 60px 0;
-            text-align: center;
-        }
-        
-        .quick-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 30px;
-        }
-        
-        .quick-btn {
-            background: white;
-            color: #25D366;
-            padding: 15px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            min-width: 200px;
-            justify-content: center;
-        }
-        
-        .faq {
-            padding: 80px 0;
-            background: white;
+        .faq-list {
+            max-width: 800px;
+            margin: 60px auto 0;
         }
         
         .faq-item {
             margin-bottom: 20px;
-            border: 1px solid #eee;
-            border-radius: 10px;
+            border: 2px solid #e0e0e0;
+            border-radius: 15px;
             overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .faq-item.active {
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.1);
         }
         
         .faq-question {
-            padding: 20px;
-            background: #f8f9fa;
+            padding: 25px 30px;
+            background: var(--light);
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-weight: 500;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--dark);
+            transition: var(--transition);
+        }
+        
+        .faq-item.active .faq-question {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: var(--white);
+        }
+        
+        .faq-question i {
+            transition: var(--transition);
         }
         
         .faq-answer {
-            padding: 20px;
-            display: none;
+            padding: 0 30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
         }
         
         .faq-item.active .faq-answer {
-            display: block;
+            padding: 30px;
+            max-height: 500px;
         }
         
-        footer {
-            background: #111;
-            color: white;
-            padding: 50px 0 20px;
-            text-align: center;
+        .faq-answer p {
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 15px;
         }
         
-        .whatsapp-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25D366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            z-index: 1000;
-            text-decoration: none;
+        /* Map Section */
+        .map-section {
+            padding: 0 0 100px;
+            background: var(--light);
+        }
+        
+        .map-container {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 400px;
+        }
+        
+        @media (max-width: 992px) {
+            .contact-container {
+                gap: 40px;
+            }
+            
+            .quick-buttons {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
         }
         
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.1rem;
             }
             
             .contact-container {
                 grid-template-columns: 1fr;
+                gap: 40px;
             }
             
-            .quick-buttons {
-                flex-direction: column;
-                align-items: center;
+            .contact-info,
+            .contact-form-container {
+                padding: 40px 30px;
+            }
+            
+            .info-item {
+                gap: 20px;
+                margin-bottom: 30px;
+                padding-bottom: 30px;
+            }
+            
+            .info-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.3rem;
+            }
+            
+            .contact-number {
+                font-size: 1.5rem;
             }
             
             .quick-btn {
-                width: 100%;
-                max-width: 300px;
+                padding: 20px;
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .quick-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+            
+            .faq-question {
+                padding: 20px;
+                font-size: 1rem;
+            }
+            
+            .faq-answer {
+                padding: 0 20px;
+            }
+            
+            .faq-item.active .faq-answer {
+                padding: 20px;
+            }
+            
+            .map-container {
+                height: 300px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .info-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+            
+            .contact-number {
+                font-size: 1.3rem;
+            }
+            
+            .quick-buttons {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-control {
+                padding: 15px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- HEADER -->
+    <!-- Header -->
     <header>
         <div class="container header-content">
             <a href="index.html" class="logo">
-                <i class="fas fa-rocket"></i> 
+                <i class="fas fa-rocket"></i>
                 <span>Page2Lead</span>
             </a>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="blog.html">Blog</a>
-                <a href="contact.html">Contact</a>
+            
+            <nav class="nav-links">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="services.html"><i class="fas fa-cogs"></i> Services</a>
+                <a href="portfolio.html"><i class="fas fa-briefcase"></i> Portfolio</a>
+                <a href="blog.html"><i class="fas fa-blog"></i> Blog</a>
+                <a href="contact.html" class="active"><i class="fas fa-envelope"></i> Contact</a>
             </nav>
+            
+            <a href="https://wa.me/918290948499" class="cta-button" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> WhatsApp Now
+            </a>
         </div>
     </header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="container">
-            <h1>Let's Create Your High-Converting Landing Page</h1>
-            <p>Book a free 15-minute consultation call. No pressure. No sales pitch. Just honest advice about your landing page.</p>
-            <a href="https://wa.me/918290948499" style="background: #25D366; color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 10px;" target="_blank">
-                <i class="fab fa-whatsapp"></i> WhatsApp Now for Instant Response
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container hero-content">
+            <h1>Let's Create Your <span>High-Converting</span> Landing Page</h1>
+            <p>Book a free 15-minute consultation call. No pressure. No sales pitch. Just honest advice about your landing page and conversion goals.</p>
+            <a href="#contact" class="btn-primary">
+                <i class="fas fa-comments"></i> Start Conversation
             </a>
         </div>
     </section>
 
-    <!-- CONTACT SECTION -->
-    <section class="contact-section">
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
         <div class="container">
             <div class="section-title">
                 <h2>Get in Touch</h2>
-                <p>Choose your preferred way to contact us</p>
+                <p>Choose your preferred way to contact us. We're always here to help.</p>
             </div>
             
             <div class="contact-container">
@@ -321,14 +503,13 @@
                 <div class="contact-info">
                     <div class="info-item">
                         <div class="info-icon">
-                            <i class="fas fa-phone"></i>
+                            <i class="fas fa-phone-alt"></i>
                         </div>
-                        <div>
+                        <div class="info-content">
                             <h3>Call Us</h3>
-                            <p style="font-size: 1.5rem; font-weight: bold; color: #25D366; margin: 10px 0;">
-                                <a href="tel:+918290948499" style="color: inherit; text-decoration: none;">+91 82909 48499</a>
-                            </p>
-                            <p style="color: #666;">Available 10AM-8PM, Monday-Saturday</p>
+                            <p>Available 10AM-8PM, Monday-Saturday</p>
+                            <a href="tel:+918290948499" class="contact-number">+91 82909 48499</a>
+                            <p>Perfect for detailed discussions and immediate assistance.</p>
                         </div>
                     </div>
                     
@@ -336,240 +517,449 @@
                         <div class="info-icon">
                             <i class="fab fa-whatsapp"></i>
                         </div>
-                        <div>
+                        <div class="info-content">
                             <h3>WhatsApp</h3>
-                            <p style="font-size: 1.5rem; font-weight: bold; color: #25D366; margin: 10px 0;">
-                                <a href="https://wa.me/918290948499" style="color: inherit; text-decoration: none;">+91 82909 48499</a>
-                            </p>
-                            <p style="color: #666;">24/7 for quick questions. We usually reply within 15 minutes.</p>
+                            <p>24/7 for quick questions and updates</p>
+                            <a href="https://wa.me/918290948499" class="contact-number" target="_blank" rel="noopener noreferrer">+91 82909 48499</a>
+                            <p>We usually reply within 15-30 minutes during business hours.</p>
                         </div>
                     </div>
                     
-                    <div class="info-item" style="border-bottom: none; padding-bottom: 0; margin-bottom: 0;">
+                    <div class="info-item">
                         <div class="info-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
-                        <div>
+                        <div class="info-content">
                             <h3>Email</h3>
-                            <p style="font-size: 1.2rem; font-weight: bold; color: #25D366; margin: 10px 0;">
-                                <a href="mailto:contact@page2lead.com" style="color: inherit; text-decoration: none;">contact@page2lead.com</a>
-                            </p>
-                            <p style="color: #666;">For detailed proposals and documentation</p>
+                            <p>For proposals, documentation, and detailed queries</p>
+                            <a href="mailto:contact@page2lead.com" class="contact-number">contact@page2lead.com</a>
+                            <p>Response time: Within 24 hours on weekdays.</p>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Contact Form -->
-                <div class="contact-form">
-                    <h3 style="margin-bottom: 30px;">Send us a Message</h3>
+                <div class="contact-form-container">
+                    <h3>Send us a Message</h3>
                     <form id="contactForm" action="https://formspree.io/f/xreebbvr" method="POST">
+                        <!-- Hidden fields for Formspree -->
+                        <input type="hidden" name="_subject" value="New Contact from Page2Lead Website">
+                        <input type="hidden" name="_replyto" value="%email%">
+                        <input type="hidden" name="_cc" value="contact@page2lead.com">
+                        
                         <div class="form-group">
-                            <label for="name">Your Name *</label>
-                            <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+                            <label for="name" class="form-label">Your Name *</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" class="form-control" placeholder="john@example.com" required>
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="john@example.com" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" class="form-control" placeholder="+91 98765 43210">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="+91 98765 43210">
                         </div>
                         
                         <div class="form-group">
-                            <label for="website">Website (if any)</label>
-                            <input type="url" id="website" class="form-control" placeholder="https://yourwebsite.com">
+                            <label for="website" class="form-label">Website (if any)</label>
+                            <input type="url" id="website" name="website" class="form-control" placeholder="https://yourwebsite.com">
                         </div>
                         
                         <div class="form-group">
-                            <label for="service">Service Interested In</label>
-                            <select id="service" class="form-control">
+                            <label for="service" class="form-label">Service Interested In</label>
+                            <select id="service" name="service" class="form-control">
                                 <option value="">Select a service</option>
                                 <option value="basic">Basic Landing Page (₹4,999)</option>
                                 <option value="pro">Pro Landing Page (₹9,999)</option>
                                 <option value="custom">Custom Package</option>
                                 <option value="audit">Free Landing Page Audit</option>
+                                <option value="consultation">Just Consultation</option>
                             </select>
                         </div>
                         
                         <div class="form-group">
-                            <label for="message">Tell us about your project *</label>
-                            <textarea id="message" class="form-control" rows="5" placeholder="I need a landing page for my coaching business..." required></textarea>
+                            <label for="message" class="form-label">Tell us about your project *</label>
+                            <textarea id="message" name="message" class="form-control" rows="6" placeholder="I need a landing page for my coaching business. My goals are..." required></textarea>
                         </div>
                         
-                        <button type="submit" class="submit-btn">
+                        <button type="submit" class="cta-button" style="width: 100%; justify-content: center; font-size: 18px; padding: 18px;">
                             <i class="fas fa-paper-plane"></i> Send Message
                         </button>
+                        
+                        <p style="margin-top: 20px; color: var(--gray); font-size: 0.9rem; text-align: center;">
+                            By submitting this form, you agree to our <a href="privacy.html" style="color: var(--primary);">Privacy Policy</a>.
+                        </p>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- QUICK CONTACT -->
-    <section class="quick-contact">
-        <div class="container">
-            <h2 style="font-size: 2.2rem; margin-bottom: 20px;">Quick Contact Options</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;">Choose the method that works best for you</p>
+    <!-- Quick Contact Section -->
+    <section class="quick-contact-section">
+        <div class="container quick-contact-content">
+            <div class="section-title">
+                <h2 style="color: var(--white);">Quick Contact Options</h2>
+                <p style="color: rgba(255,255,255,0.9);">Choose the method that works best for you</p>
+            </div>
             
             <div class="quick-buttons">
-                <a href="https://wa.me/918290948499" class="quick-btn" target="_blank">
-                    <i class="fab fa-whatsapp"></i> WhatsApp Chat
+                <a href="https://wa.me/918290948499" class="quick-btn" target="_blank" rel="noopener noreferrer">
+                    <div class="quick-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div>
+                        <h3 style="margin: 0 0 10px; color: var(--primary);">WhatsApp Chat</h3>
+                        <p style="margin: 0; color: var(--gray); line-height: 1.6;">Instant messaging for quick questions and discussions.</p>
+                    </div>
                 </a>
                 
                 <a href="tel:+918290948499" class="quick-btn">
-                    <i class="fas fa-phone"></i> Call Now
+                    <div class="quick-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div>
+                        <h3 style="margin: 0 0 10px; color: var(--primary);">Call Now</h3>
+                        <p style="margin: 0; color: var(--gray); line-height: 1.6;">Speak directly with our team for detailed discussions.</p>
+                    </div>
                 </a>
                 
                 <a href="mailto:contact@page2lead.com" class="quick-btn">
-                    <i class="fas fa-envelope"></i> Send Email
+                    <div class="quick-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h3 style="margin: 0 0 10px; color: var(--primary);">Send Email</h3>
+                        <p style="margin: 0; color: var(--gray); line-height: 1.6;">For detailed proposals and documentation.</p>
+                    </div>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="faq">
+    <!-- FAQ Section -->
+    <section class="faq-section">
         <div class="container">
             <div class="section-title">
                 <h2>Frequently Asked Questions</h2>
-                <p>Quick answers to common questions</p>
+                <p>Quick answers to common questions about our services</p>
             </div>
             
             <div class="faq-list">
+                <!-- FAQ Item 1 -->
                 <div class="faq-item">
                     <div class="faq-question">
                         How long does it take to create a landing page?
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Basic landing pages: 2-3 days. Pro landing pages with copywriting and testing: 5-7 days. Custom packages: 1-2 weeks depending on complexity.</p>
+                        <p>Basic landing pages: 2-3 business days. Pro landing pages with copywriting and testing: 5-7 business days. Custom packages: 1-2 weeks depending on complexity. We also offer priority delivery options for urgent projects.</p>
                     </div>
                 </div>
                 
+                <!-- FAQ Item 2 -->
                 <div class="faq-item">
                     <div class="faq-question">
                         Do I need to pay upfront?
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>We require 50% upfront for all projects. The remaining 50% is due upon completion before final files are delivered.</p>
+                        <p>We require 50% upfront payment to begin work on your project. The remaining 50% is due upon completion before we deliver the final files. This ensures commitment from both sides and allows us to allocate resources to your project.</p>
                     </div>
                 </div>
                 
+                <!-- FAQ Item 3 -->
                 <div class="faq-item">
                     <div class="faq-question">
                         Can you redesign my existing landing page?
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Yes! We often work with clients to redesign and optimize existing landing pages for better conversions.</p>
+                        <p>Yes! We often work with clients to redesign and optimize existing landing pages for better conversions. We'll analyze your current page, identify improvement areas, and create a more effective version that converts better.</p>
                     </div>
                 </div>
                 
+                <!-- FAQ Item 4 -->
                 <div class="faq-item">
                     <div class="faq-question">
                         Do you offer revisions?
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Yes. Basic package includes 2 rounds of revisions. Pro package includes 4 rounds of revisions. We work until you're happy with the result.</p>
+                        <p>Yes. Basic package includes 2 rounds of revisions. Pro package includes 4 rounds of revisions. We work until you're 100% satisfied with the result. Additional revisions beyond the included rounds can be arranged if needed.</p>
                     </div>
                 </div>
                 
+                <!-- FAQ Item 5 -->
                 <div class="faq-item">
                     <div class="faq-question">
                         What information do you need from me to start?
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>We need: 1) Your business details, 2) Target audience information, 3) Your goals for the landing page, 4) Any branding guidelines, 5) Content/photos if available.</p>
+                        <p>We need: 1) Your business details and target audience, 2) Your goals for the landing page, 3) Any existing branding guidelines, 4) Content/photos if available, 5) Examples of landing pages you like, 6) Information about your competition.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Location</h2>
+                <p>Based in India, serving clients worldwide</p>
+            </div>
+            
+            <div class="map-container">
+                <!-- Google Map Embed -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.051103590037!2d72.827560574941!3d19.15064408206278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7ddc8205f3d%3A0x583d70cab50ec59b!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1628154400000!5m2!1sen!2sin"
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <p style="color: var(--gray); font-size: 1.1rem;">
+                    <i class="fas fa-map-marker-alt" style="color: var(--primary); margin-right: 10px;"></i>
+                    Serving clients across India and worldwide via remote collaboration
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <div style="margin-bottom: 30px;">
-                <a href="index.html" class="logo" style="font-size: 2rem; color: white;">
-                    <i class="fas fa-rocket"></i> 
-                    <span style="color: white;">Page2Lead</span>
-                </a>
-                <p style="margin-top: 20px; color: #aaa;">Your partner for high-converting landing pages</p>
+            <div class="footer-content">
+                <div>
+                    <a href="index.html" class="logo" style="font-size: 32px; margin-bottom: 20px;">
+                        <i class="fas fa-rocket"></i>
+                        <span>Page2Lead</span>
+                    </a>
+                    <p style="margin: 20px 0; color: #aaa; max-width: 300px;">
+                        Your partner for high-converting landing pages. Let's grow your business together.
+                    </p>
+                    <div style="display: flex; gap: 15px; margin-top: 20px;">
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" 
+                           style="color: #aaa; font-size: 20px; transition: var(--transition);">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
+                           style="color: #aaa; font-size: 20px; transition: var(--transition);">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"
+                           style="color: #aaa; font-size: 20px; transition: var(--transition);">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://wa.me/918290948499" target="_blank" rel="noopener noreferrer"
+                           style="color: #aaa; font-size: 20px; transition: var(--transition);">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 style="color: var(--white); margin-bottom: 20px;">Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 style="color: var(--white); margin-bottom: 20px;">Services</h3>
+                    <a href="services.html">Basic Landing Page</a>
+                    <a href="services.html">Pro Landing Page</a>
+                    <a href="services.html">Custom Packages</a>
+                    <a href="services.html">Landing Page Audit</a>
+                    <a href="services.html">Conversion Optimization</a>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 style="color: var(--white); margin-bottom: 20px;">Contact Info</h3>
+                    <p style="color: #aaa; margin-bottom: 10px;">
+                        <i class="fas fa-phone"></i> +91 82909 48499
+                    </p>
+                    <p style="color: #aaa; margin-bottom: 10px;">
+                        <i class="fas fa-envelope"></i> contact@page2lead.com
+                    </p>
+                    <p style="color: #aaa; margin-bottom: 10px;">
+                        <i class="fas fa-clock"></i> Mon-Sat: 10AM-8PM IST
+                    </p>
+                    <p style="color: #aaa; margin-bottom: 10px;">
+                        <i class="fas fa-globe"></i> Based in India, Serving Worldwide
+                    </p>
+                </div>
             </div>
             
-            <div style="margin-bottom: 30px;">
-                <a href="tel:+918290948499" style="color: white; text-decoration: none; margin: 0 15px;">
-                    <i class="fas fa-phone"></i> +91 82909 48499
-                </a>
-                <a href="mailto:contact@page2lead.com" style="color: white; text-decoration: none; margin: 0 15px;">
-                    <i class="fas fa-envelope"></i> contact@page2lead.com
-                </a>
-                <a href="https://wa.me/918290948499" style="color: white; text-decoration: none; margin: 0 15px;">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
-            </div>
-            
-            <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #333; color: #999; font-size: 0.9rem;">
-                <p>© 2024 Page2Lead. All rights reserved. | <a href="index.html" style="color: #25D366;">Home</a> | <a href="services.html" style="color: #25D366;">Services</a> | <a href="contact.html" style="color: #25D366;">Contact</a></p>
+            <div class="copyright">
+                <p>&copy; 2024 Page2Lead. All rights reserved. | <a href="privacy.html" style="color: var(--primary);">Privacy Policy</a> | <a href="terms.html" style="color: var(--primary);">Terms of Service</a></p>
             </div>
         </div>
     </footer>
 
-    <!-- WHATSAPP FLOAT -->
-    <a href="https://wa.me/918290948499" class="whatsapp-float" target="_blank">
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/918290948499" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+    
+    <!-- Page Specific JavaScript -->
     <script>
-        // Contact form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+        // Contact page specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate contact info items
+            const infoItems = document.querySelectorAll('.info-item');
             
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const service = document.getElementById('service').value;
+            const infoObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateX(0)';
+                        }, index * 200);
+                    }
+                });
+            }, { threshold: 0.3 });
             
-            // Show success message
-            const submitBtn = this.querySelector('.submit-btn');
-            const originalText = submitBtn.innerHTML;
+            infoItems.forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateX(-30px)';
+                item.style.transition = 'all 0.6s ease';
+                infoObserver.observe(item);
+            });
             
-            submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-            submitBtn.style.background = '#4CAF50';
+            // Animate contact form
+            const contactForm = document.querySelector('.contact-form-container');
             
-            // Show alert
-            alert('Thank you ' + name + '! We have received your message and will contact you within 24 hours on ' + email);
+            const formObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }, 300);
+                    }
+                });
+            }, { threshold: 0.3 });
             
-            // Reset form
-            this.reset();
+            if (contactForm) {
+                contactForm.style.opacity = '0';
+                contactForm.style.transform = 'translateY(30px)';
+                contactForm.style.transition = 'all 0.6s ease';
+                formObserver.observe(contactForm);
+            }
             
-            // Reset button after 3 seconds
-            setTimeout(() => {
-                submitBtn.innerHTML = originalText;
-                submitBtn.style.background = '#25D366';
-            }, 3000);
-        });
-        
-        // FAQ toggle
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', function() {
-                const item = this.parentElement;
-                item.classList.toggle('active');
+            // Animate quick buttons
+            const quickButtons = document.querySelectorAll('.quick-btn');
+            
+            const buttonObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }, index * 150);
+                    }
+                });
+            }, { threshold: 0.3 });
+            
+            quickButtons.forEach(button => {
+                button.style.opacity = '0';
+                button.style.transform = 'translateY(30px)';
+                button.style.transition = 'all 0.5s ease';
+                buttonObserver.observe(button);
+            });
+            
+            // FAQ functionality
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
                 
-                const icon = this.querySelector('i');
-                if(item.classList.contains('active')) {
+                question.addEventListener('click', function() {
+                    // Close all other FAQ items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                            const icon = otherItem.querySelector('.faq-question i');
+                            icon.classList.remove('fa-chevron-up');
+                            icon.classList.add('fa-chevron-down');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                    
+                    const icon = this.querySelector('i');
+                    if (item.classList.contains('active')) {
+                        icon.classList.remove('fa-chevron-down');
+                        icon.classList.add('fa-chevron-up');
+                    } else {
+                        icon.classList.remove('fa-chevron-up');
+                        icon.classList.add('fa-chevron-down');
+                    }
+                });
+            });
+            
+            // Auto open first FAQ
+            setTimeout(() => {
+                if (faqItems.length > 0) {
+                    faqItems[0].classList.add('active');
+                    const icon = faqItems[0].querySelector('.faq-question i');
                     icon.classList.remove('fa-chevron-down');
                     icon.classList.add('fa-chevron-up');
-                } else {
-                    icon.classList.remove('fa-chevron-up');
-                    icon.classList.add('fa-chevron-down');
                 }
+            }, 1000);
+            
+            // Form validation and enhancement
+            const contactFormElement = document.getElementById('contactForm');
+            if (contactFormElement) {
+                const websiteField = contactFormElement.querySelector('#website');
+                
+                if (websiteField) {
+                    websiteField.addEventListener('blur', function() {
+                        let value = this.value.trim();
+                        if (value && !value.startsWith('http')) {
+                            this.value = 'https://' + value;
+                        }
+                    });
+                }
+                
+                // Add focus effects to form inputs
+                const formInputs = contactFormElement.querySelectorAll('.form-control');
+                formInputs.forEach(input => {
+                    input.addEventListener('focus', function() {
+                        this.parentElement.style.transform = 'translateY(-5px)';
+                    });
+                    
+                    input.addEventListener('blur', function() {
+                        this.parentElement.style.transform = 'translateY(0)';
+                    });
+                });
+            }
+            
+            // Quick button hover effects
+            quickButtons.forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                
+                button.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
             });
         });
     </script>
