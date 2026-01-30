@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Page2Lead</title>
+    <meta name="description" content="Privacy Policy for Page2Lead. Learn how we collect, use, and protect your personal information.">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        :root {
+            --primary: #25D366;
+            --primary-dark: #1DA851;
+            --secondary: #128C7E;
+            --dark: #111;
+            --light: #f8f9fa;
+            --gray: #666;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: var(--white);
+            padding: 20px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo span {
+            color: var(--dark);
+        }
+        
+        .back-btn {
+            background: var(--primary);
+            color: var(--white);
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+        
+        .back-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, #f0fff4 0%, #e6f7ff 100%);
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+            font-weight: 800;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Content Section */
+        .content-section {
+            padding: 80px 0;
+            background: var(--white);
+        }
+        
+        .content-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .content-section h2 {
+            font-size: 2rem;
+            margin: 40px 0 20px;
+            color: var(--dark);
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        .content-section h2:first-child {
+            margin-top: 0;
+        }
+        
+        .content-section p {
+            margin-bottom: 20px;
+            color: var(--gray);
+            line-height: 1.8;
+        }
+        
+        .content-section ul, 
+        .content-section ol {
+            margin: 20px 0 30px 40px;
+        }
+        
+        .content-section li {
+            margin-bottom: 10px;
+            color: var(--gray);
+            line-height: 1.7;
+        }
+        
+        .content-section strong {
+            color: var(--dark);
+        }
+        
+        .highlight-box {
+            background: rgba(37, 211, 102, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .update-date {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 40px 0;
+            text-align: center;
+            border: 2px solid #e0e0e0;
+        }
+        
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 20px 0;
+            padding: 20px;
+            background: var(--light);
+            border-radius: 10px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .contact-info i {
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 100px 0 60px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .content-section {
+                padding: 60px 0;
+            }
+            
+            .content-section h2 {
+                font-size: 1.7rem;
+            }
+            
+            .content-section ul,
+            .content-section ol {
+                margin-left: 20px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .back-btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <i class="fas fa-rocket"></i>
+                <span>Page2Lead</span>
+            </a>
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p>Your privacy is important to us. This policy explains how we collect, use, and protect your information.</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="container content-container">
+            <div class="update-date">
+                <p><strong>Last Updated:</strong> January 15, 2024</p>
+                <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service.</p>
+            </div>
+
+            <h2>1. Interpretation and Definitions</h2>
+            <p><strong>Interpretation:</strong> The words of which the initial letter is capitalized have meanings defined under the following conditions.</p>
+            
+            <p><strong>Definitions:</strong> For the purposes of this Privacy Policy:</p>
+            <ul>
+                <li><strong>Account</strong> means a unique account created for You to access our Service.</li>
+                <li><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Page2Lead.</li>
+                <li><strong>Cookies</strong> are small files that are placed on Your computer, mobile device or any other device by a website.</li>
+                <li><strong>Device</strong> means any device that can access the Service such as a computer, a cellphone or a digital tablet.</li>
+                <li><strong>Personal Data</strong> is any information that relates to an identified or identifiable individual.</li>
+                <li><strong>Service</strong> refers to the Website.</li>
+                <li><strong>Service Provider</strong> means any natural or legal person who processes the data on behalf of the Company.</li>
+                <li><strong>Usage Data</strong> refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself.</li>
+                <li><strong>Website</strong> refers to Page2Lead, accessible from <a href="https://sohailk-cpu.github.io/Page2Lead" style="color: var(--primary);">https://sohailk-cpu.github.io/Page2Lead</a></li>
+                <li><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</li>
+            </ul>
+
+            <h2>2. Types of Data Collected</h2>
+            
+            <h3>Personal Data</h3>
+            <p>While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:</p>
+            <ul>
+                <li>Email address</li>
+                <li>First name and last name</li>
+                <li>Phone number</li>
+                <li>Business name</li>
+                <li>Website URL</li>
+                <li>Usage Data</li>
+            </ul>
+
+            <h3>Usage Data</h3>
+            <p>Usage Data is collected automatically when using the Service. Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</p>
+
+            <div class="highlight-box">
+                <h3>Cookies and Tracking Technologies</h3>
+                <p>We use Cookies and similar tracking technologies to track the activity on Our Service and store certain information. Tracking technologies used are beacons, tags, and scripts to collect and track information and to improve and analyze Our Service.</p>
+                <p>You can instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if You do not accept Cookies, You may not be able to use some parts of our Service.</p>
+            </div>
+
+            <h2>3. Use of Your Personal Data</h2>
+            <p>The Company may use Personal Data for the following purposes:</p>
+            <ul>
+                <li><strong>To provide and maintain our Service:</strong> Including to monitor the usage of our Service.</li>
+                <li><strong>To manage Your Account:</strong> To manage Your registration as a user of the Service.</li>
+                <li><strong>For the performance of a contract:</strong> The development, compliance and undertaking of the purchase contract for the products, items or services You have purchased.</li>
+                <li><strong>To contact You:</strong> To contact You by email, telephone calls, SMS, or other equivalent forms of electronic communication.</li>
+                <li><strong>To provide You</strong> with news, special offers and general information about other goods, services and events which we offer.</li>
+                <li><strong>To manage Your requests:</strong> To attend and manage Your requests to Us.</li>
+                <li><strong>For business transfers:</strong> We may use Your information to evaluate or conduct a merger, divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of Our assets.</li>
+                <li><strong>For other purposes:</strong> We may use Your information for other purposes, such as data analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Service, products, services, marketing and your experience.</li>
+            </ul>
+
+            <h2>4. Retention of Your Personal Data</h2>
+            <p>The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our legal agreements and policies.</p>
+            <p>The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of Our Service, or We are legally obligated to retain this data for longer time periods.</p>
+
+            <h2>5. Transfer of Your Personal Data</h2>
+            <p>Your information, including Personal Data, is processed at the Company's operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.</p>
+            <p>Your consent to this Privacy Policy followed by Your submission of such information represents Your agreement to that transfer.</p>
+            <p>The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of Your data and other personal information.</p>
+
+            <h2>6. Disclosure of Your Personal Data</h2>
+            
+            <h3>Business Transactions</h3>
+            <p>If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We will provide notice before Your Personal Data is transferred and becomes subject to a different Privacy Policy.</p>
+
+            <h3>Law enforcement</h3>
+            <p>Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).</p>
+
+            <h3>Other legal requirements</h3>
+            <p>The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:</p>
+            <ul>
+                <li>Comply with a legal obligation</li>
+                <li>Protect and defend the rights or property of the Company</li>
+                <li>Prevent or investigate possible wrongdoing in connection with the Service</li>
+                <li>Protect the personal safety of Users of the Service or the public</li>
+                <li>Protect against legal liability</li>
+            </ul>
+
+            <h2>7. Security of Your Personal Data</h2>
+            <p>The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.</p>
+
+            <div class="highlight-box">
+                <h3>Your Data Protection Rights</h3>
+                <p>Depending on Your location, you may have the following data protection rights:</p>
+                <ul>
+                    <li>The right to access – You have the right to request copies of your personal data.</li>
+                    <li>The right to rectification – You have the right to request that We correct any information you believe is inaccurate.</li>
+                    <li>The right to erasure – You have the right to request that We erase your personal data, under certain conditions.</li>
+                    <li>The right to restrict processing – You have the right to request that We restrict the processing of your personal data, under certain conditions.</li>
+                    <li>The right to object to processing – You have the right to object to Our processing of your personal data, under certain conditions.</li>
+                    <li>The right to data portability – You have the right to request that We transfer the data that We have collected to another organization, or directly to you, under certain conditions.</li>
+                </ul>
+            </div>
+
+            <h2>8. Children's Privacy</h2>
+            <p>Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware that We have collected Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to remove that information from Our servers.</p>
+
+            <h2>9. Links to Other Websites</h2>
+            <p>Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit.</p>
+            <p>We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.</p>
+
+            <h2>10. Changes to this Privacy Policy</h2>
+            <p>We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.</p>
+            <p>We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming effective and update the "Last updated" date at the top of this Privacy Policy.</p>
+            <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+
+            <h2>11. Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, You can contact us:</p>
+            
+            <div class="contact-info">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <p><strong>By email:</strong> contact@page2lead.com</p>
+                </div>
+            </div>
+            
+            <div class="contact-info">
+                <i class="fas fa-phone"></i>
+                <div>
+                    <p><strong>By phone:</strong> +91 82909 48499</p>
+                </div>
+            </div>
+            
+            <div class="contact-info">
+                <i class="fas fa-globe"></i>
+                <div>
+                    <p><strong>Through our website:</strong> <a href="contact.html" style="color: var(--primary);">Contact Page</a></p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <p><strong>Note:</strong> This privacy policy has been created with the help of legal templates and should be reviewed by a legal professional to ensure compliance with all applicable laws and regulations in your jurisdiction.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <a href="index.html" class="logo" style="font-size: 32px; color: var(--white); margin-bottom: 20px; display: inline-block;">
+                        <i class="fas fa-rocket"></i>
+                        <span>Page2Lead</span>
+                    </a>
+                    <p style="color: #aaa; margin-top: 20px; max-width: 300px;">High-converting landing pages for small businesses. Your privacy is our priority.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 style="color: var(--white); margin-bottom: 20px;">Legal</h3>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 style="color: var(--white); margin-bottom: 20px;">Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 style="color: var(--white); margin-bottom: 20px;">Contact</h3>
+                    <p style="color: #aaa; margin-bottom: 10px;">
+                        <i class="fas fa-phone"></i> +91 82909 48499
+                    </p>
+                    <p style="color: #aaa; margin-bottom: 10px;">
+                        <i class="fas fa-envelope"></i> contact@page2lead.com
+                    </p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2024 Page2Lead. All rights reserved. | <a href="privacy.html" style="color: var(--primary);">Privacy Policy</a> | <a href="terms.html" style="color: var(--primary);">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
