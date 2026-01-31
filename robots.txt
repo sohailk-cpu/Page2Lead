@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /private/
 
-Sitemap: https://sohailk-cpu.github.io/Page2Lead/sitemap.xml
+Sitemap: https://page2lead.in/sitemap.xml
