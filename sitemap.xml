@@ -1,33 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://sohailk-cpu.github.io/Page2Lead/</loc>
-    <lastmod>2024-01-14</lastmod>
+    <loc>https://page2lead.in/</loc>
+    <lastmod>2024-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://sohailk-cpu.github.io/Page2Lead/services.html</loc>
-    <lastmod>2024-01-14</lastmod>
+    <loc>https://page2lead.in/services.html</loc>
+    <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://sohailk-cpu.github.io/Page2Lead/portfolio.html</loc>
-    <lastmod>2024-01-14</lastmod>
+    <loc>https://page2lead.in/portfolio.html</loc>
+    <lastmod>2024-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://sohailk-cpu.github.io/Page2Lead/blog.html</loc>
-    <lastmod>2024-01-14</lastmod>
+    <loc>https://page2lead.in/blog.html</loc>
+    <lastmod>2024-01-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sohailk-cpu.github.io/Page2Lead/contact.html</loc>
-    <lastmod>2024-01-14</lastmod>
+    <loc>https://page2lead.in/contact.html</loc>
+    <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://page2lead.in/privacy.html</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://page2lead.in/terms.html</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>
