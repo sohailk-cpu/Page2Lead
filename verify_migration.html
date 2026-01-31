@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Migration Verification - Page2Lead</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        .success { color: green; }
+        .error { color: red; }
+        .warning { color: orange; }
+    </style>
+</head>
+<body>
+    <h1>Page2Lead.in Migration Verification</h1>
+    
+    <h2>1. Domain Verification</h2>
+    <p id="domain-check">Checking...</p>
+    
+    <h2>2. SSL Verification</h2>
+    <p id="ssl-check">Checking...</p>
+    
+    <h2>3. Page Load Test</h2>
+    <div id="page-tests">
+        <p>Homepage: <span id="home-check">Testing...</span></p>
+        <p>Services: <span id="services-check">Testing...</span></p>
+        <p>Portfolio: <span id="portfolio-check">Testing...</span></p>
+        <p>Contact: <span id="contact-check">Testing...</span></p>
+    </div>
+    
+    <script>
+        // Verification script
+        console.log('Page2Lead Migration Verification');
+        console.log('Domain: page2lead.in');
+        console.log('Date: ' + new Date().toLocaleDateString());
+        
+        // Check current domain
+        document.getElementById('domain-check').innerHTML = 
+            window.location.hostname === 'page2lead.in' ? 
+            '<span class="success">✅ Correct domain</span>' : 
+            '<span class="error">❌ Wrong domain</span>';
+        
+        // Check SSL
+        document.getElementById('ssl-check').innerHTML = 
+            window.location.protocol === 'https:' ? 
+            '<span class="success">✅ HTTPS Enabled</span>' : 
+            '<span class="warning">⚠️ Not HTTPS</span>';
+    </script>
+</body>
+</html>
