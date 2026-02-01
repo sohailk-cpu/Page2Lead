@@ -380,6 +380,14 @@
     
     <script>
         // Admin Dashboard Script
+        // Track page views
+function trackPageView(page) {
+    db.collection('analytics').add({
+        page: page,
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent
+    });
+}
         
         // Check authentication
         auth.onAuthStateChanged((user) => {
