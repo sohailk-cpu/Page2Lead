@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Admin User</title>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+    
+    <script>
+        // Your Firebase config
+        const firebaseConfig = {
+          apiKey: "AIzaSyDDqDXUNkhq2uNvtutkSS_opIC9V2Prnh0",
+          authDomain: "page2lead.firebaseapp.com",
+          projectId: "page2lead",
+          storageBucket: "page2lead.firebasestorage.app",
+          messagingSenderId: "976763674892",
+          appId: "1:976763674892:web:4f7f6695ebec6f3fdbe929"
+        };
+        
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        
+        async function createAdmin() {
+            const email = prompt("Enter admin email:");
+            const password = prompt("Enter admin password:");
+            
+            if (!email || !password) return;
+            
+            try {
+                // Create user
+                const userCredential = await auth.createUserWithEmailAndPassword(email, password);
+                alert(`✅ Admin user created successfully!\nEmail: ${email}`);
+                
+                // Optional: Send verification email
+                await userCredential.user.sendEmailVerification();
+                alert('Verification email sent!');
+                
+            } catch (error) {
+                alert(`❌ Error: ${error.message}`);
+            }
+        }
+        
+        createAdmin();
+    </script>
+</head>
+<body>
+    <h1>Creating Admin User...</h1>
+    <p>Check the prompt above.</p>
+</body>
+</html>
