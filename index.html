@@ -40,6 +40,8 @@
 <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-storage.js"></script>
 
 <!-- Your Firebase Config -->
+             <!-- Firebase Forms Handler -->
+<script src="/firebase-forms.js"></script>
 <script src="/firebase-config.js"></script>
 
 <!-- Preconnect to important domains -->
@@ -780,11 +782,8 @@
                 testimonialIndex = (testimonialIndex + 1) % testimonials.length;
                 showTestimonial(testimonialIndex);
             }, 8000);
-
-            <!-- Firebase Forms Handler -->
-<script src="/firebase-forms.js"></script>
-            
-            // contact-form.js - Add this to contact.html
+        });
+                    // contact-form.js - Add this to contact.html
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     
@@ -857,7 +856,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-        });
+
     </script>
 </body>
 </html>
