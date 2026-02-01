@@ -606,7 +606,7 @@
                 <!-- Contact Form -->
                 <div class="contact-form-container">
                     <h3>Send us a Message</h3>
-                    <form id="contactForm" action="https://formspree.io/f/xreebbvr" method="POST">
+                    <form id="contactForm">
                         <!-- Hidden fields for Formspree -->
                         <input type="hidden" name="_subject" value="New Contact from Page2Lead Website">
                         <input type="hidden" name="_replyto" value="%email%">
@@ -1027,6 +1027,80 @@
                 });
             });
         });
+
+        // contact-form.js - Add this to contact.html
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    
+    if (!contactForm) return;
+    
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Get form values
+        const formData = {
+            name: document.getElementById('name').value.trim(),
+            email: document.getElementById('email').value.trim(),
+            phone: document.getElementById('phone').value.trim(),
+            website: document.getElementById('website').value.trim(),
+            service: document.getElementById('service').value,
+            message: document.getElementById('message').value.trim(),
+            timestamp: new Date().toISOString(),
+            status: 'new',
+            source: 'website'
+        };
+        
+        // Validate
+        if (!formData.name || !formData.email || !formData.message) {
+            alert('Please fill all required fields');
+            return;
+        }
+        
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        
+        // Show loading
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        submitBtn.disabled = true;
+        
+        try {
+            // Save to Firebase
+            const docRef = await db.collection('contacts').add(formData);
+            console.log('Contact saved with ID: ', docRef.id);
+            
+            // Send WhatsApp notification
+            const whatsappMessage = `New Contact from Website:%0A%0AName: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0AService: ${formData.service}%0AMessage: ${formData.message.substring(0, 100)}...`;
+            window.open(`https://wa.me/918290948499?text=${whatsappMessage}`, '_blank');
+            
+            // Show success
+            submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+            submitBtn.style.background = '#4CAF50';
+            
+            // Reset form
+            this.reset();
+            
+            // Show success message
+            alert(`Thank you ${formData.name}! We've received your message and will contact you within 24 hours.`);
+            
+        } catch (error) {
+            console.error('Error saving contact: ', error);
+            
+            // Show error
+            submitBtn.innerHTML = '<i class="fas fa-exclamation-circle"></i> Error!';
+            submitBtn.style.background = '#dc3545';
+            
+            alert('There was an error sending your message. Please try again or WhatsApp us directly.');
+            
+        } finally {
+            // Reset button after 3 seconds
+            setTimeout(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.style.background = '';
+                submitBtn.disabled = false;
+            }, 3000);
+        }
+    });
+});
     </script>
 </body>
 </html>
