@@ -33,16 +33,13 @@
 
 <!-- Alternate Languages (if you have multilingual site) -->
 <!-- <link rel="alternate" hreflang="hi" href="https://yoursite.com/hi/" /> -->
-    <!-- Firebase SDK -->
-<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-storage.js"></script>
 
 <!-- Your Firebase Config -->
-             <!-- Firebase Forms Handler -->
-<script src="firebase-forms.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
 <script src="firebase-config.js"></script>
+
 
 <!-- Preconnect to important domains -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -367,6 +364,15 @@
                 justify-content: center;
             }
         }
+
+        .contact-form .submit-btn:disabled,
+.contact-form .submit-btn:disabled:hover {
+    background: #ffffff !important;
+    color: #000000 !important;
+    opacity: 0.8;
+    transform: none !important;
+}
+
     </style>
     
     <!-- Google Search Console Verification -->
@@ -782,81 +788,87 @@
                 testimonialIndex = (testimonialIndex + 1) % testimonials.length;
                 showTestimonial(testimonialIndex);
             }, 8000);
-        });
-                    // contact-form.js - Add this to contact.html
-document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.getElementById('contactForm');
-    
-    if (!contactForm) return;
-    
-    contactForm.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
-        // Get form values
-        const formData = {
-            name: document.getElementById('name').value.trim(),
-            email: document.getElementById('email').value.trim(),
-            phone: document.getElementById('phone').value.trim(),
-            website: document.getElementById('website').value.trim(),
-            service: document.getElementById('service').value,
-            message: document.getElementById('message').value.trim(),
-            timestamp: new Date().toISOString(),
-            status: 'new',
-            source: 'website'
-        };
-        
-        // Validate
-        if (!formData.name || !formData.email || !formData.message) {
-            alert('Please fill all required fields');
-            return;
-        }
-        
-        const submitBtn = this.querySelector('button[type="submit"]');
-        const originalText = submitBtn.innerHTML;
-        
-        // Show loading
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-        submitBtn.disabled = true;
-        
-        try {
-            // Save to Firebase
-            const docRef = await db.collection('contacts').add(formData);
-            console.log('Contact saved with ID: ', docRef.id);
-            
-            // Send WhatsApp notification
-            const whatsappMessage = `New Contact from Website:%0A%0AName: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0AService: ${formData.service}%0AMessage: ${formData.message.substring(0, 100)}...`;
-            window.open(`https://wa.me/918290948499?text=${whatsappMessage}`, '_blank');
-            
-            // Show success
-            submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-            submitBtn.style.background = '#4CAF50';
-            
-            // Reset form
-            this.reset();
-            
-            // Show success message
-            alert(`Thank you ${formData.name}! We've received your message and will contact you within 24 hours.`);
-            
-        } catch (error) {
-            console.error('Error saving contact: ', error);
-            
-            // Show error
-            submitBtn.innerHTML = '<i class="fas fa-exclamation-circle"></i> Error!';
-            submitBtn.style.background = '#dc3545';
-            
-            alert('There was an error sending your message. Please try again or WhatsApp us directly.');
-            
-        } finally {
-            // Reset button after 3 seconds
-            setTimeout(() => {
-                submitBtn.innerHTML = originalText;
-                submitBtn.style.background = '';
-                submitBtn.disabled = false;
-            }, 3000);
-        }
-    });
+
+
+
+
+const form = document.getElementById("contactForm");
+if(!form) return;
+
+form.addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const formData = {
+    name: form.querySelector('[name="name"]').value.trim(),
+    email: form.querySelector('[name="email"]').value.trim(),
+    phone: form.querySelector('[name="phone"]').value.trim(),
+    website: form.querySelector('[name="website"]').value.trim(),
+    message: form.querySelector('[name="message"]').value.trim(),
+    createdAt: new Date()
+  };
+
+  if(!formData.name || !formData.email || !formData.message){
+    alert("Please fill all required fields");
+    return;
+  }
+
+  const btn = form.querySelector("button");
+  btn.innerHTML = "Sending...";
+  btn.disabled = true;
+
+  btn.style.background = "#ffffff";
+  btn.style.color = "#000000";
+
+  db.collection("leads").add(formData)
+  .then((docRef) => {
+
+    console.log("Document written with ID:", docRef.id);
+
+    const msg =
+`New Lead - Page2Lead
+
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Website: ${formData.website}
+Message: ${formData.message}`;
+
+    btn.innerHTML = "Message Sent ✓";
+    btn.style.background = "#4CAF50";
+    btn.style.color = "#ffffff";
+
+    window.open(
+      "https://wa.me/918290948499?text=" + encodeURIComponent(msg),
+      "_blank"
+    );
+
+    form.reset();
+
+  })
+  .catch((error) => {
+
+    console.error("Error adding document:", error);
+
+    btn.innerHTML = "Error";
+    btn.style.background = "#dc3545";
+    btn.style.color = "#ffffff";
+
+  })
+  .finally(()=>{
+
+    setTimeout(()=>{
+      btn.innerHTML = "Get Free Audit";
+      btn.style.background = "";
+      btn.style.color = "";
+      btn.disabled = false;
+    },2000);
+
+  });
+
+
 });
 
-    </script>
+});
+</script>
 </body>
 </html>
