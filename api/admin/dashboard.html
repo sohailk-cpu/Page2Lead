@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page2Lead Admin Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { background: #f1f5f9; }
+        .header { background: linear-gradient(135deg, #0f172a, #1e293b); color: white; padding: 20px; position: sticky; top: 0; z-index: 100; }
+        .header-content { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+        .header h1 { font-size: 1.8rem; }
+        .header h1 span { color: #25D366; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+
+        .stats-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 15px; margin: 20px 0; }
+        .stat-card { background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; text-align: center; }
+        .stat-number { font-size: 2rem; font-weight: bold; color: #2563eb; }
+        .stat-number.green { color: #16a34a; }
+        .stat-number.orange { color: #ea580c; }
+        .stat-label { color: #64748b; font-size: 0.85rem; margin-top: 5px; }
+
+        .tabs { display: flex; gap: 10px; margin: 20px 0; flex-wrap: wrap; }
+        .tab { padding: 12px 24px; background: white; border: 1px solid #e2e8f0; border-radius: 40px; cursor: pointer; font-weight: 500; transition: all 0.2s; }
+        .tab.active { background: #2563eb; color: white; border-color: #2563eb; }
+        .tab:hover:not(.active) { background: #f8fafc; }
+
+        .card { background: white; border-radius: 20px; padding: 25px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 15px; }
+
+        .btn { background: #2563eb; color: white; border: none; padding: 10px 20px; border-radius: 40px; cursor: pointer; font-weight: 500; transition: all 0.2s; text-decoration: none; display: inline-block; }
+        .btn:hover { background: #1d4ed8; transform: translateY(-1px); }
+        .btn-outline { background: white; color: #2563eb; border: 2px solid #2563eb; }
+        .btn-outline:hover { background: #2563eb; color: white; }
+        .btn-success { background: #25D366; }
+        .btn-success:hover { background: #128C7E; }
+        .btn-danger { background: #dc2626; }
+        .btn-danger:hover { background: #b91c1c; }
+        .btn-warning { background: #f59e0b; color: white; }
+        .btn-warning:hover { background: #d97706; }
+        .btn-small { padding: 6px 12px; font-size: 0.85rem; }
+
+        table { width: 100%; border-collapse: collapse; }
+        th { text-align: left; padding: 15px 12px; background: #f8fafc; font-weight: 600; color: #475569; border-bottom: 2px solid #e2e8f0; }
+        td { padding: 12px; border-bottom: 1px solid #e2e8f0; font-size: 0.95rem; }
+        tr:hover td { background: #f8fafc; }
+
+        .badge { padding: 4px 12px; border-radius: 40px; font-size: 0.8rem; display: inline-block; font-weight: 600; }
+        .badge-new { background: #dbeafe; color: #1e40af; }
+        .badge-sent { background: #fef9c3; color: #854d0e; }
+        .badge-responded { background: #fed7aa; color: #9a3412; }
+        .badge-converted { background: #dcfce7; color: #166534; }
+        .badge-closed { background: #f1f5f9; color: #475569; }
+        .badge-online { background: #dcfce7; color: #166534; }
+        .badge-offline { background: #fee2e2; color: #991b1b; }
+        .badge-trial { background: #fef9c3; color: #854d0e; }
+        .badge-paid { background: #dbeafe; color: #1e40af; }
+
+        .providers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 20px; margin-top: 20px; }
+        .provider-card { background: white; border: 1px solid #e2e8f0; border-radius: 16px; padding: 20px; transition: all 0.2s; }
+        .provider-card:hover { box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        .provider-card.offline { border-left: 4px solid #dc2626; }
+        .provider-card.online { border-left: 4px solid #25D366; }
+        .provider-header { display: flex; justify-content: space-between; align-items: start; margin-bottom: 12px; }
+        .provider-name h3 { font-size: 1.1rem; margin-bottom: 3px; }
+        .provider-business { color: #2563eb; font-weight: 500; font-size: 0.9rem; }
+        .provider-detail { margin: 6px 0; color: #475569; font-size: 0.9rem; }
+        .provider-actions { display: flex; gap: 8px; margin-top: 15px; flex-wrap: wrap; }
+        .credits-bar { background: #f1f5f9; border-radius: 8px; padding: 8px 12px; margin: 8px 0; font-size: 0.85rem; }
+
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); justify-content: center; align-items: center; z-index: 1000; backdrop-filter: blur(5px); }
+        .modal.open { display: flex; }
+        .modal-content { background: white; padding: 30px; border-radius: 24px; max-width: 600px; width: 90%; max-height: 90vh; overflow-y: auto; }
+        .modal-content h3 { font-size: 1.6rem; margin-bottom: 20px; color: #0f172a; }
+        .form-group { margin-bottom: 18px; }
+        .form-group label { display: block; margin-bottom: 6px; font-weight: 500; color: #475569; font-size: 0.9rem; }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px 16px; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 1rem; transition: all 0.2s; }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: #2563eb; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .modal-actions { display: flex; gap: 15px; margin-top: 20px; }
+        .search-box { padding: 10px 20px; border: 2px solid #e2e8f0; border-radius: 40px; width: 280px; font-size: 0.95rem; outline: none; }
+        .filter-tabs { display: flex; gap: 8px; margin: 15px 0; flex-wrap: wrap; }
+        .filter-tab { padding: 6px 16px; border-radius: 40px; background: #f1f5f9; cursor: pointer; font-size: 0.85rem; border: none; }
+        .filter-tab.active { background: #2563eb; color: white; }
+        .status-select { padding: 5px 8px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 0.82rem; cursor: pointer; background: white; }
+        .whatsapp-box { background: #e8f5e9; padding: 15px; border-radius: 12px; margin: 15px 0; border-left: 4px solid #25D366; }
+        .toggle-btn { padding: 6px 14px; border-radius: 40px; border: none; cursor: pointer; font-size: 0.8rem; font-weight: 600; }
+        .toggle-to-offline { background: #fee2e2; color: #991b1b; }
+        .toggle-to-online { background: #dcfce7; color: #166534; }
+
+        @media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 600px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .providers-grid { grid-template-columns: 1fr; } .form-row { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="header-content">
+        <h1>Page2<span>Lead</span> Admin</h1>
+        <div style="display:flex; align-items:center; gap:15px;">
+            <span id="liveTime" style="color:#94a3b8; font-size:0.9rem;"></span>
+            <span class="badge badge-online">🟢 Live</span>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- Stats -->
+    <div class="stats-grid">
+        <div class="stat-card"><div class="stat-number" id="totalLeads">0</div><div class="stat-label">Total Leads</div></div>
+        <div class="stat-card"><div class="stat-number orange" id="todayLeads">0</div><div class="stat-label">Aaj ke Leads</div></div>
+        <div class="stat-card"><div class="stat-number" id="newLeads">0</div><div class="stat-label">New Leads</div></div>
+        <div class="stat-card"><div class="stat-number green" id="convertedLeads">0</div><div class="stat-label">Converted</div></div>
+        <div class="stat-card"><div class="stat-number" id="totalProviders">0</div><div class="stat-label">Providers</div></div>
+        <div class="stat-card"><div class="stat-number green" id="onlineProviders">0</div><div class="stat-label">Online Now</div></div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <div class="tab active" id="tabLeads" onclick="switchTab('leads')">📋 Leads</div>
+        <div class="tab" id="tabProviders" onclick="switchTab('providers')">🔧 Providers</div>
+        <div class="tab" id="tabAlerts" onclick="switchTab('alerts')">🚨 Alerts <span id="alertBadge" style="background:#dc2626;color:white;border-radius:40px;padding:2px 8px;font-size:0.75rem;display:none;">0</span></div>
+        <div class="tab" id="tabPricing" onclick="switchTab('pricing')">💰 Lead Pricing</div>
+        <div class="tab" id="tabReplace" onclick="switchTab('replace')">🔄 Replace Requests <span id="replaceBadge" style="background:#f59e0b;color:white;border-radius:40px;padding:2px 8px;font-size:0.75rem;display:none;">0</span></div>
+    </div>
+
+    <!-- Leads Section -->
+    <div id="leadsSection">
+        <div class="card">
+            <div class="card-header">
+                <h2>📋 All Leads</h2>
+                <input type="text" class="search-box" id="leadSearch" placeholder="🔍 Search leads..." oninput="searchLeads()">
+            </div>
+            <div style="overflow-x:auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Time</th>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Service</th>
+                            <th>Area</th>
+                            <th>Problem</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leadsBody">
+                        <tr><td colspan="9" style="text-align:center;padding:40px;color:#64748b;">Loading...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Providers Section -->
+    <div id="providersSection" style="display:none;">
+        <div class="card">
+            <div class="card-header">
+                <h2>🔧 Providers</h2>
+                <div style="display:flex;gap:10px;flex-wrap:wrap;">
+                    <input type="text" class="search-box" id="providerSearch" placeholder="🔍 Search..." oninput="searchProviders()">
+                    <button class="btn" onclick="openAddProviderModal()">+ Add Provider</button>
+                </div>
+            </div>
+            <div class="filter-tabs">
+                <button class="filter-tab active" onclick="filterProviders('all', this)">All</button>
+                <button class="filter-tab" onclick="filterProviders('AC Repair', this)">AC Repair</button>
+                <button class="filter-tab" onclick="filterProviders('Plumber', this)">Plumber</button>
+                <button class="filter-tab" onclick="filterProviders('Electrician', this)">Electrician</button>
+                <button class="filter-tab" onclick="filterProviders('Cleaning', this)">Cleaning</button>
+                <button class="filter-tab" onclick="filterProviders('Pest Control', this)">Pest Control</button>
+            </div>
+            <div id="providersGrid" class="providers-grid"></div>
+        </div>
+    </div>
+
+    <!-- Alerts Section -->
+    <div id="alertsSection" style="display:none;">
+        <div class="card">
+            <div class="card-header">
+                <h2>🚨 Provider Alerts</h2>
+                <small style="color:#64748b;">Trial khatam ya credits zero hone pe yahan dikhega</small>
+            </div>
+            <div id="alertsList">
+                <p style="color:#64748b;padding:20px;text-align:center;">Loading...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pricing Section -->
+    <div id="pricingSection" style="display:none;">
+        <div class="card">
+            <div class="card-header">
+                <h2>💰 Lead Pricing</h2>
+                <small style="color:#64748b;">Har service ke liye lead ka price set karo — provider ke credits is price pe katenge</small>
+            </div>
+            <div id="pricingList"></div>
+        </div>
+    </div>
+
+    <!-- Replace Requests Section -->
+    <div id="replaceSection" style="display:none;">
+        <div class="card">
+            <div class="card-header">
+                <h2>🔄 Replace Requests</h2>
+                <div style="display:flex;gap:10px;flex-wrap:wrap;">
+                    <button class="btn" onclick="openAddReplaceModal()">+ Add Request</button>
+                </div>
+            </div>
+            <p style="color:#64748b;font-size:0.9rem;margin-bottom:20px;padding:0 0 15px;border-bottom:1px solid #e2e8f0;">
+                Provider ne WhatsApp pe fake/invalid lead report ki ho toh yahan add karo. Approve karne pe credit automatic wapas ho jaayega.
+            </p>
+            <div id="replaceList"></div>
+        </div>
+    </div>
+
+</div>
+
+<!-- REFUND MODAL -->
+<div class="modal" id="refundModal">
+    <div class="modal-content" style="max-width:420px;">
+        <h3>🔄 Credit Refund Karo</h3>
+        <input type="hidden" id="refundProviderId">
+        <p style="margin-bottom:15px;color:#475569;">Provider: <strong id="refundProviderName"></strong></p>
+        <div class="form-group">
+            <label>Kitne Credits Wapas Karne Hain?</label>
+            <select id="refundCredits">
+                <option value="1">1 Credit</option>
+                <option value="2">2 Credits</option>
+                <option value="3">3 Credits</option>
+                <option value="5">5 Credits</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Reason</label>
+            <select id="refundReason">
+                <option value="Fake lead reported by provider">Fake lead reported by provider</option>
+                <option value="Invalid phone number in lead">Invalid phone number in lead</option>
+                <option value="Wrong service type in lead">Wrong service type in lead</option>
+                <option value="Duplicate lead">Duplicate lead</option>
+                <option value="Manual adjustment by admin">Manual adjustment by admin</option>
+            </select>
+        </div>
+        <div class="modal-actions">
+            <button class="btn" style="flex:1;background:#16a34a;" onclick="processRefund()">✅ Refund Karo</button>
+            <button class="btn btn-outline" style="flex:1;" onclick="closeModal('refundModal')">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<!-- ADD REPLACE REQUEST MODAL -->
+<div class="modal" id="addReplaceModal">
+    <div class="modal-content" style="max-width:500px;">
+        <h3>➕ Replace Request Add Karo</h3>
+        <p style="color:#64748b;margin-bottom:20px;font-size:0.9rem;">Provider ne WhatsApp pe report kiya — yahan add karo taaki record rahe aur credit automatically manage ho.</p>
+        <div class="form-group">
+            <label>Provider Select Karo *</label>
+            <select id="replaceProvider"></select>
+        </div>
+        <div class="form-group">
+            <label>Lead ID *</label>
+            <input type="number" id="replaceLeadId" placeholder="Lead ka ID enter karo (dashboard mein # ke baad wala number)">
+        </div>
+        <div class="form-group">
+            <label>Reason</label>
+            <select id="replaceReason">
+                <option value="Fake lead reported by provider">Fake lead — provider ne report kiya</option>
+                <option value="Invalid phone number in lead">Invalid phone number</option>
+                <option value="Wrong service type in lead">Wrong service type</option>
+                <option value="Duplicate lead">Duplicate lead</option>
+                <option value="Customer not reachable">Customer not reachable</option>
+            </select>
+        </div>
+        <div class="modal-actions">
+            <button class="btn" style="flex:1;" onclick="submitReplaceRequest()">Add Request</button>
+            <button class="btn btn-outline" style="flex:1;" onclick="closeModal('addReplaceModal')">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<!-- SEND LEAD MODAL -->
+<div class="modal" id="sendLeadModal">
+    <div class="modal-content">
+        <h3>📤 Lead Bhejo</h3>
+        <div style="background:#f8fafc;padding:15px;border-radius:12px;margin-bottom:20px;">
+            <p><strong>Customer:</strong> <span id="modalName"></span></p>
+            <p style="margin-top:6px;"><strong>Phone:</strong> <span id="modalPhone"></span></p>
+            <p style="margin-top:6px;"><strong>Service:</strong> <span id="modalService"></span></p>
+            <p style="margin-top:6px;"><strong>Area:</strong> <span id="modalArea"></span></p>
+            <p style="margin-top:6px;"><strong>Problem:</strong> <span id="modalProblem"></span></p>
+        </div>
+        <div class="form-group">
+            <label>Provider Select Karo</label>
+            <select id="providerSelect"></select>
+        </div>
+        <div class="form-group">
+            <label>Kaise Bhejoge</label>
+            <select id="sentVia" onchange="toggleWhatsappBox()">
+                <option value="whatsapp">📱 WhatsApp</option>
+                <option value="call">📞 Phone Call</option>
+                <option value="sms">💬 SMS</option>
+            </select>
+        </div>
+        <div class="whatsapp-box" id="whatsappBox">
+            <p style="font-weight:600;margin-bottom:8px;">📱 WhatsApp Message:</p>
+            <pre id="msgPreview" style="font-size:0.82rem;color:#075e54;white-space:pre-wrap;word-break:break-word;"></pre>
+        </div>
+        <div class="modal-actions">
+            <button class="btn btn-success" style="flex:1;" onclick="sendLead()">📱 Send Karo</button>
+            <button class="btn btn-outline" style="flex:1;" onclick="closeModal('sendLeadModal')">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<!-- CREDITS MODAL -->
+<div class="modal" id="creditsModal">
+    <div class="modal-content" style="max-width:400px;">
+        <h3>💳 Credits Add Karo</h3>
+        <input type="hidden" id="creditProviderId">
+        <p style="margin-bottom:15px;color:#475569;">Provider: <strong id="creditProviderName"></strong></p>
+        <div class="form-group">
+            <label>Package Select Karo</label>
+            <select id="creditsAmount">
+                <option value="5">5 Credits — Rs.400</option>
+                <option value="10">10 Credits — Rs.800</option>
+                <option value="25">25 Credits — Rs.1,800</option>
+                <option value="50">50 Credits — Rs.3,200</option>
+            </select>
+        </div>
+        <div class="modal-actions">
+            <button class="btn" style="flex:1;" onclick="addCredits()">✅ Add Karo</button>
+            <button class="btn btn-outline" style="flex:1;" onclick="closeModal('creditsModal')">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<!-- PROVIDER ADD/EDIT MODAL -->
+<div class="modal" id="providerModal">
+    <div class="modal-content">
+        <h3 id="providerModalTitle">Add New Provider</h3>
+        <input type="hidden" id="providerId">
+        <div class="form-row">
+            <div class="form-group">
+                <label>Name *</label>
+                <input type="text" id="providerName" placeholder="Full name">
+            </div>
+            <div class="form-group">
+                <label>Business Name</label>
+                <input type="text" id="providerBusiness" placeholder="Business name">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label>Phone *</label>
+                <input type="tel" id="providerPhone" placeholder="9829XXXXXX">
+            </div>
+            <div class="form-group">
+                <label>WhatsApp Number *</label>
+                <input type="tel" id="providerWhatsapp" placeholder="919829XXXXXX">
+                <small style="color:#64748b;">Country code ke saath (91XXXXXXXXXX)</small>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label>Service Type *</label>
+                <select id="providerService">
+                    <option value="">Select Service</option>
+                    <option value="AC Repair">AC Repair</option>
+                    <option value="Plumber">Plumber</option>
+                    <option value="Electrician">Electrician</option>
+                    <option value="Cleaning">Cleaning</option>
+                    <option value="Pest Control">Pest Control</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>City</label>
+                <input type="text" id="providerCity" value="Ajmer">
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Areas Served</label>
+            <input type="text" id="providerAreas" placeholder="e.g., Vaishali Nagar, Ana Sagar">
+        </div>
+        <div class="form-group">
+            <label>Price Range</label>
+            <input type="text" id="providerPrice" placeholder="e.g., Rs.300-1000">
+        </div>
+        <div class="form-group">
+            <label>Notes</label>
+            <textarea id="providerNotes" rows="2" placeholder="Koi aur info..."></textarea>
+        </div>
+        <div class="modal-actions">
+            <button class="btn" style="flex:1;" onclick="saveProvider()">Save Karo</button>
+            <button class="btn btn-outline" style="flex:1;" onclick="closeModal('providerModal')">Cancel</button>
+        </div>
+    </div>
+    <!-- Alerts Section -->
+    <div id="alertsSection" style="display:none;">
+        <div class="card">
+            <div class="card-header">
+                <h2>🚨 Provider Alerts</h2>
+                <small style="color:#64748b;">Trial khatam ya credits zero hone pe yahan dikhega</small>
+            </div>
+            <div id="alertsList"></div>
+        </div>
+    </div>
+
+</div>
+
+<!-- DELETE MODAL -->
+<div class="modal" id="deleteModal">
+    <div class="modal-content" style="max-width:400px;">
+        <h3 style="color:#dc2626;">Delete Provider</h3>
+        <p style="margin:20px 0;">Kya aap <strong id="deleteProviderName"></strong> ko delete karna chahte ho?</p>
+        <div class="modal-actions">
+            <button class="btn btn-danger" style="flex:1;" onclick="confirmDelete()">Haan, Delete</button>
+            <button class="btn btn-outline" style="flex:1;" onclick="closeModal('deleteModal')">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    var allLeads = [];
+    var allProviders = [];
+    var currentLeadId = null;
+    var currentProviderId = null;
+    var currentFilter = 'all';
+
+    // Live clock
+    setInterval(function() {
+        document.getElementById('liveTime').textContent = new Date().toLocaleTimeString('en-IN', { timeZone: 'Asia/Kolkata' });
+    }, 1000);
+
+    // ---- TAB SWITCH ----
+    function switchTab(tab) {
+        document.getElementById('leadsSection').style.display    = tab === 'leads'    ? 'block' : 'none';
+        document.getElementById('providersSection').style.display = tab === 'providers'? 'block' : 'none';
+        document.getElementById('alertsSection').style.display   = tab === 'alerts'   ? 'block' : 'none';
+        document.getElementById('pricingSection').style.display  = tab === 'pricing'  ? 'block' : 'none';
+        document.getElementById('replaceSection').style.display  = tab === 'replace'  ? 'block' : 'none';
+        ['Leads','Providers','Alerts','Pricing','Replace'].forEach(function(t) {
+            var el = document.getElementById('tab' + t);
+            if (el) el.className = 'tab' + (tab === t.toLowerCase() ? ' active' : '');
+        });
+        if (tab === 'providers') loadProviders();
+        if (tab === 'alerts')    loadAlerts();
+        if (tab === 'pricing')   loadPricing();
+        if (tab === 'replace')   loadReplaceRequests();
+    }
+
+    // ---- MODAL ----
+    function openModal(id) { document.getElementById(id).classList.add('open'); }
+    function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+    window.onclick = function(e) {
+        var modals = document.querySelectorAll('.modal');
+        modals.forEach(function(m) { if (e.target === m) m.classList.remove('open'); });
+    };
+
+    // ---- STATS ----
+    function loadStats() {
+        fetch('/api/admin/stats').then(function(r) { return r.json(); }).then(function(data) {
+            document.getElementById('totalLeads').textContent = data.data.total_leads || 0;
+            document.getElementById('todayLeads').textContent = data.data.today_leads || 0;
+            document.getElementById('newLeads').textContent = data.data.new_leads || 0;
+            document.getElementById('convertedLeads').textContent = data.data.converted_leads || 0;
+            document.getElementById('totalProviders').textContent = data.data.total_providers || 0;
+            document.getElementById('onlineProviders').textContent = data.data.online_providers || 0;
+        });
+    }
+
+    // ---- LEADS ----
+    function loadLeads() {
+        fetch('/api/admin/leads').then(function(r) { return r.json(); }).then(function(data) {
+            allLeads = data.data || [];
+            displayLeads(allLeads);
+        });
+    }
+
+    function displayLeads(leads) {
+        var tbody = document.getElementById('leadsBody');
+        if (leads.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="9" style="text-align:center;padding:40px;color:#64748b;">Abhi koi lead nahi aaya</td></tr>';
+            return;
+        }
+        var html = '';
+        var statusList = ['new','sent','responded','converted','closed'];
+        leads.slice(0, 50).forEach(function(lead) {
+            var dt = new Date(lead.created_at);
+            var time = dt.toLocaleDateString('en-IN') + ' ' + dt.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' });
+            var opts = statusList.map(function(s) {
+                return '<option value="' + s + '"' + (lead.status === s ? ' selected' : '') + '>' + s + '</option>';
+            }).join('');
+            html += '<tr>' +
+                '<td>#' + lead.id + '</td>' +
+                '<td style="font-size:0.8rem;white-space:nowrap;">' + time + '</td>' +
+                '<td><strong>' + escHtml(lead.name) + '</strong></td>' +
+                '<td><a href="tel:' + lead.phone + '" style="color:#2563eb;">' + lead.phone + '</a></td>' +
+                '<td>' + escHtml(lead.service) + '</td>' +
+                '<td>' + escHtml(lead.area || 'Ajmer') + '</td>' +
+                '<td style="max-width:140px;font-size:0.82rem;color:#475569;">' + escHtml(lead.problem || '-') + '</td>' +
+                '<td><select class="status-select" onchange="updateStatus(' + lead.id + ', this.value)">' + opts + '</select></td>' +
+                '<td><button class="btn btn-small btn-success" onclick="openSendModal(' + lead.id + ')">📱 Send</button></td>' +
+            '</tr>';
+        });
+        tbody.innerHTML = html;
+    }
+
+    function escHtml(str) {
+        if (!str) return '';
+        return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    function searchLeads() {
+        var s = document.getElementById('leadSearch').value.toLowerCase();
+        if (!s) return displayLeads(allLeads);
+        displayLeads(allLeads.filter(function(l) {
+            return l.name.toLowerCase().includes(s) || l.phone.includes(s) || l.service.toLowerCase().includes(s);
+        }));
+    }
+
+    function updateStatus(id, status) {
+        fetch('/api/admin/leads/' + id + '/status', {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ status: status })
+        }).then(function() { loadStats(); });
+    }
+
+    // ---- SEND LEAD MODAL ----
+    function openSendModal(leadId) {
+        currentLeadId = leadId;
+        var lead = allLeads.find(function(l) { return l.id === leadId; });
+        if (!lead) return;
+
+        document.getElementById('modalName').textContent = lead.name;
+        document.getElementById('modalPhone').textContent = lead.phone;
+        document.getElementById('modalService').textContent = lead.service;
+        document.getElementById('modalArea').textContent = lead.area || 'Ajmer';
+        document.getElementById('modalProblem').textContent = lead.problem || 'Bataya nahi';
+
+        var now = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
+        var msg = '🔔 Naya Lead Mila Hai!\n\n' +
+            '👤 Customer: ' + lead.name + '\n' +
+            '📞 Phone: ' + lead.phone + '\n' +
+            '🔧 Service: ' + lead.service + '\n' +
+            '📍 Area: ' + (lead.area || 'Ajmer') + '\n' +
+            '📝 Problem: ' + (lead.problem || 'Bataya nahi') + '\n\n' +
+            '⏱️ Time: ' + now + '\n\n' +
+            '✅ Page2Lead dwara bheja gaya';
+        document.getElementById('msgPreview').textContent = msg;
+
+        // Load providers
+        fetch('/api/admin/providers').then(function(r) { return r.json(); }).then(function(data) {
+            var opts = '<option value="">-- Provider Select Karo --</option>';
+            (data.data || []).forEach(function(p) {
+                var tag = p.is_paid ? '💳' : '🆓';
+                var info = p.is_paid ? 'Credits:' + p.credits : 'Free:' + p.free_leads_given + '/' + p.free_leads_limit;
+                var onl = p.status === 'online' ? '🟢' : '🔴';
+                opts += '<option value="' + p.id + '">' + onl + ' ' + tag + ' ' + escHtml(p.business_name || p.name) + ' (' + p.service_type + ') — ' + info + '</option>';
+            });
+            document.getElementById('providerSelect').innerHTML = opts;
+        });
+
+        openModal('sendLeadModal');
+    }
+
+    function toggleWhatsappBox() {
+        var via = document.getElementById('sentVia').value;
+        document.getElementById('whatsappBox').style.display = via === 'whatsapp' ? 'block' : 'none';
+    }
+
+    function sendLead() {
+        var providerId = document.getElementById('providerSelect').value;
+        var sentVia = document.getElementById('sentVia').value;
+        if (!providerId) { alert('Provider select karo pehle!'); return; }
+
+        fetch('/api/admin/send-lead', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ lead_id: currentLeadId, provider_id: parseInt(providerId), sent_via: sentVia })
+        }).then(function(r) { return r.json(); }).then(function(data) {
+            if (data.success) {
+                if (sentVia === 'whatsapp' && data.whatsappUrl) {
+                    window.open(data.whatsappUrl, '_blank');
+                    alert('✅ WhatsApp khul gaya! Message send karo.');
+                } else {
+                    alert('✅ Lead send ho gayi!');
+                }
+                closeModal('sendLeadModal');
+                loadLeads();
+                loadStats();
+            } else {
+                alert('Error: ' + (data.error || 'Kuch gadbad hui'));
+            }
+        });
+    }
+
+    // ---- PROVIDERS ----
+    function loadProviders() {
+        fetch('/api/admin/providers').then(function(r) { return r.json(); }).then(function(data) {
+            allProviders = data.data || [];
+            renderProviders(allProviders);
+        });
+    }
+
+    function filterProviders(service, btn) {
+        document.querySelectorAll('.filter-tab').forEach(function(b) { b.classList.remove('active'); });
+        if (btn) btn.classList.add('active');
+        currentFilter = service;
+        var filtered = service === 'all' ? allProviders : allProviders.filter(function(p) { return p.service_type === service; });
+        renderProviders(filtered);
+    }
+
+    function searchProviders() {
+        var s = document.getElementById('providerSearch').value.toLowerCase();
+        var list = s ? allProviders.filter(function(p) {
+            return p.name.toLowerCase().includes(s) || (p.business_name || '').toLowerCase().includes(s) || p.service_type.toLowerCase().includes(s);
+        }) : allProviders;
+        renderProviders(list);
+    }
+
+    function renderProviders(providers) {
+        if (providers.length === 0) {
+            document.getElementById('providersGrid').innerHTML = '<p style="color:#64748b;padding:20px;">Koi provider nahi mila.</p>';
+            return;
+        }
+        var html = '';
+        providers.forEach(function(p) {
+            var online = p.status === 'online';
+            var isPaid = p.is_paid;
+            var freeUsed = p.free_leads_given || 0;
+            var freeLimit = p.free_leads_limit || 3;
+            var credits = p.credits || 0;
+            var trialHtml = isPaid
+                ? '<div class="credits-bar">💳 Credits: <strong>' + credits + '</strong> remaining</div>'
+                : '<div class="credits-bar">🆓 Free Trial: <strong>' + freeUsed + '/' + freeLimit + '</strong> leads used' + (freeUsed >= freeLimit ? ' <span style="color:#dc2626;font-weight:bold;">— KHATAM</span>' : '') + '</div>';
+
+            html += '<div class="provider-card ' + (online ? 'online' : 'offline') + '">' +
+                '<div class="provider-header">' +
+                    '<div class="provider-name">' +
+                        '<h3>' + escHtml(p.name) + '</h3>' +
+                        '<div class="provider-business">' + escHtml(p.business_name || 'Individual') + '</div>' +
+                    '</div>' +
+                    '<div style="display:flex;flex-direction:column;align-items:flex-end;gap:5px;">' +
+                        '<span class="badge badge-' + (online ? 'online' : 'offline') + '">' + (online ? '🟢 Online' : '🔴 Offline') + '</span>' +
+                        '<span class="badge badge-' + (isPaid ? 'paid' : 'trial') + '">' + (isPaid ? '💳 Paid' : '🆓 Trial') + '</span>' +
+                    '</div>' +
+                '</div>' +
+                '<div class="provider-detail">📞 ' + p.phone + '</div>' +
+                '<div class="provider-detail">🔧 ' + p.service_type + '</div>' +
+                '<div class="provider-detail">📍 ' + escHtml(p.city) + (p.areas ? ' — ' + escHtml(p.areas) : '') + '</div>' +
+                '<div class="provider-detail">📊 Total leads: ' + (p.total_leads_received || 0) + '</div>' +
+                trialHtml +
+                '<div class="provider-actions">' +
+                    '<button class="toggle-btn ' + (online ? 'toggle-to-offline' : 'toggle-to-online') + '" onclick="toggleStatus(' + p.id + ', \'' + (online ? 'offline' : 'online') + '\')">' + (online ? '🔴 Offline Karo' : '🟢 Online Karo') + '</button>' +
+                    '<button class="btn btn-small btn-warning" onclick="openCreditsModal(' + p.id + ', \'' + escHtml(p.business_name || p.name) + '\')">💳 Credits</button>' +
+                    '<button class="btn btn-small" style="background:#16a34a;" onclick="openRefundModal(' + p.id + ', \'' + escHtml(p.business_name || p.name) + '\')">🔄 Refund</button>' +
+                    '<button class="btn btn-small" onclick="openEditProviderModal(' + p.id + ')">✏️ Edit</button>' +
+                    '<button class="btn btn-small btn-danger" onclick="openDeleteModal(' + p.id + ', \'' + escHtml(p.business_name || p.name) + '\')">🗑️</button>' +
+                '</div>' +
+            '</div>';
+        });
+        document.getElementById('providersGrid').innerHTML = html;
+    }
+
+    function toggleStatus(id, newStatus) {
+        fetch('/api/admin/providers/' + id + '/status', {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ status: newStatus })
+        }).then(function() { loadProviders(); loadStats(); });
+    }
+
+    // ---- CREDITS ----
+    function openCreditsModal(id, name) {
+        currentProviderId = id;
+        document.getElementById('creditProviderId').value = id;
+        document.getElementById('creditProviderName').textContent = name;
+        openModal('creditsModal');
+    }
+
+    function addCredits() {
+        var id = document.getElementById('creditProviderId').value;
+        var credits = document.getElementById('creditsAmount').value;
+        fetch('/api/admin/providers/' + id + '/credits', {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ credits: parseInt(credits) })
+        }).then(function(r) { return r.json(); }).then(function(data) {
+            if (data.success) {
+                alert('✅ ' + credits + ' credits add ho gaye!');
+                closeModal('creditsModal');
+                loadProviders();
+            }
+        });
+    }
+
+    // ---- ADD / EDIT PROVIDER ----
+    function openAddProviderModal() {
+        document.getElementById('providerModalTitle').textContent = 'Add New Provider';
+        document.getElementById('providerId').value = '';
+        document.getElementById('providerName').value = '';
+        document.getElementById('providerBusiness').value = '';
+        document.getElementById('providerPhone').value = '';
+        document.getElementById('providerWhatsapp').value = '91';
+        document.getElementById('providerService').value = '';
+        document.getElementById('providerCity').value = 'Ajmer';
+        document.getElementById('providerAreas').value = '';
+        document.getElementById('providerPrice').value = '';
+        document.getElementById('providerNotes').value = '';
+        openModal('providerModal');
+    }
+
+    function openEditProviderModal(id) {
+        fetch('/api/admin/providers/' + id).then(function(r) { return r.json(); }).then(function(data) {
+            var p = data.data;
+            document.getElementById('providerModalTitle').textContent = 'Edit Provider';
+            document.getElementById('providerId').value = p.id;
+            document.getElementById('providerName').value = p.name;
+            document.getElementById('providerBusiness').value = p.business_name || '';
+            document.getElementById('providerPhone').value = p.phone;
+            document.getElementById('providerWhatsapp').value = p.whatsapp_number || '';
+            document.getElementById('providerService').value = p.service_type;
+            document.getElementById('providerCity').value = p.city || 'Ajmer';
+            document.getElementById('providerAreas').value = p.areas || '';
+            document.getElementById('providerPrice').value = p.price_range || '';
+            document.getElementById('providerNotes').value = p.notes || '';
+            openModal('providerModal');
+        });
+    }
+
+    function saveProvider() {
+        var id = document.getElementById('providerId').value;
+        var data = {
+            name: document.getElementById('providerName').value.trim(),
+            business_name: document.getElementById('providerBusiness').value.trim(),
+            phone: document.getElementById('providerPhone').value.trim(),
+            whatsapp_number: document.getElementById('providerWhatsapp').value.trim(),
+            service_type: document.getElementById('providerService').value,
+            city: document.getElementById('providerCity').value.trim(),
+            areas: document.getElementById('providerAreas').value.trim(),
+            price_range: document.getElementById('providerPrice').value.trim(),
+            notes: document.getElementById('providerNotes').value.trim()
+        };
+        if (!data.name || !data.phone || !data.service_type) {
+            alert('Name, Phone aur Service type zaroori hai!');
+            return;
+        }
+        fetch(id ? '/api/admin/providers/' + id : '/api/admin/providers', {
+            method: id ? 'PUT' : 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        }).then(function(r) { return r.json(); }).then(function(res) {
+            if (res.success) {
+                alert(id ? '✅ Provider update ho gaya!' : '✅ Provider add ho gaya!');
+                closeModal('providerModal');
+                loadProviders();
+                loadStats();
+            } else {
+                alert('Error: ' + (res.error || 'Kuch gadbad hui'));
+            }
+        });
+    }
+
+    // ---- DELETE ----
+    function openDeleteModal(id, name) {
+        currentProviderId = id;
+        document.getElementById('deleteProviderName').textContent = name;
+        openModal('deleteModal');
+    }
+
+    function confirmDelete() {
+        fetch('/api/admin/providers/' + currentProviderId, { method: 'DELETE' })
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                if (data.success) {
+                    alert('✅ Provider delete ho gaya');
+                    closeModal('deleteModal');
+                    loadProviders();
+                    loadStats();
+                }
+            });
+    }
+
+    // ---- ALERTS ----
+    function loadAlerts() {
+        fetch('/api/admin/alerts').then(function(r) { return r.json(); }).then(function(data) {
+            var alerts = data.data || [];
+
+            // Badge update
+            var unsent = alerts.filter(function(a) { return !a.is_sent; }).length;
+            var badge = document.getElementById('alertBadge');
+            if (unsent > 0) { badge.textContent = unsent; badge.style.display = 'inline'; }
+            else { badge.style.display = 'none'; }
+
+            if (alerts.length === 0) {
+                document.getElementById('alertsList').innerHTML = '<p style="color:#64748b;padding:20px;text-align:center;">Abhi koi alert nahi hai 🎉</p>';
+                return;
+            }
+
+            var html = '';
+            alerts.forEach(function(a) {
+                var isTrialOver   = a.alert_type === 'trial_over';
+                var bgColor       = isTrialOver ? '#fef9c3' : '#fee2e2';
+                var borderColor   = isTrialOver ? '#f59e0b' : '#dc2626';
+                var label         = isTrialOver ? '🆓 Trial Khatam' : '💳 Credits Khatam';
+                var dt            = new Date(a.created_at).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
+                var waUrl         = a.whatsapp_number
+                    ? 'https://wa.me/' + a.whatsapp_number + '?text=' + encodeURIComponent(a.message)
+                    : null;
+
+                html += '<div style="background:' + bgColor + ';border-left:4px solid ' + borderColor + ';border-radius:12px;padding:16px;margin-bottom:12px;">' +
+                    '<div style="display:flex;justify-content:space-between;align-items:start;flex-wrap:wrap;gap:10px;">' +
+                        '<div>' +
+                            '<span style="font-weight:700;font-size:1rem;">' + label + '</span>' +
+                            '<p style="margin:4px 0;color:#374151;"><strong>' + escHtml(a.business_name || a.name) + '</strong> — ' + a.phone + '</p>' +
+                            '<p style="font-size:0.82rem;color:#6b7280;">' + dt + '</p>' +
+                        '</div>' +
+                        '<div style="display:flex;gap:8px;flex-wrap:wrap;">' +
+                            (waUrl ? '<a href="' + waUrl + '" target="_blank" class="btn btn-success btn-small">📱 WhatsApp Bhejo</a>' : '') +
+                            (!a.is_sent ? '<button class="btn btn-small btn-outline" onclick="markAlertSent(' + a.id + ', this)">✅ Sent Mark Karo</button>' : '<span style="color:#16a34a;font-size:0.85rem;font-weight:600;">✅ Sent</span>') +
+                        '</div>' +
+                    '</div>' +
+                '</div>';
+            });
+            document.getElementById('alertsList').innerHTML = html;
+        });
+    }
+
+    function markAlertSent(id, btn) {
+        fetch('/api/admin/alerts/' + id + '/sent', { method: 'PUT' })
+            .then(function() {
+                btn.outerHTML = '<span style="color:#16a34a;font-size:0.85rem;font-weight:600;">✅ Sent</span>';
+                loadAlerts();
+            });
+    }
+
+    // ---- LEAD PRICING ----
+    function loadPricing() {
+        fetch('/api/admin/pricing').then(function(r){return r.json();}).then(function(data){
+            var rows = data.data || [];
+            if (rows.length === 0) {
+                document.getElementById('pricingList').innerHTML = '<p style="color:#64748b;padding:20px;">No pricing data found.</p>';
+                return;
+            }
+            var html = '<table><thead><tr><th>Service</th><th>Price Per Lead (₹)</th><th>Last Updated</th><th>Action</th></tr></thead><tbody>';
+            rows.forEach(function(r) {
+                var dt = new Date(r.updated_at).toLocaleDateString('en-IN');
+                html += '<tr>' +
+                    '<td><strong>' + r.service_type + '</strong></td>' +
+                    '<td><span style="font-size:1.2rem;font-weight:700;color:#16a34a;">₹' + r.price_per_lead + '</span></td>' +
+                    '<td style="color:#64748b;font-size:0.85rem;">' + dt + '</td>' +
+                    '<td><button class="btn btn-small btn-warning" onclick="openEditPricing(\'' + r.service_type + '\',' + r.price_per_lead + ')">✏️ Edit Price</button></td>' +
+                '</tr>';
+            });
+            html += '</tbody></table>';
+            html += '<div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:12px;padding:15px 20px;margin-top:20px;">' +
+                '<p style="color:#1e40af;font-size:0.9rem;">💡 <strong>Note:</strong> Jab provider ko lead jaati hai, is price ke barabar 1 credit kata jaata hai. Credits add karte waqt bhi yahi price use hoti hai package mein.</p>' +
+            '</div>';
+            document.getElementById('pricingList').innerHTML = html;
+        });
+    }
+
+    function openEditPricing(service, currentPrice) {
+        var newPrice = prompt('New price for "' + service + '" leads (in ₹):', currentPrice);
+        if (!newPrice || isNaN(newPrice) || parseInt(newPrice) <= 0) return;
+        fetch('/api/admin/pricing/' + encodeURIComponent(service), {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ price_per_lead: parseInt(newPrice) })
+        }).then(function(r){return r.json();}).then(function(res){
+            if (res.success) { alert('✅ Price updated to ₹' + newPrice); loadPricing(); }
+            else alert('❌ Error: ' + res.error);
+        });
+    }
+
+    // ---- REPLACE REQUESTS ----
+    function loadReplaceRequests() {
+        fetch('/api/admin/replace-requests').then(function(r){return r.json();}).then(function(data){
+            var requests = data.data || [];
+
+            // Badge update
+            var pending = requests.filter(function(r){ return r.status === 'pending'; }).length;
+            var badge = document.getElementById('replaceBadge');
+            if (pending > 0) { badge.textContent = pending; badge.style.display = 'inline'; }
+            else { badge.style.display = 'none'; }
+
+            if (requests.length === 0) {
+                document.getElementById('replaceList').innerHTML = '<p style="color:#64748b;padding:20px;text-align:center;">Koi replace request nahi hai abhi. 🎉</p>';
+                return;
+            }
+
+            var html = '';
+            requests.forEach(function(r) {
+                var isPending = r.status === 'pending';
+                var bgColor = isPending ? '#fef9c3' : (r.status === 'approved' ? '#dcfce7' : '#fee2e2');
+                var borderColor = isPending ? '#f59e0b' : (r.status === 'approved' ? '#16a34a' : '#dc2626');
+                var statusLabel = isPending ? '⏳ Pending' : (r.status === 'approved' ? '✅ Approved' : '❌ Rejected');
+                var dt = new Date(r.created_at).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', day:'2-digit', month:'short', hour:'2-digit', minute:'2-digit' });
+
+                html += '<div style="background:' + bgColor + ';border-left:4px solid ' + borderColor + ';border-radius:12px;padding:16px;margin-bottom:12px;">' +
+                    '<div style="display:flex;justify-content:space-between;align-items:start;flex-wrap:wrap;gap:10px;">' +
+                        '<div>' +
+                            '<p style="font-weight:700;margin-bottom:4px;">' + escHtml(r.business_name || r.provider_name) + ' <span style="color:#64748b;font-weight:400;font-size:0.85rem;">— ' + r.provider_phone + '</span></p>' +
+                            '<p style="font-size:0.9rem;color:#374151;">Lead #' + r.lead_id + ' — ' + escHtml(r.customer_name) + ' (' + r.customer_phone + ') — ' + escHtml(r.service) + '</p>' +
+                            '<p style="font-size:0.85rem;color:#64748b;margin-top:4px;">Reason: ' + escHtml(r.reason) + '</p>' +
+                            '<p style="font-size:0.8rem;color:#94a3b8;margin-top:4px;">' + dt + ' &nbsp;|&nbsp; ' + statusLabel + '</p>' +
+                        '</div>' +
+                        (isPending ? '<div style="display:flex;gap:8px;">' +
+                            '<button class="btn btn-small" style="background:#16a34a;" onclick="resolveReplace(' + r.id + ',\'approve\')">✅ Approve & Refund</button>' +
+                            '<button class="btn btn-small btn-danger" onclick="resolveReplace(' + r.id + ',\'reject\')">❌ Reject</button>' +
+                        '</div>' : '') +
+                    '</div>' +
+                '</div>';
+            });
+            document.getElementById('replaceList').innerHTML = html;
+        });
+    }
+
+    function resolveReplace(id, action) {
+        var url = '/api/admin/replace-requests/' + id + '/' + action;
+        fetch(url, { method: 'PUT' }).then(function(r){return r.json();}).then(function(res){
+            if (res.success) {
+                alert(action === 'approve' ? '✅ Approved! Credit refunded.' : '❌ Request rejected.');
+                loadReplaceRequests();
+                loadProviders();
+            } else {
+                alert('Error: ' + res.error);
+            }
+        });
+    }
+
+    function openAddReplaceModal() {
+        // Load providers into dropdown
+        fetch('/api/admin/providers').then(function(r){return r.json();}).then(function(data){
+            var opts = '<option value="">-- Provider Select Karo --</option>';
+            (data.data || []).forEach(function(p){
+                opts += '<option value="' + p.id + '">' + escHtml(p.business_name || p.name) + ' (' + p.service_type + ')</option>';
+            });
+            document.getElementById('replaceProvider').innerHTML = opts;
+        });
+        document.getElementById('replaceLeadId').value = '';
+        openModal('addReplaceModal');
+    }
+
+    function submitReplaceRequest() {
+        var providerId = document.getElementById('replaceProvider').value;
+        var leadId = document.getElementById('replaceLeadId').value;
+        var reason = document.getElementById('replaceReason').value;
+        if (!providerId || !leadId) { alert('Provider aur Lead ID dono zaroori hain'); return; }
+        fetch('/api/admin/replace-requests', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ provider_id: parseInt(providerId), lead_id: parseInt(leadId), reason: reason })
+        }).then(function(r){return r.json();}).then(function(res){
+            if (res.success) {
+                alert('✅ Replace request add ho gayi! Ab Approve karo tab credit wapas jayega.');
+                closeModal('addReplaceModal');
+                loadReplaceRequests();
+            } else {
+                alert('Error: ' + res.error);
+            }
+        });
+    }
+
+    // ---- REFUND (from provider card) ----
+    function openRefundModal(id, name) {
+        document.getElementById('refundProviderId').value = id;
+        document.getElementById('refundProviderName').textContent = name;
+        openModal('refundModal');
+    }
+
+    function processRefund() {
+        var id = document.getElementById('refundProviderId').value;
+        var credits = document.getElementById('refundCredits').value;
+        var reason = document.getElementById('refundReason').value;
+        fetch('/api/admin/providers/' + id + '/refund', {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ credits: parseInt(credits), reason: reason })
+        }).then(function(r){return r.json();}).then(function(res){
+            if (res.success) {
+                alert('✅ ' + credits + ' credit(s) refund ho gaye!');
+                closeModal('refundModal');
+                loadProviders();
+            } else {
+                alert('Error: ' + res.error);
+            }
+        });
+    }
+
+    // ---- INIT ----
+    loadStats();
+    loadLeads();
+    loadAlerts();
+    setInterval(function() { loadStats(); loadLeads(); loadAlerts(); }, 30000);
+</script>
+</body>
+</html>
