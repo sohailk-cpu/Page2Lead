@@ -1,0 +1,15 @@
+# Page2Lead - robots.txt
+# https://page2lead.in
+
+# Allow all search engines
+User-agent: *
+Allow: /
+
+# Block admin dashboard from indexing
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api/
+Disallow: /api
+
+# Sitemap location
+Sitemap: https://page2lead.in/sitemap.xml

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page2Lead - Join as Provider or Get Help | Ajmer</title>
+    <meta name="description" content="Contact Page2Lead. Are you a local service provider in Ajmer? Join our platform and start receiving customer leads. AC repair, plumbing, electrical, cleaning, pest control.">
+    <meta name="keywords" content="contact Page2Lead, join Page2Lead provider, lead generation Ajmer, service provider Ajmer">
+    <link rel="canonical" href="https://page2lead.in/contact">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Favicon & App Icons -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="icon" type="image/png" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta name="theme-color" content="#000000">
+
+    <style>
+        .contact-hero { background: linear-gradient(135deg, #0f172a, #1e3a8a); color: white; padding: 80px 0; text-align: center; }
+        .contact-hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
+        .contact-hero p { font-size: 1.15rem; color: #94a3b8; max-width: 580px; margin: 0 auto; }
+        .contact-section { padding: 60px 0; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        .contact-form-box { background: white; border-radius: 20px; padding: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; }
+        .contact-form-box h2 { font-size: 1.6rem; margin-bottom: 8px; color: #0f172a; }
+        .contact-form-box p { color: #64748b; margin-bottom: 25px; font-size: 0.95rem; }
+        .form-group { margin-bottom: 18px; }
+        .form-group label { display: block; margin-bottom: 6px; font-weight: 500; color: #374151; font-size: 0.9rem; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 16px; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 1rem; outline: none; transition: border-color 0.2s; font-family: inherit; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #2563eb; }
+        .submit-btn { width: 100%; background: #2563eb; color: white; border: none; padding: 14px; border-radius: 12px; font-size: 1.05rem; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+        .submit-btn:hover { background: #1d4ed8; transform: translateY(-1px); }
+        .contact-info-box { display: flex; flex-direction: column; gap: 20px; }
+        .info-card { background: white; border-radius: 16px; padding: 25px; border: 1px solid #e2e8f0; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .info-card h3 { font-size: 1.1rem; margin-bottom: 10px; color: #0f172a; }
+        .info-card p { color: #64748b; font-size: 0.95rem; line-height: 1.6; }
+        .provider-benefits { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 16px; padding: 25px; }
+        .provider-benefits h3 { color: #1e40af; margin-bottom: 15px; }
+        .benefit-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: #374151; font-size: 0.95rem; }
+        .benefit-item span:first-child { color: #16a34a; font-weight: 700; flex-shrink: 0; }
+        .form-message { margin-top: 15px; padding: 12px 16px; border-radius: 10px; font-size: 0.95rem; display: none; }
+        .form-message.success { background: #dcfce7; color: #166534; display: block; }
+        .form-message.error { background: #fee2e2; color: #991b1b; display: block; }
+        @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">Page2<span>Lead</span></a>
+            <div class="nav-links">
+                <a href="/#services">Services</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="#contact-form" class="cta-btn">Join as Provider</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="contact-hero">
+        <div class="container">
+            <h1>Contact Page2Lead</h1>
+            <p>Are you a local service provider in Ajmer? Join our platform and start getting customer leads on WhatsApp.</p>
+        </div>
+    </div>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+
+                <!-- Contact Form -->
+                <div class="contact-form-box" id="contact-form">
+                    <h2>Get in Touch</h2>
+                    <p>Fill the form below — we will get back to you within 24 hours.</p>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label>Your Full Name *</label>
+                            <input type="text" id="cname" placeholder="e.g. Rahul Sharma" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number *</label>
+                            <input type="tel" id="cphone" placeholder="10 digit mobile number" required maxlength="10">
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" id="cemail" placeholder="your@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label>I am a... *</label>
+                            <select id="ctype" required>
+                                <option value="">Select</option>
+                                <option value="Provider - AC Repair">Service Provider — AC Repair</option>
+                                <option value="Provider - Plumber">Service Provider — Plumber</option>
+                                <option value="Provider - Electrician">Service Provider — Electrician</option>
+                                <option value="Provider - Cleaning">Service Provider — Cleaning</option>
+                                <option value="Provider - Pest Control">Service Provider — Pest Control</option>
+                                <option value="Customer">Customer with a query</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Business Name <span style="color:#94a3b8;">(if provider)</span></label>
+                            <input type="text" id="cbusiness" placeholder="e.g. Rahul AC Services">
+                        </div>
+                        <div class="form-group">
+                            <label>Your Area in Ajmer *</label>
+                            <input type="text" id="carea" placeholder="e.g. Vaishali Nagar" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea id="cmessage" rows="4" placeholder="Tell us more about your query or business..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn" id="contactBtn">Send Message →</button>
+                    </form>
+                    <div class="form-message" id="contactMsg"></div>
+                </div>
+
+                <!-- Info Side -->
+                <div class="contact-info-box">
+                    <div class="provider-benefits">
+                        <h3>🚀 Why Join as a Provider?</h3>
+                        <div class="benefit-item"><span>✓</span><span>Receive customer leads directly on WhatsApp</span></div>
+                        <div class="benefit-item"><span>✓</span><span>First 3 leads are completely free — no payment needed to start</span></div>
+                        <div class="benefit-item"><span>✓</span><span>Only leads from your city and service type</span></div>
+                        <div class="benefit-item"><span>✓</span><span>You decide your pricing — we only send the lead</span></div>
+                        <div class="benefit-item"><span>✓</span><span>Simple pay-per-lead model after free trial</span></div>
+                        <div class="benefit-item"><span>✓</span><span>No app, no complex setup — just your WhatsApp number</span></div>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>📍 Location</h3>
+                        <p>Page2Lead operates in Ajmer, Rajasthan, India.<br>We are an online platform — no physical office visits required.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>✉️ Email</h3>
+                        <p>page2lead.contact@gmail.com<br><span style="font-size:0.85rem; color:#94a3b8;">We respond within 24 hours on working days.</span></p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>⏱️ Response Time</h3>
+                        <p>We review all provider join requests within 24 hours. Once approved, you will start receiving leads immediately.</p>
+                    </div>
+
+                    <div class="info-card" style="background:#f0fdf4; border-color:#bbf7d0;">
+                        <h3 style="color:#166534;">🆓 Free Trial Available</h3>
+                        <p style="color:#15803d;">All new providers get 3 free leads to test the platform. No payment required to get started.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col"><h4>Page2Lead</h4><a href="/">Home</a><a href="/about">About Us</a><a href="/contact">Contact</a><a href="/privacy">Privacy Policy</a></div>
+                <div class="footer-col"><h4>Services in Ajmer</h4><a href="/ac-repair-ajmer">AC Repair</a><a href="/plumber-ajmer">Plumber</a><a href="/electrician-ajmer">Electrician</a><a href="/cleaning-ajmer">Cleaning</a><a href="/pest-control-ajmer">Pest Control</a></div>
+                <div class="footer-col"><h4>Support</h4><a href="/faq">FAQ</a><a href="/terms">Terms of Service</a><a href="/privacy">Privacy Policy</a></div>
+                <div class="footer-col"><h4>Contact</h4><p>📍 Ajmer, Rajasthan</p><p>✉️ page2lead.contact@gmail.com</p></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 Page2Lead. All rights reserved. | Lead Generation Platform — Ajmer</p></div>
+        </div>
+    </footer>
+
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var btn = document.getElementById('contactBtn');
+        var msg = document.getElementById('contactMsg');
+        btn.textContent = 'Sending...'; btn.disabled = true;
+
+        // Send as a lead with type "contact"
+        fetch('/api/lead', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name: document.getElementById('cname').value,
+                phone: document.getElementById('cphone').value,
+                service: document.getElementById('ctype').value,
+                area: document.getElementById('carea').value,
+                city: 'Ajmer',
+                page: 'contact',
+                problem: 'Business: ' + document.getElementById('cbusiness').value + ' | Email: ' + document.getElementById('cemail').value + ' | Message: ' + document.getElementById('cmessage').value
+            })
+        }).then(function(r) { return r.json(); }).then(function(res) {
+            if (res.success) {
+                msg.className = 'form-message success';
+                msg.innerHTML = '✅ Message sent! We will get back to you within 24 hours.';
+                document.getElementById('contactForm').reset();
+            } else {
+                msg.className = 'form-message error';
+                msg.innerHTML = '❌ Something went wrong. Please try again.';
+            }
+            btn.textContent = 'Send Message →'; btn.disabled = false;
+        }).catch(function() {
+            msg.className = 'form-message error';
+            msg.innerHTML = '❌ Server error. Please try again.';
+            btn.textContent = 'Send Message →'; btn.disabled = false;
+        });
+    });
+    </script>
+</body>
+</html>
