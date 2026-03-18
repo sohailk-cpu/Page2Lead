@@ -1,6 +1,5 @@
 const express = require('express');
 const cors = require('cors');
-const compression = require('compression');
 const { Pool } = require('pg');
 const path = require('path');
 const nodemailer = require('nodemailer');
@@ -15,9 +14,6 @@ app.use(function(req, res, next) {
     }
     next();
 });
-
-// GZIP Compression
-app.use(compression());
 
 // Security + SEO Headers
 app.use(function(req, res, next) {
