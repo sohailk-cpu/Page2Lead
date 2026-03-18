@@ -1,10 +1,14 @@
 const express = require('express');
 const cors = require('cors');
+const zlib = require('zlib');
 const { Pool } = require('pg');
 const path = require('path');
 const nodemailer = require('nodemailer');
 
 const app = express();
+
+// Hide X-Powered-By header
+app.disable('x-powered-by');
 
 // WWW to non-www 301 redirect
 app.use(function(req, res, next) {
@@ -12,6 +16,27 @@ app.use(function(req, res, next) {
     if (host.startsWith('www.')) {
         return res.redirect(301, 'https://' + host.slice(4) + req.originalUrl);
     }
+    next();
+});
+
+// Manual GZIP compression (no external package needed)
+app.use(function(req, res, next) {
+    var acceptEncoding = req.headers['accept-encoding'] || '';
+    if (!acceptEncoding.includes('gzip')) return next();
+
+    var contentType = res.getHeader('Content-Type') || '';
+    var compressTypes = /html|css|javascript|json|text|xml|svg/;
+
+    var _send = res.send.bind(res);
+    res.send = function(body) {
+        if (typeof body !== 'string' && !Buffer.isBuffer(body)) return _send(body);
+        zlib.gzip(Buffer.isBuffer(body) ? body : Buffer.from(body), function(err, compressed) {
+            if (err) return _send(body);
+            res.setHeader('Content-Encoding', 'gzip');
+            res.setHeader('Content-Length', compressed.length);
+            _send(compressed);
+        });
+    };
     next();
 });
 
