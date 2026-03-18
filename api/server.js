@@ -1,14 +1,46 @@
 const express = require('express');
 const cors = require('cors');
+const compression = require('compression');
 const { Pool } = require('pg');
 const path = require('path');
 const nodemailer = require('nodemailer');
 
 const app = express();
+
+// WWW to non-www 301 redirect
+app.use(function(req, res, next) {
+    var host = req.headers.host || '';
+    if (host.startsWith('www.')) {
+        return res.redirect(301, 'https://' + host.slice(4) + req.originalUrl);
+    }
+    next();
+});
+
+// GZIP Compression
+app.use(compression());
+
+// Security + SEO Headers
+app.use(function(req, res, next) {
+    res.setHeader('X-Content-Type-Options', 'nosniff');
+    res.setHeader('X-Frame-Options', 'SAMEORIGIN');
+    res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+    next();
+});
+
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname)));
+
+// Static files with cache headers
+app.use(express.static(path.join(__dirname), {
+    maxAge: '7d',
+    etag: true,
+    setHeaders: function(res, filePath) {
+        if (filePath.endsWith('.html')) {
+            res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+        }
+    }
+}));
 
 // ============================================
 // PostgreSQL SETUP
