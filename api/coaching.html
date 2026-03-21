@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get More Students for Your Coaching Business | Page2Lead</title>
+    <meta name="description" content="Page2Lead helps coaching businesses attract and convert Indian and international students using a simple lead generation system. Landing page, forms, WhatsApp leads.">
+    <meta name="keywords" content="coaching lead generation, student leads, online tutoring leads, coaching business marketing, study abroad leads, Page2Lead education">
+    <link rel="canonical" href="https://page2lead.in/coaching">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Get More Students for Your Coaching Business | Page2Lead">
+    <meta property="og:description" content="Page2Lead helps coaching businesses attract and convert students using a simple lead generation system. Landing page, forms, WhatsApp leads.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://page2lead.in/coaching">
+    <meta property="og:site_name" content="Page2Lead">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Get More Students for Your Coaching Business | Page2Lead">
+    <meta name="twitter:description" content="Simple lead generation system for coaching businesses. Get student enquiries on WhatsApp.">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <style>
+        /* ===== BASE RESET ===== */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1e293b; background: white; line-height: 1.6; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        a { text-decoration: none; }
+        img { max-width: 100%; }
+
+        /* ===== NAVBAR ===== */
+        .navbar { background: white; padding: 16px 0; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 100; }
+        .navbar .inner { display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.4rem; font-weight: 800; color: #0f172a; }
+        .logo span { color: #2563eb; }
+        .nav-cta { background: #2563eb; color: white; padding: 10px 22px; border-radius: 40px; font-weight: 600; font-size: 0.9rem; transition: background 0.2s; }
+        .nav-cta:hover { background: #1d4ed8; }
+
+        /* ===== BADGE ===== */
+        .badge { display: inline-block; background: #eff6ff; color: #2563eb; padding: 6px 18px; border-radius: 40px; font-size: 0.85rem; font-weight: 600; border: 1px solid #bfdbfe; margin-bottom: 20px; }
+
+        /* ===== HERO ===== */
+        .hero { padding: 80px 0 70px; background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 100%); }
+        .hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .hero h1 { font-size: 2.6rem; font-weight: 800; color: #0f172a; line-height: 1.2; margin-bottom: 18px; }
+        .hero h1 span { color: #2563eb; }
+        .hero p { font-size: 1.1rem; color: #475569; line-height: 1.7; margin-bottom: 30px; }
+        .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+        .btn-primary { background: #2563eb; color: white; padding: 15px 32px; border-radius: 40px; font-weight: 700; font-size: 1rem; transition: all 0.2s; display: inline-block; }
+        .btn-primary:hover { background: #1d4ed8; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(37,99,235,0.3); }
+        .btn-secondary { background: white; color: #2563eb; padding: 15px 32px; border-radius: 40px; font-weight: 600; font-size: 1rem; border: 2px solid #2563eb; transition: all 0.2s; display: inline-block; }
+        .btn-secondary:hover { background: #2563eb; color: white; }
+
+        /* Hero Visual */
+        .hero-card { background: white; border-radius: 20px; padding: 28px; box-shadow: 0 16px 50px rgba(37,99,235,0.1); }
+        .hero-card-title { font-weight: 700; font-size: 0.95rem; color: #0f172a; margin-bottom: 18px; display: flex; align-items: center; gap: 8px; }
+        .stat-row { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 12px; margin-bottom: 10px; }
+        .stat-row.blue { background: #eff6ff; }
+        .stat-row.green { background: #f0fdf4; }
+        .stat-row.purple { background: #f5f3ff; }
+        .stat-icon { width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
+        .stat-icon.blue { background: #2563eb; }
+        .stat-icon.green { background: #16a34a; }
+        .stat-icon.purple { background: #7c3aed; }
+        .stat-text strong { display: block; font-size: 0.88rem; font-weight: 700; color: #0f172a; }
+        .stat-text span { font-size: 0.78rem; color: #64748b; }
+        .card-badge { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 10px; padding: 10px 14px; margin-top: 14px; text-align: center; font-size: 0.82rem; color: #15803d; font-weight: 600; }
+
+        /* ===== SECTION BASE ===== */
+        section { padding: 70px 0; }
+        .section-label { font-size: 0.82rem; font-weight: 700; color: #2563eb; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+        .section-title { font-size: 2rem; font-weight: 800; color: #0f172a; margin-bottom: 12px; }
+        .section-sub { font-size: 1rem; color: #64748b; max-width: 560px; line-height: 1.6; }
+        .section-header { margin-bottom: 48px; }
+
+        /* ===== HOW IT WORKS ===== */
+        .how-section { background: #f8fafc; }
+        .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+        .step-card { background: white; border-radius: 18px; padding: 32px 24px; text-align: center; border: 1px solid #e2e8f0; position: relative; transition: all 0.2s; }
+        .step-card:hover { box-shadow: 0 8px 30px rgba(37,99,235,0.1); border-color: #2563eb; }
+        .step-num { width: 48px; height: 48px; background: #2563eb; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 800; margin: 0 auto 18px; }
+        .step-card h3 { font-size: 1.05rem; font-weight: 700; color: #0f172a; margin-bottom: 10px; }
+        .step-card p { font-size: 0.88rem; color: #64748b; line-height: 1.6; }
+        .step-emoji { font-size: 2rem; margin-top: 16px; }
+
+        /* Connector arrow between steps */
+        .steps-wrapper { position: relative; }
+
+        /* ===== WHAT WE PROVIDE ===== */
+        .provide-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .provide-card { display: flex; align-items: flex-start; gap: 16px; background: #f8fafc; border-radius: 14px; padding: 22px 20px; border: 1px solid #e2e8f0; transition: all 0.2s; }
+        .provide-card:hover { background: #eff6ff; border-color: #bfdbfe; }
+        .provide-icon { width: 46px; height: 46px; background: #2563eb; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+        .provide-text h3 { font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-bottom: 6px; }
+        .provide-text p { font-size: 0.85rem; color: #64748b; line-height: 1.5; }
+
+        /* ===== USE CASES ===== */
+        .usecase-section { background: #0f172a; }
+        .usecase-section .section-title { color: white; }
+        .usecase-section .section-sub { color: #94a3b8; }
+        .usecase-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 40px; }
+        .usecase-card { background: #1e293b; border-radius: 16px; padding: 26px 20px; text-align: center; border: 1px solid #334155; transition: all 0.2s; }
+        .usecase-card:hover { border-color: #2563eb; background: #1e3a5f; }
+        .usecase-icon { font-size: 2.2rem; margin-bottom: 14px; }
+        .usecase-card h3 { font-size: 0.95rem; font-weight: 700; color: white; margin-bottom: 8px; }
+        .usecase-card p { font-size: 0.82rem; color: #94a3b8; line-height: 1.5; }
+
+        /* ===== DEMO SECTION ===== */
+        .demo-section { background: white; }
+        .demo-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .demo-mockup { background: #f8fafc; border-radius: 20px; padding: 30px; border: 1px solid #e2e8f0; }
+        .mockup-bar { background: #e2e8f0; border-radius: 8px; height: 10px; margin-bottom: 16px; }
+        .mockup-bar.short { width: 60%; }
+        .mockup-bar.shorter { width: 40%; }
+        .mockup-form { background: white; border-radius: 12px; padding: 20px; border: 1px solid #e2e8f0; margin-top: 20px; }
+        .mockup-input { background: #f1f5f9; border-radius: 8px; height: 36px; margin-bottom: 10px; }
+        .mockup-btn { background: #2563eb; border-radius: 8px; height: 40px; width: 100%; }
+        .mockup-label { font-size: 0.75rem; color: #94a3b8; margin-bottom: 6px; font-weight: 500; }
+        .demo-content h2 { font-size: 1.8rem; font-weight: 800; color: #0f172a; margin-bottom: 14px; }
+        .demo-content p { color: #64748b; font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px; }
+        .demo-features { list-style: none; margin-bottom: 28px; }
+        .demo-features li { display: flex; align-items: center; gap: 10px; color: #374151; font-size: 0.9rem; margin-bottom: 10px; }
+        .demo-features li::before { content: "✓"; background: #2563eb; color: white; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 700; flex-shrink: 0; }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section { background: linear-gradient(135deg, #1e3a8a, #2563eb); padding: 80px 0; text-align: center; }
+        .cta-section h2 { font-size: 2.2rem; font-weight: 800; color: white; margin-bottom: 14px; }
+        .cta-section p { font-size: 1.05rem; color: #bfdbfe; margin-bottom: 34px; }
+        .btn-white { background: white; color: #2563eb; padding: 16px 40px; border-radius: 40px; font-weight: 700; font-size: 1.05rem; display: inline-block; transition: all 0.2s; }
+        .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.2); }
+        .cta-note { margin-top: 16px; font-size: 0.85rem; color: #93c5fd; }
+
+        /* ===== FOOTER ===== */
+        .footer-mini { background: #0f172a; padding: 24px 0; text-align: center; }
+        .footer-mini p { color: #64748b; font-size: 0.85rem; }
+        .footer-mini a { color: #94a3b8; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .usecase-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+            .hero h1 { font-size: 2rem; }
+            .steps-grid { grid-template-columns: 1fr; gap: 16px; }
+            .provide-grid { grid-template-columns: 1fr; }
+            .usecase-grid { grid-template-columns: repeat(2, 1fr); }
+            .demo-inner { grid-template-columns: 1fr; gap: 36px; }
+            .section-title { font-size: 1.6rem; }
+            .cta-section h2 { font-size: 1.7rem; }
+            .hero-btns { flex-direction: column; }
+            .hero-btns a { text-align: center; }
+        }
+        @media (max-width: 480px) {
+            .usecase-grid { grid-template-columns: 1fr; }
+            .hero { padding: 50px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="inner">
+                <a href="/" class="logo">Page2<span>Lead</span></a>
+                <a href="#cta" class="nav-cta">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-inner">
+
+                <!-- Left -->
+                <div>
+                    <div class="badge">🎓 Education Lead Generation</div>
+                    <h1>Get More Students for Your <span>Coaching Business</span></h1>
+                    <p>We help you attract and convert Indian and international students using a simple, done-for-you lead generation system. No tech skills needed.</p>
+                    <div class="hero-btns">
+                        <a href="#cta" class="btn-primary">Get Started →</a>
+                        <a href="#how" class="btn-secondary">See How It Works</a>
+                    </div>
+                </div>
+
+                <!-- Right — Visual Card -->
+                <div>
+                    <div class="hero-card">
+                        <div class="hero-card-title">⚡ What Happens After Setup</div>
+
+                        <div class="stat-row blue">
+                            <div class="stat-icon blue">📋</div>
+                            <div class="stat-text">
+                                <strong>Student Fills Your Form</strong>
+                                <span>Name, phone, course interest</span>
+                            </div>
+                        </div>
+
+                        <div class="stat-row green">
+                            <div class="stat-icon green">📱</div>
+                            <div class="stat-text">
+                                <strong>You Get Lead on WhatsApp</strong>
+                                <span>Instant notification, no delay</span>
+                            </div>
+                        </div>
+
+                        <div class="stat-row purple">
+                            <div class="stat-icon purple">🎯</div>
+                            <div class="stat-text">
+                                <strong>Student Converts to Enrollment</strong>
+                                <span>Free demo → Paid student</span>
+                            </div>
+                        </div>
+
+                        <div class="card-badge">✅ Simple Setup — Starts Working in 3 Days</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== HOW IT WORKS ==================== -->
+    <section class="how-section" id="how">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Process</div>
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-sub">A simple 3-step process that turns website visitors into paying students.</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-num">1</div>
+                    <h3>Student Registers</h3>
+                    <p>A student finds your page, fills a simple form with their name, phone number, and course interest.</p>
+                    <div class="step-emoji">📝</div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-num">2</div>
+                    <h3>Attends Free Demo</h3>
+                    <p>You invite them to a free demo class or discovery call. They experience your teaching first-hand.</p>
+                    <div class="step-emoji">🎓</div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-num">3</div>
+                    <h3>Becomes a Paid Student</h3>
+                    <p>Interested students enroll in your paid course or coaching program. You grow your batch.</p>
+                    <div class="step-emoji">🏆</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WHAT WE PROVIDE ==================== -->
+    <section style="background: white;">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Our Services</div>
+                <h2 class="section-title">What We Provide</h2>
+                <p class="section-sub">Everything you need to start getting student enquiries — without hiring a marketing team.</p>
+            </div>
+
+            <div class="provide-grid">
+                <div class="provide-card">
+                    <div class="provide-icon">🌐</div>
+                    <div class="provide-text">
+                        <h3>High-Converting Landing Page</h3>
+                        <p>A clean, professional page built specifically to attract students and capture their details.</p>
+                    </div>
+                </div>
+
+                <div class="provide-card">
+                    <div class="provide-icon">📋</div>
+                    <div class="provide-text">
+                        <h3>Lead Capture System</h3>
+                        <p>Forms connected to WhatsApp — every student enquiry lands directly on your phone instantly.</p>
+                    </div>
+                </div>
+
+                <div class="provide-card">
+                    <div class="provide-icon">📢</div>
+                    <div class="provide-text">
+                        <h3>Ad Campaign Setup (Optional)</h3>
+                        <p>We help you set up Google or Meta ads to bring targeted students to your landing page.</p>
+                    </div>
+                </div>
+
+                <div class="provide-card">
+                    <div class="provide-icon">💡</div>
+                    <div class="provide-text">
+                        <h3>Lead-to-Student Guidance</h3>
+                        <p>We guide you on how to follow up, pitch your demo, and convert enquiries into paid enrollments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== USE CASES ==================== -->
+    <section class="usecase-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label" style="color:#60a5fa;">Who It Works For</div>
+                <h2 class="section-title">Built for Coaching Businesses</h2>
+                <p class="section-sub" style="color:#94a3b8;">Whether you teach online or offline — this system works for you.</p>
+            </div>
+
+            <div class="usecase-grid">
+                <div class="usecase-card">
+                    <div class="usecase-icon">💻</div>
+                    <h3>Online Tutoring</h3>
+                    <p>Maths, science, language, or any subject taught online — get students from across India.</p>
+                </div>
+
+                <div class="usecase-card">
+                    <div class="usecase-icon">👤</div>
+                    <h3>1-on-1 Coaching</h3>
+                    <p>Personal coaching for exams, skills, or career — attract serious, high-intent students.</p>
+                </div>
+
+                <div class="usecase-card">
+                    <div class="usecase-icon">✈️</div>
+                    <h3>Study Abroad Guidance</h3>
+                    <p>Help students apply to international universities — reach students who are actively searching.</p>
+                </div>
+
+                <div class="usecase-card">
+                    <div class="usecase-icon">🎯</div>
+                    <h3>Skill-Based Classes</h3>
+                    <p>Coding, design, photography, spoken English — grow your batch with targeted student leads.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== DEMO ==================== -->
+    <section class="demo-section">
+        <div class="container">
+            <div class="demo-inner">
+
+                <!-- Mockup -->
+                <div class="demo-mockup">
+                    <div style="background:#2563eb; border-radius:10px; padding:14px 16px; margin-bottom:20px;">
+                        <div style="background:rgba(255,255,255,0.2); border-radius:6px; height:8px; width:50%; margin-bottom:8px;"></div>
+                        <div style="background:rgba(255,255,255,0.3); border-radius:6px; height:14px; width:80%; margin-bottom:6px;"></div>
+                        <div style="background:rgba(255,255,255,0.2); border-radius:6px; height:10px; width:65%;"></div>
+                    </div>
+                    <div class="mockup-form">
+                        <p style="font-size:0.82rem;font-weight:700;color:#0f172a;margin-bottom:14px;">📋 Student Registration</p>
+                        <p class="mockup-label">Full Name</p>
+                        <div class="mockup-input"></div>
+                        <p class="mockup-label">Phone Number</p>
+                        <div class="mockup-input"></div>
+                        <p class="mockup-label">Course Interest</p>
+                        <div class="mockup-input"></div>
+                        <div class="mockup-btn"></div>
+                    </div>
+                    <div style="background:#f0fdf4;border-radius:10px;padding:12px 14px;margin-top:14px;display:flex;align-items:center;gap:10px;">
+                        <span style="font-size:1.4rem;">📱</span>
+                        <div>
+                            <p style="font-size:0.78rem;font-weight:700;color:#15803d;">WhatsApp Notification</p>
+                            <p style="font-size:0.72rem;color:#64748b;">New student enquiry received!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div class="demo-content">
+                    <div class="section-label">Sample Page</div>
+                    <h2>See What Your Student Page Looks Like</h2>
+                    <p>We build a clean, mobile-friendly page for your coaching business. Students land on it, fill the form, and you get an instant WhatsApp notification.</p>
+
+                    <ul class="demo-features">
+                        <li>Mobile-friendly design that loads fast</li>
+                        <li>Simple form — takes 30 seconds to fill</li>
+                        <li>Instant lead on your WhatsApp</li>
+                        <li>No login or dashboard needed for students</li>
+                        <li>Works on any device — phone, tablet, laptop</li>
+                    </ul>
+
+                    <a href="/contact" class="btn-primary">View Sample Page →</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA ==================== -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <h2>Start Getting Student Enquiries</h2>
+            <p>Setup takes 3 days. Your page goes live and leads start coming in.</p>
+            <a href="/contact" class="btn-white">Start Basic Setup →</a>
+            <p class="cta-note">Free consultation included • No tech skills needed</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div class="footer-mini">
+        <div class="container">
+            <p>&copy; 2026 <a href="/">Page2Lead</a>. All rights reserved. | <a href="/about">About</a> | <a href="/contact">Contact</a> | <a href="/privacy">Privacy</a> | <a href="/terms">Terms</a></p>
+        </div>
+    </div>
+
+    <script src="/js/consent.js"></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Education Lead Generation — Page2Lead",
+        "url": "https://page2lead.in/coaching",
+        "description": "Page2Lead helps coaching businesses attract and convert Indian and international students using a simple lead generation system.",
+        "provider": {
+            "@type": "Organization",
+            "name": "Page2Lead",
+            "url": "https://page2lead.in"
+        },
+        "serviceType": "Education Lead Generation",
+        "areaServed": {
+            "@type": "Country",
+            "name": "India"
+        },
+        "audience": {
+            "@type": "Audience",
+            "audienceType": "Coaching businesses, tutors, online educators"
+        },
+        "offers": {
+            "@type": "Offer",
+            "description": "Landing page + lead capture system for coaching businesses",
+            "url": "https://page2lead.in/contact"
+        }
+    }
+    </script>
+</body>
+</html>

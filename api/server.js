@@ -503,6 +503,7 @@ app.get('/about',   function(req,res) { res.sendFile(path.join(__dirname,'about.
 app.get('/contact', function(req,res) { res.sendFile(path.join(__dirname,'contact.html')); });
 app.get('/privacy', function(req,res) { res.sendFile(path.join(__dirname,'privacy.html')); });
 app.get('/terms',   function(req,res) { res.sendFile(path.join(__dirname,'terms.html')); });
+app.get('/coaching',    function(req,res) { res.sendFile(path.join(__dirname,'coaching.html')); });
 app.get('/admin',       function(req,res) { res.sendFile(path.join(__dirname,'admin','dashboard.html')); });
 app.get('/sitemap.xml', function(req,res) { res.sendFile(path.join(__dirname,'sitemap.xml')); });
 app.get('/robots.txt',  function(req,res) { res.sendFile(path.join(__dirname,'robots.txt')); });
