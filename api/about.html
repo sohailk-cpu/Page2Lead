@@ -3,232 +3,306 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Page2Lead | Lead Generation Platform Ajmer</title>
-    <meta name="description" content="Learn about Page2Lead — a lead generation platform offering home services leads in Ajmer and coaching lead generation across India and international markets.">
-    <meta name="keywords" content="about Page2Lead, lead generation platform Ajmer, coaching lead generation India, Page2Lead company">
+    <title>About Sohail Khan — Page2Lead</title>
+    <meta name="description" content="Page2Lead is run by Sohail Khan, a freelance lead generation specialist from Ajmer. I help coaching businesses get student enquiries and local service providers in Ajmer get customers.">
+    <meta name="keywords" content="Sohail Khan Page2Lead, coaching lead generation freelancer India, about Page2Lead, lead generation Ajmer">
     <link rel="canonical" href="https://page2lead.in/about">
-
     <!-- Favicon & App Icons -->
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="icon" type="image/png" href="assets/favicon.ico">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <meta name="theme-color" content="#000000">
-
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
+
     <style>
-        .about-hero { background: linear-gradient(135deg, #0f172a, #1e3a8a); color: white; padding: 80px 0; text-align: center; }
-        .about-hero h1 { font-size: 2.5rem; margin-bottom: 20px; color: white;}
-        .about-hero p { font-size: 1.15rem; color: #94a3b8; max-width: 600px; margin: 0 auto; }
-        .about-section { padding: 60px 0; }
-        .about-section.gray { background: var(--bg-light); }
-        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        .about-text h2 { font-size: 2rem; margin-bottom: 20px; color: #0f172a; }
-        .about-text p { color: #475569; line-height: 1.8; margin-bottom: 15px; }
-        .value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-top: 40px; }
-        .value-card { background: white; padding: 30px 25px; border-radius: 16px; border: 1px solid #e2e8f0; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .value-icon { font-size: 2.5rem; margin-bottom: 15px; }
-        .value-card h3 { font-size: 1.1rem; margin-bottom: 10px; color: #0f172a; }
-        .value-card p { color: #64748b; font-size: 0.9rem; line-height: 1.6; }
-        .mission-box { background: linear-gradient(135deg, #eff6ff, #dbeafe); border: 1px solid #bfdbfe; border-radius: 20px; padding: 40px; margin: 40px 0; }
-        .mission-box h3 { font-size: 1.5rem; color: #1e40af; margin-bottom: 15px; }
-        .mission-box p { color: #1e3a8a; line-height: 1.8; font-size: 1.05rem; }
-        .how-platform-works { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; }
-        .platform-step { text-align: center; padding: 30px 20px; }
-        .step-circle { width: 60px; height: 60px; background: #2563eb; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; margin: 0 auto 20px; }
-        @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; gap: 30px; } .value-grid { grid-template-columns: 1fr; } .how-platform-works { grid-template-columns: 1fr; } }
+        *, *::before, *::after { box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, sans-serif; color: #1e293b; background: white; }
+        h1 { font-size: clamp(1.9rem, 4vw, 2.6rem); font-weight: 800; line-height: 1.13; letter-spacing: -0.02em; color: #0f172a; }
+        h2 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); font-weight: 700; line-height: 1.2; color: #0f172a; }
+        h3 { font-size: 1rem; font-weight: 700; color: #0f172a; }
+        p { line-height: 1.8; color: #475569; }
+        .container { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+        section { padding: 72px 0; }
+        .label { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #2563eb; margin-bottom: 10px; }
+
+        .navbar { background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 100; }
+        .navbar .container { display: flex; align-items: center; justify-content: space-between; height: 66px; }
+        .logo { font-size: 1.4rem; font-weight: 800; color: #0f172a; text-decoration: none; letter-spacing: -0.02em; }
+        .logo span { color: #2563eb; }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+        .nav-links a { color: #475569; font-size: 0.88rem; font-weight: 500; text-decoration: none; transition: color 0.2s; }
+        .nav-links a:hover { color: #2563eb; }
+        .nav-cta { background: #2563eb; color: white !important; padding: 9px 20px; border-radius: 40px; font-weight: 600 !important; }
+
+        /* Page hero */
+        .page-hero { background: linear-gradient(135deg, #f0f4ff, #e8f0fe); padding: 72px 0 60px; }
+        .page-hero-inner { display: grid; grid-template-columns: auto 1fr; gap: 48px; align-items: center; }
+        .avatar { width: 120px; height: 120px; border-radius: 50%; background: #1e293b; border: 4px solid #2563eb; display: flex; align-items: center; justify-content: center; font-size: 3rem; flex-shrink: 0; }
+        .page-hero h1 { margin-bottom: 10px; }
+        .page-hero .tagline { font-size: 1.05rem; color: #475569; max-width: 480px; margin-bottom: 20px; }
+        .hero-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+        .chip { background: white; border: 1px solid #e2e8f0; color: #475569; padding: 6px 14px; border-radius: 40px; font-size: 0.78rem; font-weight: 500; }
+
+        /* Story */
+        .story-section { background: white; }
+        .story-inner { max-width: 700px; }
+        .story-inner p { margin-bottom: 18px; font-size: 0.95rem; }
+        .story-inner strong { color: #0f172a; }
+        .quote-block { border-left: 4px solid #2563eb; padding: 16px 20px; background: #f0f4ff; border-radius: 0 12px 12px 0; margin: 28px 0; }
+        .quote-block p { font-size: 1rem; font-style: italic; color: #1e40af; margin: 0; line-height: 1.7; }
+
+        /* What I do */
+        .services-section { background: #f8fafc; }
+        .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+        .scard { border-radius: 18px; padding: 30px 26px; border: 2px solid #e2e8f0; background: white; transition: all 0.2s; }
+        .scard.primary { border-color: #2563eb; }
+        .scard:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+        .scard-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 3px 10px; border-radius: 40px; margin-bottom: 14px; display: inline-block; }
+        .scard-label.primary { background: #eff6ff; color: #2563eb; }
+        .scard-label.secondary { background: #f8fafc; color: #64748b; border: 1px solid #e2e8f0; }
+        .scard h3 { font-size: 1.05rem; margin-bottom: 10px; }
+        .scard p { font-size: 0.86rem; line-height: 1.65; margin-bottom: 14px; }
+        .scard ul { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+        .scard ul li { font-size: 0.84rem; color: #374151; display: flex; gap: 8px; }
+        .scard ul li::before { content: "→"; color: #2563eb; font-weight: 700; flex-shrink: 0; }
+
+        /* Values */
+        .values-section { background: white; }
+        .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .vcard { background: #f8fafc; border-radius: 14px; padding: 24px 20px; border: 1px solid #e2e8f0; }
+        .vcard-icon { font-size: 1.8rem; margin-bottom: 12px; }
+        .vcard h3 { font-size: 0.92rem; margin-bottom: 7px; }
+        .vcard p { font-size: 0.82rem; line-height: 1.6; }
+
+        /* CTA */
+        .cta-section { background: linear-gradient(135deg, #1e3a8a, #2563eb); padding: 76px 0; text-align: center; }
+        .cta-section h2 { color: white; margin-bottom: 12px; }
+        .cta-section p { color: #bfdbfe; margin-bottom: 28px; }
+        .btn-white { background: white; color: #2563eb; padding: 14px 34px; border-radius: 40px; font-weight: 700; font-size: 0.95rem; display: inline-block; text-decoration: none; transition: all 0.2s; }
+        .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.18); }
+
+        .footer { background: #0f172a; padding: 40px 0 24px; }
+        .footer-inner { display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; gap: 32px; margin-bottom: 28px; }
+        .footer-brand .logo { color: white; display: block; margin-bottom: 10px; }
+        .footer-brand p { font-size: 0.82rem; color: #64748b; max-width: 220px; }
+        .footer-links h4 { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #e2e8f0; margin-bottom: 12px; }
+        .footer-links a { display: block; font-size: 0.82rem; color: #64748b; text-decoration: none; margin-bottom: 6px; }
+        .footer-links a:hover { color: #60a5fa; }
+        .footer-bottom { border-top: 1px solid #1e293b; padding-top: 20px; }
+        .footer-bottom p { font-size: 0.8rem; color: #475569; }
+
+        @media (max-width: 768px) {
+            .page-hero-inner { grid-template-columns: 1fr; gap: 28px; }
+            .avatar { width: 80px; height: 80px; font-size: 2rem; }
+            .services-grid { grid-template-columns: 1fr; }
+            .values-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+        }
     </style>
 </head>
 <body>
+
     <nav class="navbar">
         <div class="container">
             <a href="/" class="logo">Page2<span>Lead</span></a>
             <div class="nav-links">
-                <a href="/#services">Services</a>
                 <a href="/#how-it-works">How It Works</a>
+                <a href="/coaching-leads">Coaching Leads</a>
                 <a href="/contact">Contact</a>
-                <a href="/contact" class="cta-btn">Join as Provider</a>
+                <a href="https://wa.me/917597256642" class="nav-cta" target="_blank" rel="noopener">WhatsApp Me</a>
             </div>
         </div>
     </nav>
 
-    <div class="about-hero">
-        <div class="container">
-            <h1>About Page2Lead</h1>
-            <p>A lead generation platform connecting customers with verified local service providers in Ajmer, Rajasthan.</p>
-        </div>
-    </div>
+    <main>
 
-    <section class="about-section">
+    <!-- HERO -->
+    <section class="page-hero">
         <div class="container">
-            <div class="about-grid">
-                <div class="about-text">
-                    <h2>What is Page2Lead?</h2>
-                    <p>Page2Lead is a <strong>lead generation platform</strong> based in Ajmer, Rajasthan. We help customers find verified local service providers quickly — and we help local service businesses get genuine customer leads.</p>
-                    <p>We do <strong>not</strong> provide AC repair, plumbing, electrical, cleaning, or pest control services ourselves. We are the bridge between the customer and the right local professional.</p>
-                    <p>In addition, Page2Lead also helps coaching institutes generate high-quality student leads across India and international markets using performance marketing funnels.</p>
-                    <p>When a customer submits a request on our platform, we send that lead to a verified local provider in Ajmer or to a coaching institute. The provider or institute then contacts the customer directly.</p>
-                </div>
+            <div class="page-hero-inner">
+                <div class="avatar" aria-hidden="true">👨‍💻</div>
                 <div>
-                    <div class="mission-box">
-                        <h3>🎯 Our Mission</h3>
-                        <p>To make it easy for people in Ajmer to find trusted local service providers — and to help businesses grow by connecting them with real customers searching online.</p>
+                    <span class="label">The Person Behind Page2Lead</span>
+                    <h1>Hi, I'm Sohail Khan</h1>
+                    <p class="tagline">I run Page2Lead — a lead generation platform for coaching businesses and local service providers. Based in Ajmer, working remotely across India.</p>
+                    <div class="hero-chips">
+                        <span class="chip">📍 Ajmer, Rajasthan</span>
+                        <span class="chip">🎓 Coaching Leads — Primary</span>
+                        <span class="chip">🔧 Local Services Ajmer — Secondary</span>
+                        <span class="chip">💬 Direct WhatsApp Support</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="about-section gray">
+    <!-- STORY -->
+    <section class="story-section">
         <div class="container">
-            <h2 class="section-title">Coaching Lead Generation (India + International)</h2>
-            <p class="section-subtitle">We help coaching institutes generate consistent, high-quality student leads</p>
+            <div class="story-inner">
+                <span class="label">My Story</span>
+                <h2 style="margin-bottom:24px;">Why I Built Page2Lead</h2>
 
-            <div class="value-grid">
-                <div class="value-card">
-                    <div class="value-icon">📈</div>
-                    <h3>Basic Plan</h3>
-                    <p>₹5,000–7,000/month management</p>
-                    <p>+ Minimum ₹5,000 ads budget</p>
-                    <p>Includes landing page, lead form, and WhatsApp lead delivery.</p>
+                <p>I started Page2Lead after noticing a frustrating pattern — <strong>coaching businesses with great teachers were struggling to find students</strong>, while less qualified institutes were growing simply because they had a better marketing setup.</p>
+
+                <p>The problem wasn't the quality of teaching. It was that most coaching owners didn't know how to get consistent student enquiries. And the "solutions" out there — agencies, complicated tools, overpriced packages — weren't built for someone running a coaching class.</p>
+
+                <div class="quote-block">
+                    <p>"A good teacher deserves a full batch. The system I built is my way of making that happen — directly, simply, without unnecessary complications."</p>
                 </div>
 
-                <div class="value-card">
-                    <div class="value-icon">🌍</div>
-                    <h3>Standard Plan</h3>
-                    <p>₹8,000–12,000/month management</p>
-                    <p>+ ₹8,000–15,000 ads budget</p>
-                    <p>Includes landing page, WhatsApp integration, international targeting (Australia, UK, Canada), and lead tracking.</p>
-                </div>
+                <p>So I built a focused, WhatsApp-first lead system — targeted ads, a clean landing page, direct enquiries on WhatsApp. No CRM. No dashboard to learn. Just students reaching you on the same app you already use.</p>
 
-                <div class="value-card">
-                    <div class="value-icon">🚀</div>
-                    <h3>Advanced Plan</h3>
-                    <p>₹15,000+/month management</p>
-                    <p>+ Custom ads budget</p>
-                    <p>Includes full funnel setup, multi-country targeting, scaling, and priority support.</p>
-                </div>
+                <p>I also run a secondary service for local businesses in Ajmer — connecting people who need home services (AC repair, plumbing, electrical, cleaning, pest control) with verified local providers. It's a different model, but the same idea: <strong>direct connections, no unnecessary middlemen.</strong></p>
+
+                <p>I work with a limited number of clients at a time. That's intentional — I'd rather do a small number of setups really well than spread thin across too many clients.</p>
             </div>
         </div>
     </section>
 
-    <section class="about-section gray">
+    <!-- WHAT I DO -->
+    <section class="services-section">
         <div class="container">
-            <h2 class="section-title">How Our Platform Works</h2>
-            <p class="section-subtitle">Simple and transparent — for both customers and providers</p>
-            <div class="how-platform-works">
-                <div class="platform-step">
-                    <div class="step-circle">1</div>
-                    <h3>Customer Searches</h3>
-                    <p style="color:#64748b;">Customer searches on Google for a service or coaching program and lands on a Page2Lead page.</p>
-                </div>
-                <div class="platform-step">
-                    <div class="step-circle">2</div>
-                    <h3>Request Submitted</h3>
-                    <p style="color:#64748b;">Customer fills a simple form with their details and requirement.</p>
-                </div>
-                <div class="platform-step">
-                    <div class="step-circle">3</div>
-                    <h3>Provider Gets Lead</h3>
-                    <p style="color:#64748b;">The lead is sent to a provider or coaching institute who contacts the customer directly.</p>
-                </div>
+            <div style="margin-bottom:40px;">
+                <span class="label">What I Do</span>
+                <h2>Two Services. One Goal — More Customers.</h2>
             </div>
-        </div>
-    </section>
-
-    <section class="about-section">
-        <div class="container">
-            <h2 class="section-title">Our Values</h2>
-            <p class="section-subtitle">What guides us every day</p>
-            <div class="value-grid">
-                <div class="value-card">
-                    <div class="value-icon">🔍</div>
-                    <h3>Transparency</h3>
-                    <p>We clearly communicate what Page2Lead is — a lead generation platform, not a service provider. No misleading claims.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">✅</div>
-                    <h3>Verified Providers</h3>
-                    <p>We only work with local service providers who are genuine and experienced in their trade.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">📍</div>
-                    <h3>Local First</h3>
-                    <p>We believe in supporting local businesses in Ajmer. Every lead stays within the city — no outsiders.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">💰</div>
-                    <h3>Free for Customers</h3>
-                    <p>Customers always get free quotes. There is no charge for submitting a request on our platform.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">🚀</div>
-                    <h3>Simple & Fast</h3>
-                    <p>No app, no login, no hassle. Fill a form and a provider calls you back. That is it.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">🤝</div>
-                    <h3>Win-Win Model</h3>
-                    <p>Customers find trusted help. Providers get real leads. Both sides benefit from using Page2Lead.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="about-section gray">
-        <div class="container">
-            <h2 class="section-title">Services We Cover in Ajmer</h2>
-            <p class="section-subtitle">We connect customers with providers across these 5 service categories</p>
             <div class="services-grid">
-                <a href="/ac-repair-ajmer" style="text-decoration:none; background:white; padding:25px 15px; border-radius:16px; text-align:center; border:1px solid #e2e8f0; transition:all 0.2s;" onmouseover="this.style.borderColor='#2563eb'" onmouseout="this.style.borderColor='#e2e8f0'">
-                    <div style="font-size:2.5rem; margin-bottom:12px;">🔧</div>
-                    <h3 style="font-size:1rem; color:#0f172a;">AC Repair</h3>
-                </a>
-                <a href="/plumber-ajmer" style="text-decoration:none; background:white; padding:25px 15px; border-radius:16px; text-align:center; border:1px solid #e2e8f0; transition:all 0.2s;" onmouseover="this.style.borderColor='#2563eb'" onmouseout="this.style.borderColor='#e2e8f0'">
-                    <div style="font-size:2.5rem; margin-bottom:12px;">🔨</div>
-                    <h3 style="font-size:1rem; color:#0f172a;">Plumber</h3>
-                </a>
-                <a href="/electrician-ajmer" style="text-decoration:none; background:white; padding:25px 15px; border-radius:16px; text-align:center; border:1px solid #e2e8f0; transition:all 0.2s;" onmouseover="this.style.borderColor='#2563eb'" onmouseout="this.style.borderColor='#e2e8f0'">
-                    <div style="font-size:2.5rem; margin-bottom:12px;">⚡</div>
-                    <h3 style="font-size:1rem; color:#0f172a;">Electrician</h3>
-                </a>
-                <a href="/cleaning-ajmer" style="text-decoration:none; background:white; padding:25px 15px; border-radius:16px; text-align:center; border:1px solid #e2e8f0; transition:all 0.2s;" onmouseover="this.style.borderColor='#2563eb'" onmouseout="this.style.borderColor='#e2e8f0'">
-                    <div style="font-size:2.5rem; margin-bottom:12px;">🧹</div>
-                    <h3 style="font-size:1rem; color:#0f172a;">Cleaning</h3>
-                </a>
-                <a href="/pest-control-ajmer" style="text-decoration:none; background:white; padding:25px 15px; border-radius:16px; text-align:center; border:1px solid #e2e8f0; transition:all 0.2s;" onmouseover="this.style.borderColor='#2563eb'" onmouseout="this.style.borderColor='#e2e8f0'">
-                    <div style="font-size:2.5rem; margin-bottom:12px;">🐜</div>
-                    <h3 style="font-size:1rem; color:#0f172a;">Pest Control</h3>
-                </a>
+                <div class="scard primary">
+                    <span class="scard-label primary">⭐ Primary</span>
+                    <h3>Coaching Lead Generation</h3>
+                    <p>I run targeted ad campaigns and set up landing pages + WhatsApp systems for coaching businesses across India — helping them get consistent student enquiries.</p>
+                    <ul>
+                        <li>Coaching institutes, online tutors</li>
+                        <li>Study abroad consultants</li>
+                        <li>Skill-based and hobby classes</li>
+                        <li>International student targeting (AU, UK, CA)</li>
+                    </ul>
+                    <p style="margin-top:14px;"><a href="/coaching-leads" style="color:#2563eb;font-weight:600;font-size:0.86rem;">Learn more →</a></p>
+                </div>
+                <div class="scard">
+                    <span class="scard-label secondary">Secondary</span>
+                    <h3>Local Services — Ajmer</h3>
+                    <p>A separate lead generation system for Ajmer where customers can find verified local service providers. Providers receive leads directly on WhatsApp.</p>
+                    <ul>
+                        <li>AC repair, plumbing, electrical</li>
+                        <li>Home cleaning, pest control</li>
+                        <li>Free trial — 3 leads for new providers</li>
+                        <li>Pay-per-lead model</li>
+                    </ul>
+                    <p style="margin-top:14px;"><a href="/ac-repair-ajmer" style="color:#2563eb;font-weight:600;font-size:0.86rem;">See local services →</a></p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="cta-section" style="background:linear-gradient(135deg,#1e3a8a,#2563eb);">
+    <!-- VALUES -->
+    <section class="values-section">
         <div class="container">
-            <div class="cta-content">
-                <h2>Are You a Local Service Provider in Ajmer?</h2>
-                <p>Join Page2Lead and start receiving customer leads on WhatsApp. First 3 leads are free.</p>
-                <a href="/contact" class="cta-btn" style="background:white;color:#2563eb;">Join as a Provider →</a>
+            <div style="margin-bottom:40px;">
+                <span class="label">How I Work</span>
+                <h2>What You Can Expect</h2>
+            </div>
+            <div class="values-grid">
+                <div class="vcard">
+                    <div class="vcard-icon">🔒</div>
+                    <h3>No Fake Promises</h3>
+                    <p>I do a free strategy call before taking any client. If I think this system won't work for your business, I'll tell you that — honestly.</p>
+                </div>
+                <div class="vcard">
+                    <div class="vcard-icon">💬</div>
+                    <h3>Direct Communication</h3>
+                    <p>You get my direct WhatsApp number. No support tickets, no account managers. You talk to the person actually doing the work.</p>
+                </div>
+                <div class="vcard">
+                    <div class="vcard-icon">📊</div>
+                    <h3>Transparent Pricing</h3>
+                    <p>Management fee and ad budget are always separate. I don't make money from your ad spend — it goes directly to Google or Meta.</p>
+                </div>
+                <div class="vcard">
+                    <div class="vcard-icon">🗓️</div>
+                    <h3>Month-to-Month</h3>
+                    <p>No long-term contracts. If you're not happy, you can stop. I'd rather earn your continued trust than lock you in.</p>
+                </div>
+                <div class="vcard">
+                    <div class="vcard-icon">🎯</div>
+                    <h3>Focused Niche</h3>
+                    <p>I work specifically with coaching businesses and local services. Not e-commerce, not SaaS. Focused expertise means better results.</p>
+                </div>
+                <div class="vcard">
+                    <div class="vcard-icon">⚡</div>
+                    <h3>Fast Setup</h3>
+                    <p>Most setups are live within 3–5 days. No endless back-and-forth or months of "planning" before results start coming in.</p>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Want to Work Together?</h2>
+            <p>Let's have a free 15-minute call and see if I can help your coaching business get more students.</p>
+            <a href="https://wa.me/917597256642?text=Hi%20Sohail,%20I%20read%20your%20about%20page%20and%20want%20to%20discuss%20leads" class="btn-white" target="_blank" rel="noopener">💬 WhatsApp Me</a>
+            <p style="margin-top:12px;font-size:0.8rem;color:#93c5fd;">Or email: page2lead.contact@gmail.com</p>
+        </div>
+    </section>
+
+    </main>
 
     <footer class="footer">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col"><h4>Page2Lead</h4><a href="/">Home</a><a href="/about">About Us</a><a href="/contact">Contact</a><a href="/privacy">Privacy Policy</a></div>
-                <div class="footer-col"><h4>Services in Ajmer</h4><a href="/ac-repair-ajmer">AC Repair</a><a href="/plumber-ajmer">Plumber</a><a href="/electrician-ajmer">Electrician</a><a href="/cleaning-ajmer">Cleaning</a><a href="/pest-control-ajmer">Pest Control</a></div>
-                <div class="footer-col"><h4>Support</h4><a href="/faq">FAQ</a><a href="/terms">Terms of Service</a><a href="/privacy">Privacy Policy</a></div>
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <p>📍 Ajmer, Rajasthan, India</p>
-                    <p>🌐 page2lead.in</p>
-                    <p>✉️ page2lead.contact@gmail.com</p>
-                    <p>📞 +91 75972 56642</p>
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <a href="/" class="logo">Page2<span>Lead</span></a>
+                    <p>Run by Sohail Khan. Lead generation for coaching businesses and local services.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Coaching</h4>
+                    <a href="/coaching-leads">Coaching Leads</a>
+                    <a href="/coaching">Pricing</a>
+                    <a href="/contact">Book a Call</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Local Services</h4>
+                    <a href="/ac-repair-ajmer">AC Repair</a>
+                    <a href="/plumber-ajmer">Plumber</a>
+                    <a href="/electrician-ajmer">Electrician</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Info</h4>
+                    <a href="/about">About</a>
+                    <a href="/privacy">Privacy</a>
+                    <a href="/terms">Terms</a>
+                    <a href="mailto:page2lead.contact@gmail.com">page2lead.contact@gmail.com</a>
+                    <a href="tel:+917597256642">+91 75972 56642</a>
                 </div>
             </div>
-            <div class="footer-bottom"><p>&copy; 2026 Page2Lead. All rights reserved. | Lead Generation Platform</p></div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Page2Lead by Sohail Khan — Ajmer, Rajasthan, India</p>
+            </div>
         </div>
     </footer>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sohail Khan",
+        "url": "https://page2lead.in/about",
+        "jobTitle": "Lead Generation Specialist",
+        "worksFor": { "@type": "Organization", "name": "Page2Lead", "url": "https://page2lead.in" },
+        "address": { "@type": "PostalAddress", "addressLocality": "Ajmer", "addressRegion": "Rajasthan", "addressCountry": "IN" },
+        "email": "page2lead.contact@gmail.com",
+        "telephone": "+917597256642",
+        "knowsAbout": ["Lead Generation", "Coaching Marketing", "Google Ads", "Meta Ads", "WhatsApp Marketing", "Student Leads"]
+    }
+    </script>
+
+    <script src="/js/consent.js"></script>
 </body>
 </html>
