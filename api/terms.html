@@ -3,48 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service - Page2Lead</title>
-    <meta name="description" content="Terms of Service for Page2Lead — the lead generation platform offering home services in Ajmer and coaching lead generation across India and international markets.">
+    <title>Terms of Service — Page2Lead</title>
+    <meta name="description" content="Terms of Service for Page2Lead — the lead generation platform run by Sohail Khan for coaching businesses and local services in Ajmer.">
     <link rel="canonical" href="https://page2lead.in/terms">
-    <link rel="stylesheet" href="/css/style.css">
-
-    <!-- Favicon & App Icons -->
+    
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="icon" type="image/png" href="assets/favicon.ico">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <meta name="theme-color" content="#000000">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
     <style>
-        .policy-hero { background: linear-gradient(135deg, #0f172a, #1e3a8a); color: white; padding: 60px 0; text-align: center; }
-        .policy-hero h1 { font-size: 2.2rem; margin-bottom: 10px; color: white;}
-        .policy-hero p { color: #94a3b8; }
-        .policy-body { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
-        .policy-body h2 { font-size: 1.4rem; color: #0f172a; margin: 40px 0 15px; padding-bottom: 10px; border-bottom: 2px solid #e2e8f0; }
+        *, *::before, *::after { box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, sans-serif; color: #1e293b; background: white; }
+        .container { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+        .navbar { background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 100; }
+        .navbar .container { display: flex; align-items: center; justify-content: space-between; height: 66px; }
+        .logo { font-size: 1.4rem; font-weight: 800; color: #0f172a; text-decoration: none; letter-spacing: -0.02em; }
+        .logo span { color: #2563eb; }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+        .nav-links a { color: #475569; font-size: 0.88rem; font-weight: 500; text-decoration: none; }
+        .nav-links a:hover { color: #2563eb; }
+
+        .page-hero { background: linear-gradient(135deg, #0f172a, #1e3a8a); color: white; padding: 56px 0 44px; text-align: center; }
+        .page-hero h1 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; color: white; margin-bottom: 10px; }
+        .page-hero p { color: #94a3b8; font-size: 0.95rem; }
+
+        .policy-body { max-width: 760px; margin: 0 auto; padding: 56px 24px 72px; }
+        .updated { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 18px; margin-bottom: 36px; font-size: 0.85rem; color: #64748b; }
+        .summary-box { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 12px; padding: 18px 22px; margin-bottom: 36px; }
+        .summary-box p { color: #1e40af; font-size: 0.9rem; line-height: 1.7; margin: 0; }
+        .warning-box { background: #fef9c3; border: 1px solid #fde68a; border-radius: 12px; padding: 16px 20px; margin: 16px 0; }
+        .warning-box p { color: #854d0e; font-size: 0.88rem; line-height: 1.65; margin: 0; }
+        .policy-body h2 { font-size: 1.2rem; font-weight: 700; color: #0f172a; margin: 36px 0 12px; padding-bottom: 10px; border-bottom: 2px solid #e2e8f0; }
         .policy-body h2:first-of-type { margin-top: 0; }
-        .policy-body p { color: #475569; line-height: 1.8; margin-bottom: 15px; }
-        .policy-body ul { color: #475569; line-height: 1.8; margin-bottom: 15px; padding-left: 25px; }
-        .policy-body ul li { margin-bottom: 8px; }
+        .policy-body p { color: #475569; line-height: 1.8; margin-bottom: 14px; font-size: 0.93rem; }
+        .policy-body ul { color: #475569; line-height: 1.8; margin-bottom: 14px; padding-left: 22px; font-size: 0.93rem; }
+        .policy-body ul li { margin-bottom: 6px; }
         .policy-body a { color: #2563eb; }
-        .updated-date { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 20px; margin-bottom: 40px; color: #64748b; font-size: 0.9rem; }
-        .highlight-box { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 12px; padding: 20px 25px; margin: 20px 0; }
-        .highlight-box p { color: #1e40af; margin: 0; }
-        .warning-box { background: #fef9c3; border: 1px solid #fde68a; border-radius: 12px; padding: 20px 25px; margin: 20px 0; }
-        .warning-box p { color: #854d0e; margin: 0; }
+        .policy-body strong { color: #0f172a; }
+
+        .footer { background: #0f172a; padding: 32px 0 20px; }
+        .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+        .footer-inner .logo { color: white; }
+        .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+        .footer-links a { font-size: 0.82rem; color: #64748b; text-decoration: none; }
+        .footer-links a:hover { color: #60a5fa; }
+        .footer-copy { border-top: 1px solid #1e293b; padding-top: 18px; margin-top: 18px; }
+        .footer-copy p { font-size: 0.8rem; color: #475569; }
+
+        @media (max-width: 768px) { .nav-links { display: none; } }
     </style>
 </head>
 <body>
+
     <nav class="navbar">
         <div class="container">
             <a href="/" class="logo">Page2<span>Lead</span></a>
             <div class="nav-links">
-                <a href="/#services">Services</a>
+                <a href="/">Home</a>
+                <a href="/coaching-leads">Coaching Leads</a>
                 <a href="/about">About</a>
                 <a href="/contact">Contact</a>
             </div>
         </div>
     </nav>
 
-    <div class="policy-hero">
+    <div class="page-hero">
         <div class="container">
             <h1>Terms of Service</h1>
             <p>Please read these terms carefully before using Page2Lead</p>
@@ -52,110 +80,111 @@
     </div>
 
     <div class="policy-body">
-        <div class="updated-date">📅 Last updated: January 2026</div>
+        <div class="updated">📅 Last updated: March 2026</div>
 
-        <div class="highlight-box">
-            <p><strong>Important:</strong> Page2Lead is a lead generation platform only. We connect customers with local service providers and coaching institutes — we do not provide, guarantee, or take responsibility for the quality of any service or results.</p>
+        <div class="summary-box">
+            <p><strong>Summary:</strong> By using Page2Lead, you agree to these terms. Page2Lead is a lead generation platform — I connect customers with service providers and coaching businesses with students. I am not responsible for the quality of work done by providers or the results of any coaching business.</p>
         </div>
 
-        <h2>1. Acceptance of Terms</h2>
-        <p>By accessing or using the Page2Lead website (page2lead.in), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our platform.</p>
-        <p>These terms apply to all users of the platform — including customers submitting requests and providers or coaching institutes receiving leads.</p>
-
-        <h2>2. What Page2Lead Is</h2>
-        <p>Page2Lead is a <strong>lead generation platform</strong>. Our service is to:</p>
+        <h2>1. About Page2Lead</h2>
+        <p>Page2Lead is owned and operated by <strong>Sohail Khan</strong>, a solo freelancer based in Ajmer, Rajasthan, India. I run two services:</p>
         <ul>
-            <li>Collect service requests from customers in Ajmer</li>
-            <li>Generate leads for coaching institutes across India and international markets</li>
-            <li>Forward those requests to verified providers or coaching clients</li>
-            <li>Facilitate the initial connection between the customer and the provider or institute</li>
+            <li><strong>Coaching Lead Generation:</strong> I help coaching institutes, online tutors, and study abroad consultants get student enquiries through paid ad campaigns and landing pages.</li>
+            <li><strong>Local Home Services — Ajmer:</strong> I connect customers in Ajmer who need home services (AC repair, plumbing, electrical, cleaning, pest control) with verified local providers.</li>
         </ul>
-        <p>Page2Lead does <strong>not</strong>:</p>
-        <ul>
-            <li>Provide AC repair, plumbing, electrical, cleaning, or pest control services</li>
-            <li>Provide coaching or educational services</li>
-            <li>Employ or directly manage any provider or institute</li>
-            <li>Set pricing for services or courses</li>
-            <li>Guarantee outcomes, results, or service quality</li>
-        </ul>
+        <p>Page2Lead is a <strong>platform and marketing service</strong> — I do not personally provide home repair services or coaching. I connect the relevant parties.</p>
 
-        <h2>3. For Customers</h2>
-        <p>As a customer using Page2Lead:</p>
+        <h2>2. Acceptance of Terms</h2>
+        <p>By accessing or using page2lead.in, submitting a request form, or engaging my services, you agree to be bound by these Terms of Service. If you do not agree, please do not use this platform.</p>
+
+        <h2>3. For Customers (Home Service Requests — Ajmer)</h2>
+        <p>If you are submitting a home service request on Page2Lead:</p>
         <ul>
-            <li>You agree to provide accurate and truthful information when submitting a request.</li>
-            <li>You understand that your contact details will be shared with a provider or coaching institute.</li>
-            <li>You understand that Page2Lead only facilitates the connection — all agreements, pricing, and outcomes are handled directly.</li>
-            <li>Page2Lead is not responsible for any disputes, damages, or issues.</li>
-            <li>Submitting a request does not guarantee response or availability.</li>
+            <li>Your contact details will be shared with a verified local provider in Ajmer who can fulfil your request.</li>
+            <li>Page2Lead is a connecting platform — I am not responsible for the quality, pricing, or outcome of the service provided by the local provider.</li>
+            <li>Requesting a callback is free. Providers set their own prices — Page2Lead does not control or guarantee any pricing.</li>
+            <li>Please only submit genuine requests. Fake or spam submissions affect real service providers.</li>
         </ul>
 
-        <h2>4. For Service Providers & Coaching Clients</h2>
-        <p>As a provider or coaching client:</p>
+        <h2>4. For Service Providers (Home Services — Ajmer)</h2>
+        <p>If you are joining Page2Lead as a local service provider:</p>
         <ul>
-            <li>You agree to provide accurate business information.</li>
-            <li>You agree to contact leads professionally.</li>
-            <li>You agree to the lead pricing model — free trial (3 leads) followed by paid leads.</li>
-            <li>You are responsible for your service or coaching outcomes.</li>
-            <li>You agree not to misuse lead data.</li>
+            <li>You will receive customer leads delivered to your WhatsApp number.</li>
+            <li>New providers receive an initial trial period with a limited number of free leads. After the trial, a pay-per-lead model applies — exact terms will be communicated to you before you start paying.</li>
+            <li>Lead credits are non-refundable except in cases where the lead is demonstrably fake or invalid, which must be reported within 24 hours of receiving the lead.</li>
+            <li>You agree to respond to leads promptly and professionally. Repeated failure to follow up may result in removal from the platform.</li>
+            <li>You must not contact customers for purposes unrelated to the service they requested.</li>
+            <li>I reserve the right to remove any provider from the platform at my discretion.</li>
+        </ul>
+
+        <h2>5. For Coaching Clients (Lead Generation Service)</h2>
+        <p>If you are engaging my coaching lead generation service:</p>
+        <ul>
+            <li>Services are provided on a month-to-month basis. There is no long-term contract unless separately agreed in writing.</li>
+            <li>The management fee covers my work — setting up landing pages, managing ad campaigns, and delivering leads. It does not include the ad budget.</li>
+            <li>Ad budget is paid directly by you to Google Ads or Meta Ads. I do not handle or profit from your ad spend.</li>
+            <li>I do not guarantee a specific number of leads or student enrollments. Results depend on factors including ad budget, course demand, targeting, and your own follow-up process.</li>
+            <li>I will provide honest feedback if I believe the system is unlikely to work for your specific situation.</li>
+            <li>Either party may terminate the service with reasonable notice. Fees already paid for the current month are non-refundable.</li>
         </ul>
 
         <div class="warning-box">
-            <p><strong>Pricing Plans (Coaching):</strong> Basic (₹5,000–7,000/month + ads), Standard (₹8,000–12,000/month + ads), Advanced (₹15,000+/month + custom ads). Ad budgets are separate. Plans include landing pages, lead forms, WhatsApp delivery, and scaling depending on plan level.</p>
+            <p><strong>Important:</strong> Page2Lead does not guarantee specific results, revenue, or student enrollment numbers from any coaching lead generation campaign. Marketing results vary based on many factors outside my control.</p>
         </div>
 
-        <h2>5. Limitation of Liability</h2>
-        <p>Page2Lead connects two parties. We are not part of any agreement.</p>
+        <h2>6. Payments</h2>
+        <p>Payment terms are agreed between Page2Lead and the client before work begins. For coaching services, invoices are issued monthly. For home service providers, lead credit pricing is communicated clearly before any charges apply. All payments are final unless otherwise agreed.</p>
+
+        <h2>7. Intellectual Property</h2>
+        <p>All content on page2lead.in — including design, code, and copy — is the property of Page2Lead (Sohail Khan). You may not copy, reproduce, or use any part of this website without my written permission.</p>
+        <p>Landing pages I create for coaching clients during an active engagement remain my intellectual property. Upon termination, clients may request handover of their landing page files.</p>
+
+        <h2>8. Limitation of Liability</h2>
+        <p>Page2Lead (Sohail Khan) shall not be liable for:</p>
         <ul>
-            <li>No liability for service quality or coaching results</li>
-            <li>No responsibility for disputes</li>
-            <li>No guarantee of results</li>
+            <li>Any disputes between customers and service providers regarding work quality or pricing.</li>
+            <li>Loss of business or revenue resulting from lead generation campaigns.</li>
+            <li>Technical downtime, data loss, or platform interruptions beyond my reasonable control.</li>
+            <li>Actions taken by third-party ad platforms (Google, Meta) including account suspensions.</li>
         </ul>
+        <p>My maximum liability in any circumstance is limited to the amount paid by you for the service in the current month.</p>
 
-        <h2>6. Accuracy of Information</h2>
-        <p>We do not guarantee all provider or coaching details are always up to date.</p>
-
-        <h2>7. Prohibited Use</h2>
-        <ul>
-            <li>No fake leads</li>
-            <li>No scraping</li>
-            <li>No fraud</li>
-        </ul>
-
-        <h2>8. Intellectual Property</h2>
-        <p>All content belongs to Page2Lead.</p>
-
-        <h2>9. Changes to Terms</h2>
-        <p>We may update terms anytime.</p>
+        <h2>9. Privacy</h2>
+        <p>Use of this platform is also governed by my <a href="/privacy">Privacy Policy</a>, which explains how I collect and use your information.</p>
 
         <h2>10. Governing Law</h2>
-        <p>Jurisdiction: Ajmer, Rajasthan, India.</p>
+        <p>These terms are governed by the laws of India. Any disputes shall be subject to the jurisdiction of courts in Ajmer, Rajasthan.</p>
 
-        <h2>11. Contact</h2>
+        <h2>11. Changes to These Terms</h2>
+        <p>I may update these terms from time to time. I will update the date at the top of this page when I do. Continued use of the platform means you accept the updated terms.</p>
+
+        <h2>12. Contact</h2>
+        <p>If you have questions about these terms, please contact me:</p>
         <ul>
-            <li>Company: Page2Lead</li>
-            <li>Website: <a href="https://page2lead.in">page2lead.in</a></li>
             <li>Email: <a href="mailto:page2lead.contact@gmail.com">page2lead.contact@gmail.com</a></li>
-            <li>Phone: +91 75972 56642</li>
-            <li>Location: Ajmer, Rajasthan, India</li>
+            <li>WhatsApp: <a href="https://wa.me/917597256642" target="_blank" rel="noopener">+91 75972 56642</a></li>
+            <li>Address: Ajmer, Rajasthan, India</li>
         </ul>
     </div>
 
     <footer class="footer">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col"><h4>Page2Lead</h4><a href="/">Home</a><a href="/about">About Us</a><a href="/contact">Contact</a><a href="/privacy">Privacy Policy</a></div>
-                <div class="footer-col"><h4>Services in Ajmer</h4><a href="/ac-repair-ajmer">AC Repair</a><a href="/plumber-ajmer">Plumber</a><a href="/electrician-ajmer">Electrician</a><a href="/cleaning-ajmer">Cleaning</a><a href="/pest-control-ajmer">Pest Control</a></div>
-                <div class="footer-col"><h4>Legal</h4><a href="/terms">Terms of Service</a><a href="/privacy">Privacy Policy</a></div>
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <p>📍 Ajmer, Rajasthan, India</p>
-                    <p>🌐 page2lead.in</p>
-                    <p>✉️ page2lead.contact@gmail.com</p>
-                    <p>📞 +91 75972 56642</p>
+            <div class="footer-inner">
+                <a href="/" class="logo">Page2<span>Lead</span></a>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="/coaching-leads">Coaching Leads</a>
+                    <a href="/about">About</a>
+                    <a href="/contact">Contact</a>
+                    <a href="/privacy">Privacy Policy</a>
                 </div>
             </div>
-            <div class="footer-bottom"><p>&copy; 2026 Page2Lead. All rights reserved.</p></div>
+            <div class="footer-copy">
+                <p>&copy; 2026 Page2Lead by Sohail Khan — Ajmer, Rajasthan, India</p>
+            </div>
         </div>
     </footer>
+
+    <script src="/js/consent.js"></script>
 </body>
 </html>
