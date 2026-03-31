@@ -3,214 +3,470 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Page2Lead - Join as Provider or Get Help | Ajmer</title>
-    <meta name="description" content="Contact Page2Lead. Join as a service provider in Ajmer or get help with coaching lead generation across India and international markets.">
-    <meta name="keywords" content="contact Page2Lead, join Page2Lead provider, coaching lead generation India, service provider Ajmer">
+    <title>Contact Sohail Khan — Page2Lead</title>
+    <meta name="description" content="Get in touch with Sohail Khan at Page2Lead. Coaching businesses can book a free strategy call. Local service providers in Ajmer can join to receive leads on WhatsApp.">
+    <meta name="keywords" content="contact Page2Lead, coaching leads enquiry, join Page2Lead Ajmer, Sohail Khan contact">
     <link rel="canonical" href="https://page2lead.in/contact">
-    <link rel="stylesheet" href="/css/style.css">
-
-    <!-- Favicon & App Icons -->
+    
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="icon" type="image/png" href="assets/favicon.ico">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <meta name="theme-color" content="#000000">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+
     <style>
-        .contact-hero { background: linear-gradient(135deg, #0f172a, #1e3a8a); color: white; padding: 80px 0; text-align: center; }
-        .contact-hero h1 { font-size: 2.5rem; margin-bottom: 20px; color: white;}
-        .contact-hero p { font-size: 1.15rem; color: #94a3b8; max-width: 580px; margin: 0 auto; }
-        .contact-section { padding: 60px 0; }
-        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
-        .contact-form-box { background: white; border-radius: 20px; padding: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; }
-        .contact-form-box h2 { font-size: 1.6rem; margin-bottom: 8px; color: #0f172a; }
-        .contact-form-box p { color: #64748b; margin-bottom: 25px; font-size: 0.95rem; }
-        .form-group { margin-bottom: 18px; }
-        .form-group label { display: block; margin-bottom: 6px; font-weight: 500; color: #374151; font-size: 0.9rem; }
-        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 16px; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 1rem; outline: none; transition: border-color 0.2s; font-family: inherit; }
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #2563eb; }
-        .submit-btn { width: 100%; background: #2563eb; color: white; border: none; padding: 14px; border-radius: 12px; font-size: 1.05rem; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+        *, *::before, *::after { box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, sans-serif; color: #1e293b; background: white; }
+        h1 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; color: #0f172a; }
+        h2 { font-size: 1.4rem; font-weight: 700; color: #0f172a; }
+        h3 { font-size: 1rem; font-weight: 700; color: #0f172a; }
+        p { line-height: 1.75; color: #475569; }
+        .container { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+        .label { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #2563eb; margin-bottom: 8px; }
+
+        /* Navbar */
+        .navbar { background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 100; }
+        .navbar .container { display: flex; align-items: center; justify-content: space-between; height: 66px; }
+        .logo { font-size: 1.4rem; font-weight: 800; color: #0f172a; text-decoration: none; letter-spacing: -0.02em; }
+        .logo span { color: #2563eb; }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+        .nav-links a { color: #475569; font-size: 0.88rem; font-weight: 500; text-decoration: none; transition: color 0.2s; }
+        .nav-links a:hover { color: #2563eb; }
+        .nav-cta { background: #2563eb; color: white !important; padding: 9px 20px; border-radius: 40px; font-weight: 600 !important; }
+
+        /* Hero */
+        .page-hero { background: linear-gradient(135deg, #0f172a, #1e3a8a); color: white; padding: 64px 0 52px; text-align: center; }
+        .page-hero h1 { color: white; margin-bottom: 12px; }
+        .page-hero p { color: #94a3b8; font-size: 1rem; max-width: 500px; margin: 0 auto; }
+
+        /* Tabs */
+        .tabs-section { padding: 52px 0 72px; }
+        .tabs-header { display: flex; gap: 12px; margin-bottom: 40px; border-bottom: 2px solid #e2e8f0; padding-bottom: 0; }
+        .tab-btn { padding: 12px 24px; border: none; background: none; cursor: pointer; font-size: 0.92rem; font-weight: 600; color: #64748b; border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all 0.2s; font-family: inherit; }
+        .tab-btn.active { color: #2563eb; border-bottom-color: #2563eb; }
+        .tab-btn:hover { color: #2563eb; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        /* Form grid */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+        .form-box { background: white; border-radius: 20px; padding: 36px; border: 1px solid #e2e8f0; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+        .form-box h2 { margin-bottom: 6px; }
+        .form-box > p { font-size: 0.9rem; color: #64748b; margin-bottom: 24px; }
+        .form-group { margin-bottom: 16px; }
+        .form-group label { display: block; margin-bottom: 6px; font-weight: 600; color: #374151; font-size: 0.85rem; }
+        .form-group input,
+        .form-group select,
+        .form-group textarea { width: 100%; padding: 11px 14px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 0.92rem; font-family: inherit; color: #0f172a; outline: none; transition: border-color 0.2s; background: white; }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus { border-color: #2563eb; }
+        .form-group textarea { resize: vertical; min-height: 100px; }
+        .submit-btn { width: 100%; background: #2563eb; color: white; border: none; padding: 13px; border-radius: 10px; font-size: 0.95rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: inherit; }
         .submit-btn:hover { background: #1d4ed8; transform: translateY(-1px); }
-        .contact-info-box { display: flex; flex-direction: column; gap: 20px; }
-        .info-card { background: white; border-radius: 16px; padding: 25px; border: 1px solid #e2e8f0; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .info-card h3 { font-size: 1.1rem; margin-bottom: 10px; color: #0f172a; }
-        .info-card p { color: #64748b; font-size: 0.95rem; line-height: 1.6; }
-        .provider-benefits { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 16px; padding: 25px; }
-        .provider-benefits h3 { color: #1e40af; margin-bottom: 15px; }
-        .benefit-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; color: #374151; font-size: 0.95rem; }
-        .benefit-item span:first-child { color: #16a34a; font-weight: 700; flex-shrink: 0; }
-        .form-message { margin-top: 15px; padding: 12px 16px; border-radius: 10px; font-size: 0.95rem; display: none; }
-        .form-message.success { background: #dcfce7; color: #166534; display: block; }
-        .form-message.error { background: #fee2e2; color: #991b1b; display: block; }
-        @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+        .submit-btn.wa { background: #25D366; }
+        .submit-btn.wa:hover { background: #128C7E; }
+        .form-msg { margin-top: 14px; padding: 12px 16px; border-radius: 10px; font-size: 0.88rem; display: none; }
+        .form-msg.success { background: #dcfce7; color: #166534; display: block; }
+        .form-msg.error { background: #fee2e2; color: #991b1b; display: block; }
+
+        /* Info cards */
+        .info-stack { display: flex; flex-direction: column; gap: 16px; }
+        .info-card { background: #f8fafc; border-radius: 14px; padding: 22px 20px; border: 1px solid #e2e8f0; }
+        .info-card h3 { margin-bottom: 8px; font-size: 0.95rem; }
+        .info-card p { font-size: 0.86rem; line-height: 1.65; }
+        .info-card a { color: #2563eb; text-decoration: none; }
+        .coaching-info { background: #eff6ff; border-color: #bfdbfe; }
+        .provider-info { background: #f0fdf4; border-color: #bbf7d0; }
+        .ilist { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
+        .ilist li { display: flex; align-items: flex-start; gap: 8px; font-size: 0.84rem; color: #374151; }
+        .ilist li::before { content: "✓"; font-weight: 700; flex-shrink: 0; }
+        .ilist.blue li::before { color: #2563eb; }
+        .ilist.green li::before { color: #16a34a; }
+
+        /* Footer */
+        .footer { background: #0f172a; padding: 40px 0 24px; }
+        .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 28px; margin-bottom: 28px; }
+        .footer-brand .logo { color: white; display: block; margin-bottom: 8px; }
+        .footer-brand p { font-size: 0.82rem; color: #64748b; max-width: 220px; }
+        .footer-col h4 { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #e2e8f0; margin-bottom: 12px; }
+        .footer-col a { display: block; font-size: 0.82rem; color: #64748b; text-decoration: none; margin-bottom: 6px; }
+        .footer-col a:hover { color: #60a5fa; }
+        .footer-col p { font-size: 0.82rem; color: #64748b; margin-bottom: 5px; }
+        .footer-bottom { border-top: 1px solid #1e293b; padding-top: 20px; }
+        .footer-bottom p { font-size: 0.8rem; color: #475569; }
+
+        @media (max-width: 768px) {
+            .contact-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+            .tabs-header { overflow-x: auto; }
+        }
     </style>
 </head>
 <body>
+
     <nav class="navbar">
         <div class="container">
             <a href="/" class="logo">Page2<span>Lead</span></a>
             <div class="nav-links">
-                <a href="/#services">Services</a>
+                <a href="/#how-it-works">How It Works</a>
+                <a href="/coaching-leads">Coaching Leads</a>
                 <a href="/about">About</a>
-                <a href="/contact">Contact</a>
-                <a href="#contact-form" class="cta-btn">Join as Provider</a>
+                <a href="https://wa.me/917597256642" class="nav-cta" target="_blank" rel="noopener">WhatsApp Me</a>
             </div>
         </div>
     </nav>
 
-    <div class="contact-hero">
+    <div class="page-hero">
         <div class="container">
-            <h1>Contact Page2Lead</h1>
-            <p>Join as a service provider in Ajmer or grow your coaching institute with high-quality leads across India and international markets.</p>
+            <h1>Get in Touch</h1>
+            <p>Coaching business enquiry, strategy call, or joining as a local service provider in Ajmer — I'll get back to you within 24 hours.</p>
         </div>
     </div>
 
-    <section class="contact-section">
+    <section class="tabs-section">
         <div class="container">
-            <div class="contact-grid">
 
-                <!-- Contact Form -->
-                <div class="contact-form-box" id="contact-form">
-                    <h2>Get in Touch</h2>
-                    <p>Fill the form below — we will get back to you within 24 hours.</p>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label>Your Full Name *</label>
-                            <input type="text" id="cname" placeholder="e.g. Rahul Sharma" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Phone Number *</label>
-                            <input type="tel" id="cphone" placeholder="10 digit mobile number" required maxlength="10">
-                        </div>
-                        <div class="form-group">
-                            <label>Email Address</label>
-                            <input type="email" id="cemail" placeholder="your@email.com">
-                        </div>
-                        <div class="form-group">
-                            <label>I am a... *</label>
-                            <select id="ctype" required>
-                                <option value="">Select</option>
-                                <option value="Provider - AC Repair">Service Provider — AC Repair</option>
-                                <option value="Provider - Plumber">Service Provider — Plumber</option>
-                                <option value="Provider - Electrician">Service Provider — Electrician</option>
-                                <option value="Provider - Cleaning">Service Provider — Cleaning</option>
-                                <option value="Provider - Pest Control">Service Provider — Pest Control</option>
-                                <option value="Coaching Institute">Coaching Institute (Lead Generation)</option>
-                                <option value="Customer">Customer with a query</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Business Name <span style="color:#94a3b8;">(if provider or coaching)</span></label>
-                            <input type="text" id="cbusiness" placeholder="e.g. Rahul AC Services or XYZ Coaching">
-                        </div>
-                        <div class="form-group">
-                            <label>Your Area in Ajmer *</label>
-                            <input type="text" id="carea" placeholder="e.g. Vaishali Nagar" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Message</label>
-                            <textarea id="cmessage" rows="4" placeholder="Tell us more about your query or business..."></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn" id="contactBtn">Send Message →</button>
-                    </form>
-                    <div class="form-message" id="contactMsg"></div>
-                </div>
-
-                <!-- Info Side -->
-                <div class="contact-info-box">
-                    <div class="provider-benefits">
-                        <h3>🚀 Why Join Page2Lead?</h3>
-                        <div class="benefit-item"><span>✓</span><span>Receive verified customer or student leads directly</span></div>
-                        <div class="benefit-item"><span>✓</span><span>First 3 leads are completely free — no payment needed to start</span></div>
-                        <div class="benefit-item"><span>✓</span><span>Home service leads in Ajmer & coaching leads across India + international</span></div>
-                        <div class="benefit-item"><span>✓</span><span>Pay per lead model — no fixed heavy costs</span></div>
-                        <div class="benefit-item"><span>✓</span><span>Landing page, WhatsApp leads, and funnel setup for coaching clients</span></div>
-                    </div>
-
-                    <div class="info-card">
-                        <h3>📍 Location</h3>
-                        <p>Ajmer, Rajasthan, India<br>We operate as an online platform — no physical office visits required.</p>
-                    </div>
-
-                    <div class="info-card">
-                        <h3>🌐 Website</h3>
-                        <p>page2lead.in</p>
-                    </div>
-
-                    <div class="info-card">
-                        <h3>✉️ Email</h3>
-                        <p>page2lead.contact@gmail.com</p>
-                    </div>
-
-                    <div class="info-card">
-                        <h3>📞 Phone</h3>
-                        <p>+91 75972 56642</p>
-                    </div>
-
-                    <div class="info-card" style="background:#f0fdf4; border-color:#bbf7d0;">
-                        <h3 style="color:#166534;">⚠️ Platform Notice</h3>
-                        <p style="color:#15803d;">Page2Lead is a lead generation platform. We do NOT provide services directly — we connect customers with providers and coaching institutes.</p>
-                    </div>
-
-                </div>
-
+            <!-- Tabs -->
+            <div class="tabs-header">
+                <button class="tab-btn active" onclick="switchTab('coaching', this)">🎓 Coaching Business Enquiry</button>
+                <button class="tab-btn" onclick="switchTab('provider', this)">🔧 Join as Local Service Provider (Ajmer)</button>
+                <button class="tab-btn" onclick="switchTab('general', this)">💬 General Query</button>
             </div>
+
+            <!-- ======= TAB 1: COACHING ======= -->
+            <div class="tab-content active" id="tab-coaching">
+                <div class="contact-grid">
+                    <div class="form-box">
+                        <span class="label">Coaching Lead Generation</span>
+                        <h2>Book a Free Strategy Call</h2>
+                        <p>Tell me about your coaching business and I'll let you know if this system can work for you — honestly.</p>
+                        <form id="coachingForm">
+                            <div class="form-group">
+                                <label>Your Full Name *</label>
+                                <input type="text" id="c_name" placeholder="e.g. Rahul Sharma" required>
+                            </div>
+                            <div class="form-group">
+                                <label>WhatsApp Number *</label>
+                                <input type="tel" id="c_phone" placeholder="10 digit number" required maxlength="10">
+                            </div>
+                            <div class="form-group">
+                                <label>Type of Coaching Business *</label>
+                                <select id="c_type" required>
+                                    <option value="">Select your coaching type</option>
+                                    <option value="Coaching Institute">Coaching Institute (JEE, NEET, Board)</option>
+                                    <option value="Online Tutor">Online Tutor (any subject)</option>
+                                    <option value="Study Abroad Consultant">Study Abroad Consultant</option>
+                                    <option value="Skill Based Classes">Skill-Based Classes (coding, design, etc.)</option>
+                                    <option value="Other Coaching">Other Coaching Business</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Target Students (City / Country)</label>
+                                <input type="text" id="c_location" placeholder="e.g. Delhi, or Australia, UK">
+                            </div>
+                            <div class="form-group">
+                                <label>Monthly Ad Budget You Can Invest (approx)</label>
+                                <select id="c_budget">
+                                    <option value="">Select range</option>
+                                    <option value="Under 5k">Under ₹5,000</option>
+                                    <option value="5k-10k">₹5,000 – ₹10,000</option>
+                                    <option value="10k-20k">₹10,000 – ₹20,000</option>
+                                    <option value="20k+">₹20,000+</option>
+                                    <option value="Not sure">Not sure yet</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Anything else I should know?</label>
+                                <textarea id="c_message" placeholder="Your current situation, what you've tried, what you need..."></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn wa" id="coachingBtn">📱 Send on WhatsApp</button>
+                        </form>
+                        <div class="form-msg" id="coachingMsg"></div>
+                    </div>
+
+                    <div class="info-stack">
+                        <div class="info-card coaching-info">
+                            <h3>📞 What Happens After You Submit</h3>
+                            <p>I'll review your message and reach out on WhatsApp within 24 hours to schedule a free 15-minute call. On that call, I'll honestly tell you whether I think this system will work for your coaching business.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>🎓 Plans Available</h3>
+                            <ul class="ilist blue">
+                                <li>Basic: ₹5,000–7,000/month + ads</li>
+                                <li>Standard: ₹8,000–12,000/month + ads</li>
+                                <li>Advanced: ₹15,000+/month + ads</li>
+                                <li>Ad budget is always separate — paid to Google/Meta directly</li>
+                            </ul>
+                            <p style="margin-top:10px;"><a href="/coaching">See full plan details →</a></p>
+                        </div>
+                        <div class="info-card">
+                            <h3>💬 Prefer to Message Directly?</h3>
+                            <p>WhatsApp me directly at <strong>+91 75972 56642</strong><br>or email <a href="mailto:page2lead.contact@gmail.com">page2lead.contact@gmail.com</a></p>
+                        </div>
+                        <div class="info-card">
+                            <h3>⏱️ Response Time</h3>
+                            <p>I respond within 24 hours on working days. For urgent queries, WhatsApp is faster.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ======= TAB 2: PROVIDER ======= -->
+            <div class="tab-content" id="tab-provider">
+                <div class="contact-grid">
+                    <div class="form-box">
+                        <span class="label">Local Services — Ajmer</span>
+                        <h2>Join as a Service Provider</h2>
+                        <p>I'll review your details and add you to the platform. You'll start receiving customer leads on WhatsApp.</p>
+                        <form id="providerForm">
+                            <div class="form-group">
+                                <label>Your Full Name *</label>
+                                <input type="text" id="p_name" placeholder="e.g. Rahul Sharma" required>
+                            </div>
+                            <div class="form-group">
+                                <label>WhatsApp Number *</label>
+                                <input type="tel" id="p_phone" placeholder="10 digit number" required maxlength="10">
+                            </div>
+                            <div class="form-group">
+                                <label>Business Name</label>
+                                <input type="text" id="p_business" placeholder="e.g. Rahul AC Services">
+                            </div>
+                            <div class="form-group">
+                                <label>Service Type *</label>
+                                <select id="p_service" required>
+                                    <option value="">Select your service</option>
+                                    <option value="AC Repair">AC Repair</option>
+                                    <option value="Plumber">Plumber</option>
+                                    <option value="Electrician">Electrician</option>
+                                    <option value="Cleaning">Cleaning</option>
+                                    <option value="Pest Control">Pest Control</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Your Service Area in Ajmer *</label>
+                                <input type="text" id="p_area" placeholder="e.g. Vaishali Nagar, Civil Lines" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Anything to add?</label>
+                                <textarea id="p_message" rows="3" placeholder="Years of experience, certifications, etc."></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn" id="providerBtn">Submit Provider Request →</button>
+                        </form>
+                        <div class="form-msg" id="providerMsg"></div>
+                    </div>
+
+                    <div class="info-stack">
+                        <div class="info-card provider-info">
+                            <h3>✅ How the Provider System Works</h3>
+                            <ul class="ilist green">
+                                <li>Customers in Ajmer search for your service on Google</li>
+                                <li>They submit a request on Page2Lead</li>
+                                <li>You get their details directly on WhatsApp</li>
+                                <li>You call them, quote your price, and get the job</li>
+                            </ul>
+                        </div>
+                        <div class="info-card">
+                            <h3>💰 Pricing Model</h3>
+                            <p style="font-size:0.86rem;">New providers start with a <strong>free trial period</strong> where you receive your first few leads at no cost. After the trial, it's a simple pay-per-lead model. I'll discuss the exact details with you before you start.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>📍 Currently Serving</h3>
+                            <p style="font-size:0.86rem;">This local service lead system currently operates in <strong>Ajmer, Rajasthan</strong> only. More cities will be added in the future.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ======= TAB 3: GENERAL ======= -->
+            <div class="tab-content" id="tab-general">
+                <div class="contact-grid">
+                    <div class="form-box">
+                        <span class="label">General Query</span>
+                        <h2>Send Me a Message</h2>
+                        <p>Anything else on your mind — feedback, partnership, or just a question.</p>
+                        <form id="generalForm">
+                            <div class="form-group">
+                                <label>Your Name *</label>
+                                <input type="text" id="g_name" placeholder="Your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Phone / WhatsApp *</label>
+                                <input type="tel" id="g_phone" placeholder="10 digit number" required maxlength="10">
+                            </div>
+                            <div class="form-group">
+                                <label>Email (optional)</label>
+                                <input type="email" id="g_email" placeholder="your@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Your Message *</label>
+                                <textarea id="g_message" rows="5" placeholder="What's on your mind?" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn" id="generalBtn">Send Message →</button>
+                        </form>
+                        <div class="form-msg" id="generalMsg"></div>
+                    </div>
+
+                    <div class="info-stack">
+                        <div class="info-card">
+                            <h3>📞 Direct Contact</h3>
+                            <p style="font-size:0.86rem;"><strong>WhatsApp:</strong> <a href="https://wa.me/917597256642" target="_blank" rel="noopener">+91 75972 56642</a><br>
+                            <strong>Email:</strong> <a href="mailto:page2lead.contact@gmail.com">page2lead.contact@gmail.com</a><br>
+                            <strong>Location:</strong> Ajmer, Rajasthan, India</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>🕐 Working Hours</h3>
+                            <p style="font-size:0.86rem;">Monday to Saturday, 10 AM – 8 PM IST.<br>I try to respond to all messages within 24 hours.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
     <footer class="footer">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col"><h4>Page2Lead</h4><a href="/">Home</a><a href="/about">About Us</a><a href="/contact">Contact</a><a href="/privacy">Privacy Policy</a></div>
-                <div class="footer-col"><h4>Services in Ajmer</h4><a href="/ac-repair-ajmer">AC Repair</a><a href="/plumber-ajmer">Plumber</a><a href="/electrician-ajmer">Electrician</a><a href="/cleaning-ajmer">Cleaning</a><a href="/pest-control-ajmer">Pest Control</a></div>
-                <div class="footer-col"><h4>Support</h4><a href="/faq">FAQ</a><a href="/terms">Terms of Service</a><a href="/privacy">Privacy Policy</a></div>
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <a href="/" class="logo">Page2<span>Lead</span></a>
+                    <p>Run by Sohail Khan. Coaching leads and local service leads in Ajmer.</p>
+                </div>
                 <div class="footer-col">
-                    <h4>Contact</h4>
-                    <p>📍 Ajmer, Rajasthan, India</p>
-                    <p>🌐 page2lead.in</p>
+                    <h4>Coaching</h4>
+                    <a href="/coaching-leads">Coaching Leads</a>
+                    <a href="/coaching">Pricing</a>
+                    <a href="/about">About Sohail</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Local Services</h4>
+                    <a href="/ac-repair-ajmer">AC Repair</a>
+                    <a href="/plumber-ajmer">Plumber</a>
+                    <a href="/electrician-ajmer">Electrician</a>
+                    <a href="/cleaning-ajmer">Cleaning</a>
+                    <a href="/pest-control-ajmer">Pest Control</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/terms">Terms of Service</a>
+                    <p>📍 Ajmer, Rajasthan</p>
                     <p>✉️ page2lead.contact@gmail.com</p>
                     <p>📞 +91 75972 56642</p>
                 </div>
             </div>
-            <div class="footer-bottom"><p>&copy; 2026 Page2Lead. All rights reserved. | Lead Generation Platform — Ajmer</p></div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Page2Lead by Sohail Khan. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
     <script>
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        var btn = document.getElementById('contactBtn');
-        var msg = document.getElementById('contactMsg');
-        btn.textContent = 'Sending...'; btn.disabled = true;
+    function switchTab(tab, btn) {
+        document.querySelectorAll('.tab-content').forEach(function(el) { el.classList.remove('active'); });
+        document.querySelectorAll('.tab-btn').forEach(function(el) { el.classList.remove('active'); });
+        document.getElementById('tab-' + tab).classList.add('active');
+        btn.classList.add('active');
+    }
+
+    function sendToAPI(data, btnId, msgId) {
+        var btn = document.getElementById(btnId);
+        var msg = document.getElementById(msgId);
+        var orig = btn.innerHTML;
+        btn.innerHTML = 'Sending...';
+        btn.disabled = true;
 
         fetch('/api/lead', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                name: document.getElementById('cname').value,
-                phone: document.getElementById('cphone').value,
-                service: document.getElementById('ctype').value,
-                area: document.getElementById('carea').value,
-                city: 'Ajmer',
-                page: 'contact',
-                problem: 'Business: ' + document.getElementById('cbusiness').value + ' | Email: ' + document.getElementById('cemail').value + ' | Message: ' + document.getElementById('cmessage').value
-            })
+            body: JSON.stringify(data)
         }).then(function(r) { return r.json(); }).then(function(res) {
             if (res.success) {
-                msg.className = 'form-message success';
-                msg.innerHTML = '✅ Message sent! We will get back to you within 24 hours.';
-                document.getElementById('contactForm').reset();
+                msg.className = 'form-msg success';
+                msg.innerHTML = '✅ Message sent! I will get back to you within 24 hours.';
+                btn.innerHTML = orig;
+                btn.disabled = false;
             } else {
-                msg.className = 'form-message error';
-                msg.innerHTML = '❌ Something went wrong. Please try again.';
+                throw new Error('Failed');
             }
-            btn.textContent = 'Send Message →'; btn.disabled = false;
         }).catch(function() {
-            msg.className = 'form-message error';
-            msg.innerHTML = '❌ Server error. Please try again.';
-            btn.textContent = 'Send Message →'; btn.disabled = false;
+            msg.className = 'form-msg error';
+            msg.innerHTML = '❌ Something went wrong. Please WhatsApp me directly at +91 75972 56642.';
+            btn.innerHTML = orig;
+            btn.disabled = false;
         });
+    }
+
+    // Coaching form — WhatsApp redirect
+    document.getElementById('coachingForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var name    = document.getElementById('c_name').value;
+        var phone   = document.getElementById('c_phone').value;
+        var type    = document.getElementById('c_type').value;
+        var loc     = document.getElementById('c_location').value;
+        var budget  = document.getElementById('c_budget').value;
+        var message = document.getElementById('c_message').value;
+        if (!name || !phone || !type) { alert('Please fill required fields'); return; }
+
+        var wa = 'Hi Sohail, I want to enquire about student leads for my coaching business.%0A%0A' +
+            '*Name:* ' + encodeURIComponent(name) + '%0A' +
+            '*Coaching Type:* ' + encodeURIComponent(type) + '%0A' +
+            '*Target Location:* ' + encodeURIComponent(loc || 'Not specified') + '%0A' +
+            '*Ad Budget:* ' + encodeURIComponent(budget || 'Not specified') + '%0A' +
+            '*Message:* ' + encodeURIComponent(message || 'No additional info');
+
+        window.open('https://wa.me/917597256642?text=' + wa, '_blank');
+
+        sendToAPI({
+            name: name, phone: phone,
+            service: 'Coaching — ' + type,
+            city: loc || 'India', area: loc || '',
+            page: 'contact-coaching',
+            problem: 'Budget: ' + budget + ' | ' + message
+        }, 'coachingBtn', 'coachingMsg');
+    });
+
+    // Provider form — API submit
+    document.getElementById('providerForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var name    = document.getElementById('p_name').value;
+        var phone   = document.getElementById('p_phone').value;
+        var service = document.getElementById('p_service').value;
+        var area    = document.getElementById('p_area').value;
+        var biz     = document.getElementById('p_business').value;
+        var msg2    = document.getElementById('p_message').value;
+        if (!name || !phone || !service || !area) { alert('Please fill required fields'); return; }
+
+        sendToAPI({
+            name: name, phone: phone,
+            service: service, area: area, city: 'Ajmer',
+            page: 'contact-provider',
+            problem: 'Provider join request | Business: ' + biz + ' | Note: ' + msg2
+        }, 'providerBtn', 'providerMsg');
+    });
+
+    // General form — API submit
+    document.getElementById('generalForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var name  = document.getElementById('g_name').value;
+        var phone = document.getElementById('g_phone').value;
+        var email = document.getElementById('g_email').value;
+        var msg3  = document.getElementById('g_message').value;
+        if (!name || !phone || !msg3) { alert('Please fill required fields'); return; }
+
+        sendToAPI({
+            name: name, phone: phone,
+            service: 'General Query', city: 'India', area: '',
+            page: 'contact-general',
+            problem: 'Email: ' + email + ' | Message: ' + msg3
+        }, 'generalBtn', 'generalMsg');
     });
     </script>
+
+    <script src="/js/consent.js"></script>
 </body>
 </html>
