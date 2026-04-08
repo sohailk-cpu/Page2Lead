@@ -494,17 +494,13 @@ app.get('/api/test', function(req,res) { res.json({ success:true, message:'Page2
 // SERVE PAGES
 // ============================================
 app.get('/',                   function(req,res) { res.sendFile(path.join(__dirname,'index.html')); });
-app.get('/ac-repair-ajmer',    function(req,res) { res.sendFile(path.join(__dirname,'services','ac-repair-ajmer.html')); });
-app.get('/plumber-ajmer',      function(req,res) { res.sendFile(path.join(__dirname,'services','plumber-ajmer.html')); });
-app.get('/electrician-ajmer',  function(req,res) { res.sendFile(path.join(__dirname,'services','electrician-ajmer.html')); });
-app.get('/cleaning-ajmer',     function(req,res) { res.sendFile(path.join(__dirname,'services','cleaning-ajmer.html')); });
-app.get('/pest-control-ajmer', function(req,res) { res.sendFile(path.join(__dirname,'services','pest-control-ajmer.html')); });
 app.get('/about',   function(req,res) { res.sendFile(path.join(__dirname,'about.html')); });
 app.get('/contact', function(req,res) { res.sendFile(path.join(__dirname,'contact.html')); });
 app.get('/privacy', function(req,res) { res.sendFile(path.join(__dirname,'privacy.html')); });
 app.get('/terms',   function(req,res) { res.sendFile(path.join(__dirname,'terms.html')); });
 app.get('/coaching',       function(req,res) { res.sendFile(path.join(__dirname,'coaching.html')); });
 app.get('/coaching-leads', function(req,res) { res.sendFile(path.join(__dirname,'coaching-leads.html')); });
+app.get('/websites',       function(req,res) { res.sendFile(path.join(__dirname,'websites.html')); });
 app.get('/admin',       function(req,res) { res.sendFile(path.join(__dirname,'admin','dashboard.html')); });
 app.get('/sitemap.xml', function(req,res) { res.sendFile(path.join(__dirname,'sitemap.xml')); });
 app.get('/robots.txt',  function(req,res) { res.sendFile(path.join(__dirname,'robots.txt')); });

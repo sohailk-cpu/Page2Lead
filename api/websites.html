@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coaching Website & Landing Page Builder | Page2Lead</title>
+    <meta name="description" content="I build professional, fast-loading websites and landing pages for coaching businesses in India. Starting ₹5,000 one-time. Mobile-friendly, WhatsApp integrated, ready in 5–7 days.">
+    <meta name="keywords" content="coaching website builder India, landing page for coaching, tutor website design, coaching institute website, WhatsApp website coaching, affordable website India">
+    <meta property="og:title" content="Coaching Website & Landing Page | Page2Lead">
+    <meta property="og:description" content="Professional websites for coaching businesses. Starting ₹5,000 one-time.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://page2lead.in/websites">
+    <link rel="canonical" href="https://page2lead.in/websites">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="icon" type="image/png" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, sans-serif; color: #1e293b; background: white; }
+        h1 { font-size: clamp(1.9rem, 4vw, 2.7rem); font-weight: 800; line-height: 1.13; letter-spacing: -0.02em; color: #0f172a; }
+        h2 { font-size: clamp(1.4rem, 2.5vw, 1.9rem); font-weight: 700; line-height: 1.2; color: #0f172a; }
+        h3 { font-size: 1rem; font-weight: 700; color: #0f172a; }
+        p { line-height: 1.75; color: #475569; }
+        .container { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+        section { padding: 76px 0; }
+        .label { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #2563eb; margin-bottom: 10px; }
+        .navbar { background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 100; }
+        .navbar .container { display: flex; align-items: center; justify-content: space-between; height: 66px; }
+        .logo { font-size: 1.4rem; font-weight: 800; color: #0f172a; text-decoration: none; letter-spacing: -0.02em; }
+        .logo span { color: #2563eb; }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+        .nav-links a { color: #475569; font-size: 0.88rem; font-weight: 500; text-decoration: none; transition: color 0.2s; }
+        .nav-links a:hover { color: #2563eb; }
+        .nav-cta { background: #2563eb; color: white !important; padding: 9px 20px; border-radius: 40px; font-weight: 600 !important; }
+        .btn-p { background: #2563eb; color: white; padding: 14px 28px; border-radius: 40px; font-weight: 700; font-size: 0.92rem; text-decoration: none; display: inline-block; transition: all 0.2s; }
+        .btn-p:hover { background: #1d4ed8; transform: translateY(-1px); }
+        .btn-wa { background: #25D366; color: white; padding: 14px 28px; border-radius: 40px; font-weight: 700; font-size: 0.92rem; text-decoration: none; display: inline-block; transition: all 0.2s; }
+        .btn-wa:hover { background: #128C7E; }
+        .btn-white { background: white; color: #2563eb; padding: 15px 36px; border-radius: 40px; font-weight: 700; font-size: 0.95rem; display: inline-block; text-decoration: none; transition: all 0.2s; }
+        .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.18); }
+        .badge { display: inline-flex; align-items: center; gap: 6px; background: #eff6ff; color: #2563eb; padding: 5px 15px; border-radius: 40px; font-size: 0.78rem; font-weight: 600; border: 1px solid #bfdbfe; margin-bottom: 20px; }
+
+        /* Hero */
+        .hero { padding: 80px 0 72px; background: linear-gradient(135deg, #f0f4ff, #e8f0fe, #f5f3ff); }
+        .hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .hero h1 em { font-style: normal; color: #2563eb; }
+        .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+        .hero-note { margin-top: 16px; font-size: 0.78rem; color: #94a3b8; }
+
+        /* Mock website preview */
+        .mock-site { background: white; border-radius: 18px; padding: 0; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 16px 48px rgba(37,99,235,0.1); }
+        .mock-bar { background: #f1f5f9; padding: 10px 14px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #e2e8f0; }
+        .mock-dot { width: 10px; height: 10px; border-radius: 50%; }
+        .mock-url { background: white; border-radius: 6px; padding: 4px 12px; font-size: 0.72rem; color: #64748b; flex: 1; }
+        .mock-body { padding: 20px; }
+        .mock-hero-bar { background: linear-gradient(135deg, #2563eb, #7c3aed); border-radius: 10px; padding: 20px; margin-bottom: 14px; }
+        .mock-hero-bar h4 { color: white; font-size: 0.9rem; margin-bottom: 6px; }
+        .mock-hero-bar p { color: #bfdbfe; font-size: 0.72rem; margin-bottom: 12px; }
+        .mock-hero-btn { background: white; color: #2563eb; padding: 6px 14px; border-radius: 40px; font-size: 0.72rem; font-weight: 700; display: inline-block; }
+        .mock-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 12px; }
+        .mock-card { background: #f8fafc; border-radius: 8px; padding: 10px; border: 1px solid #e2e8f0; }
+        .mock-card-icon { font-size: 1.1rem; margin-bottom: 4px; }
+        .mock-card p { font-size: 0.65rem; color: #64748b; line-height: 1.4; }
+        .mock-form { background: #f8fafc; border-radius: 10px; padding: 14px; border: 1px solid #e2e8f0; }
+        .mock-input { background: white; border-radius: 6px; height: 28px; border: 1px solid #e2e8f0; margin-bottom: 8px; }
+        .mock-submit { background: #25D366; border-radius: 6px; height: 30px; width: 100%; }
+
+        /* Packages */
+        .packages-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .pkg { border-radius: 18px; padding: 32px 26px; border: 2px solid #e2e8f0; transition: all 0.2s; position: relative; }
+        .pkg:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(37,99,235,0.1); }
+        .pkg.popular { border-color: #2563eb; }
+        .popular-tag { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: #2563eb; color: white; padding: 3px 16px; border-radius: 40px; font-size: 0.72rem; font-weight: 700; white-space: nowrap; }
+        .pkg-name { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #64748b; margin-bottom: 10px; }
+        .pkg-name.blue { color: #2563eb; }
+        .pkg-price { font-size: 1.9rem; font-weight: 800; color: #0f172a; line-height: 1; margin-bottom: 4px; }
+        .pkg-price span { font-size: 0.85rem; font-weight: 500; color: #64748b; }
+        .pkg-desc { font-size: 0.82rem; color: #94a3b8; margin-bottom: 14px; }
+        .pkg-divider { border: none; border-top: 1px solid #e2e8f0; margin: 16px 0; }
+        .pkg-features { list-style: none; display: flex; flex-direction: column; gap: 9px; margin-bottom: 24px; }
+        .pkg-features li { font-size: 0.85rem; color: #374151; display: flex; gap: 8px; align-items: flex-start; }
+        .pkg-features .ck { font-weight: 700; color: #2563eb; flex-shrink: 0; }
+        .pkg-btn { display: block; text-align: center; padding: 12px; border-radius: 40px; font-weight: 700; font-size: 0.88rem; text-decoration: none; transition: all 0.2s; }
+        .pkg-btn.outline { border: 2px solid #2563eb; color: #2563eb; }
+        .pkg-btn.outline:hover { background: #2563eb; color: white; }
+        .pkg-btn.filled { background: #2563eb; color: white; }
+        .pkg-btn.filled:hover { background: #1d4ed8; }
+        .pkg-btn.wa { background: #25D366; color: white; }
+        .pkg-btn.wa:hover { background: #128C7E; }
+
+        /* What's included */
+        .includes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .inc-card { background: #f8fafc; border-radius: 14px; padding: 22px 20px; border: 1px solid #e2e8f0; }
+        .inc-icon { font-size: 1.8rem; margin-bottom: 12px; }
+        .inc-card h3 { font-size: 0.92rem; margin-bottom: 7px; }
+        .inc-card p { font-size: 0.82rem; line-height: 1.6; }
+
+        /* Process */
+        .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .proc-card { text-align: center; padding: 24px 16px; }
+        .proc-num { width: 44px; height: 44px; background: #2563eb; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 800; margin: 0 auto 14px; }
+        .proc-card h3 { font-size: 0.9rem; margin-bottom: 6px; }
+        .proc-card p { font-size: 0.8rem; line-height: 1.55; }
+
+        /* Upsell */
+        .upsell-box { background: linear-gradient(135deg, #eff6ff, #f5f3ff); border-radius: 20px; padding: 36px 40px; border: 1px solid #bfdbfe; display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; margin-top: 52px; }
+        .upsell-box h3 { font-size: 1.2rem; margin-bottom: 8px; }
+        .upsell-box p { font-size: 0.9rem; }
+
+        /* CTA */
+        .cta-section { background: linear-gradient(135deg, #1e3a8a, #2563eb); padding: 80px 0; text-align: center; }
+        .cta-section h2 { color: white; margin-bottom: 12px; }
+        .cta-section p { color: #bfdbfe; margin-bottom: 30px; }
+
+        .footer-mini { background: #0f172a; padding: 28px 0; }
+        .footer-mini .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+        .footer-mini p { font-size: 0.82rem; color: #64748b; }
+        .footer-mini a { color: #94a3b8; text-decoration: none; font-size: 0.82rem; }
+        .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+
+        @media (max-width: 1024px) {
+            .packages-grid { grid-template-columns: 1fr; gap: 16px; }
+            .includes-grid { grid-template-columns: 1fr 1fr; }
+            .process-grid { grid-template-columns: 1fr 1fr; }
+            .upsell-box { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .hero-inner { grid-template-columns: 1fr; gap: 36px; }
+            .includes-grid { grid-template-columns: 1fr; }
+            .process-grid { grid-template-columns: 1fr 1fr; }
+            .hero-btns { flex-direction: column; }
+            .hero-btns a { text-align: center; }
+            .nav-links { display: none; }
+            .upsell-box { padding: 24px 20px; }
+            .footer-mini .container { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">Page2<span>Lead</span></a>
+            <div class="nav-links">
+                <a href="/">Coaching Leads</a>
+                <a href="/coaching-leads">How It Works</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="https://wa.me/917597256642" class="nav-cta" target="_blank" rel="noopener">WhatsApp Me</a>
+            </div>
+        </div>
+    </nav>
+    <main>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-inner">
+                <div>
+                    <div class="badge">🌐 Website Building — Coaching Businesses</div>
+                    <h1>A Professional Website for Your <em>Coaching Business</em></h1>
+                    <p style="font-size:1.05rem;margin-top:16px;max-width:460px;">I build fast, mobile-friendly websites and landing pages for coaching institutes, tutors and online educators — starting at ₹5,000 one-time. No monthly fee, no subscriptions.</p>
+                    <div class="hero-btns">
+                        <a href="https://wa.me/917597256642?text=Hi%20Sohail,%20I%20want%20a%20website%20for%20my%20coaching" class="btn-wa" target="_blank" rel="noopener">📱 WhatsApp Me Now</a>
+                        <a href="/contact" class="btn-p">Book Free Call</a>
+                    </div>
+                    <p class="hero-note">✓ One-time payment &nbsp;·&nbsp; ✓ Ready in 5–7 days &nbsp;·&nbsp; ✓ No monthly fee</p>
+                </div>
+                <div>
+                    <div class="mock-site">
+                        <div class="mock-bar">
+                            <div class="mock-dot" style="background:#ff5f57;"></div>
+                            <div class="mock-dot" style="background:#febc2e;"></div>
+                            <div class="mock-dot" style="background:#28c840;"></div>
+                            <div class="mock-url">yourcoaching.page2lead.in</div>
+                        </div>
+                        <div class="mock-body">
+                            <div class="mock-hero-bar">
+                                <h4>JEE / NEET Coaching — Ajmer</h4>
+                                <p>Expert coaching for board & competitive exams. 15+ years experience.</p>
+                                <span class="mock-hero-btn">Book Free Demo →</span>
+                            </div>
+                            <div class="mock-row">
+                                <div class="mock-card"><div class="mock-card-icon">📚</div><p>Expert faculty</p></div>
+                                <div class="mock-card"><div class="mock-card-icon">🏆</div><p>Proven results</p></div>
+                                <div class="mock-card"><div class="mock-card-icon">📱</div><p>WhatsApp support</p></div>
+                            </div>
+                            <div class="mock-form">
+                                <p style="font-size:0.72rem;font-weight:700;color:#0f172a;margin-bottom:8px;">Book Your Free Demo Class</p>
+                                <div class="mock-input"></div>
+                                <div class="mock-input"></div>
+                                <div class="mock-submit"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PACKAGES -->
+    <section style="background:#f8fafc;">
+        <div class="container">
+            <div style="margin-bottom:48px;">
+                <span class="label">Packages</span>
+                <h2>Simple One-Time Pricing</h2>
+                <p>No monthly fees. No hidden charges. You pay once, the website is yours.</p>
+            </div>
+            <div class="packages-grid">
+                <div class="pkg">
+                    <p class="pkg-name">Basic</p>
+                    <p class="pkg-price">₹5,000<span> one-time</span></p>
+                    <p class="pkg-desc">Single landing page — perfect for getting started</p>
+                    <hr class="pkg-divider">
+                    <ul class="pkg-features">
+                        <li><span class="ck">✓</span> 1-page website</li>
+                        <li><span class="ck">✓</span> Mobile-friendly design</li>
+                        <li><span class="ck">✓</span> WhatsApp enquiry button</li>
+                        <li><span class="ck">✓</span> Student enquiry form</li>
+                        <li><span class="ck">✓</span> Basic SEO setup</li>
+                        <li><span class="ck">✓</span> Delivered in 3–5 days</li>
+                    </ul>
+                    <a href="/contact" class="pkg-btn outline">Get Started</a>
+                </div>
+                <div class="pkg popular">
+                    <div class="popular-tag">⭐ Most Popular</div>
+                    <p class="pkg-name blue">Standard</p>
+                    <p class="pkg-price">₹10,000<span> one-time</span></p>
+                    <p class="pkg-desc">Multi-page website with full coaching info</p>
+                    <hr class="pkg-divider">
+                    <ul class="pkg-features">
+                        <li><span class="ck">✓</span> 3–5 pages (Home, About, Courses, Contact)</li>
+                        <li><span class="ck">✓</span> Mobile-first responsive design</li>
+                        <li><span class="ck">✓</span> WhatsApp + form integration</li>
+                        <li><span class="ck">✓</span> Google Maps embed</li>
+                        <li><span class="ck">✓</span> Full SEO setup</li>
+                        <li><span class="ck">✓</span> Google Analytics setup</li>
+                        <li><span class="ck">✓</span> Delivered in 5–7 days</li>
+                    </ul>
+                    <a href="/contact" class="pkg-btn filled">Get Started</a>
+                </div>
+                <div class="pkg">
+                    <p class="pkg-name">Custom</p>
+                    <p class="pkg-price">₹15,000+<span> one-time</span></p>
+                    <p class="pkg-desc">Fully custom website with advanced features</p>
+                    <hr class="pkg-divider">
+                    <ul class="pkg-features">
+                        <li><span class="ck">✓</span> 6+ pages — fully custom</li>
+                        <li><span class="ck">✓</span> Course listing pages</li>
+                        <li><span class="ck">✓</span> Student testimonials section</li>
+                        <li><span class="ck">✓</span> Results / success stories page</li>
+                        <li><span class="ck">✓</span> WhatsApp + advanced form</li>
+                        <li><span class="ck">✓</span> Full SEO + Analytics</li>
+                        <li><span class="ck">✓</span> 1 month of minor edits included</li>
+                    </ul>
+                    <a href="https://wa.me/917597256642?text=Hi%20Sohail,%20I%27m%20interested%20in%20a%20custom%20website" class="pkg-btn wa" target="_blank" rel="noopener">Discuss Requirements</a>
+                </div>
+            </div>
+            <p style="text-align:center;margin-top:20px;font-size:0.8rem;color:#94a3b8;">Hosting charges are separate (typically ₹2,000–4,000/year). I'll guide you on the best and most affordable option.</p>
+        </div>
+    </section>
+
+    <!-- WHAT'S INCLUDED -->
+    <section style="background:white;">
+        <div class="container">
+            <div style="margin-bottom:48px;">
+                <span class="label">What You Get</span>
+                <h2>Every Website Includes</h2>
+            </div>
+            <div class="includes-grid">
+                <div class="inc-card"><div class="inc-icon">📱</div><h3>Mobile-First Design</h3><p>Most students browse on their phone. Every page I build is designed for mobile first — fast, clean, and easy to navigate.</p></div>
+                <div class="inc-card"><div class="inc-icon">💬</div><h3>WhatsApp Integration</h3><p>A WhatsApp button that lets students message you directly with one tap. The quickest way to get enquiries.</p></div>
+                <div class="inc-card"><div class="inc-icon">📋</div><h3>Student Enquiry Form</h3><p>A simple form where students enter their name, phone, and course interest. You get notified instantly.</p></div>
+                <div class="inc-card"><div class="inc-icon">🔍</div><h3>Basic SEO Setup</h3><p>Meta titles, descriptions, and proper headings so your website has a chance of appearing on Google when students search.</p></div>
+                <div class="inc-card"><div class="inc-icon">⚡</div><h3>Fast Loading</h3><p>Clean code, no unnecessary plugins. Websites load quickly even on slow mobile connections — important for India.</p></div>
+                <div class="inc-card"><div class="inc-icon">🎨</div><h3>Professional Design</h3><p>Clean, modern design that builds trust. Not a generic template — I design around your coaching brand and content.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section style="background:#f8fafc;">
+        <div class="container">
+            <div style="margin-bottom:48px;">
+                <span class="label">How It Works</span>
+                <h2>Ready in 5–7 Days</h2>
+            </div>
+            <div class="process-grid">
+                <div class="proc-card"><div class="proc-num">1</div><h3>We Talk</h3><p>Quick call or WhatsApp chat to understand your coaching, students, and what you need.</p></div>
+                <div class="proc-card"><div class="proc-num">2</div><h3>You Share Content</h3><p>Send me your content — courses, about info, photos if any. I'll guide you on what's needed.</p></div>
+                <div class="proc-card"><div class="proc-num">3</div><h3>I Build &amp; Share</h3><p>I build the website and share a preview link within 5–7 days for your feedback.</p></div>
+                <div class="proc-card"><div class="proc-num">4</div><h3>Live &amp; Done</h3><p>After your approval, the site goes live. I'll also help with the domain and hosting setup.</p></div>
+            </div>
+
+            <!-- Upsell to leads -->
+            <div class="upsell-box">
+                <div>
+                    <span class="label">Combine With Lead Generation</span>
+                    <h3>Website + Student Lead System = More Enquiries</h3>
+                    <p>A website alone won't bring students — they need to find you. I also run targeted ad campaigns that send student enquiries directly to your WhatsApp. Many coaching clients get both the website and the lead system for best results.</p>
+                </div>
+                <div style="flex-shrink:0;">
+                    <a href="/coaching-leads" style="display:inline-block;background:#2563eb;color:white;padding:13px 24px;border-radius:40px;font-weight:700;font-size:0.88rem;text-decoration:none;">See Lead Generation →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Get Your Coaching Website?</h2>
+            <p>WhatsApp me with your coaching details and I'll suggest the right package for you.</p>
+            <a href="https://wa.me/917597256642?text=Hi%20Sohail,%20I%20want%20a%20website%20for%20my%20coaching%20business" class="btn-white" target="_blank" rel="noopener">💬 WhatsApp Me Now</a>
+            <p style="margin-top:12px;font-size:0.8rem;color:#93c5fd;">One-time payment &nbsp;·&nbsp; No monthly fee &nbsp;·&nbsp; Delivered in 5–7 days</p>
+        </div>
+    </section>
+    </main>
+
+    <div class="footer-mini">
+        <div class="container">
+            <p>&copy; 2026 Page2Lead by Sohail Khan</p>
+            <div class="footer-links">
+                <a href="/">Coaching Leads</a>
+                <a href="/coaching-leads">How It Works</a>
+                <a href="/about">About</a>
+                <a href="/privacy">Privacy</a>
+                <a href="/terms">Terms</a>
+            </div>
+        </div>
+    </div>
+    <script src="/js/consent.js"></script>
+</body>
+</html>
