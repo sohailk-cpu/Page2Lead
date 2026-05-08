@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://page2lead.in/</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Website Building -->
+  <url>
+    <loc>https://page2lead.in/websites</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Coaching Pages -->
+  <url>
+    <loc>https://page2lead.in/coaching-leads</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Coaching Page -->
+  <url>
+    <loc>https://page2lead.in/coaching</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Info Pages -->
+  <url>
+    <loc>https://page2lead.in/about</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://page2lead.in/contact</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://page2lead.in/privacy</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://page2lead.in/terms</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

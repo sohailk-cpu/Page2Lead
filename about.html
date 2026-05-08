@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Sohail Khan — Page2Lead</title>
+    <meta name="description" content="Page2Lead is run by Sohail Khan, a freelance lead generation specialist from Ajmer. I help coaching businesses get student enquiries and build professional coaching websites.">
+    <meta name="keywords" content="Sohail Khan Page2Lead, coaching lead generation freelancer India, about Page2Lead, lead generation coaching India">
+    <link rel="canonical" href="https://page2lead.in/about">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, sans-serif; color: #1e293b; background: white; }
+        h1 { font-size: clamp(1.9rem, 4vw, 2.6rem); font-weight: 800; line-height: 1.13; letter-spacing: -0.02em; color: #0f172a; }
+        h2 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); font-weight: 700; line-height: 1.2; color: #0f172a; }
+        h3 { font-size: 1rem; font-weight: 700; color: #0f172a; }
+        p { line-height: 1.8; color: #475569; }
+        .container { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+        section { padding: 72px 0; }
+        .label { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #2563eb; margin-bottom: 10px; }
+        .navbar { background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 100; }
+        .navbar .container { display: flex; align-items: center; justify-content: space-between; height: 66px; }
+        .logo { font-size: 1.4rem; font-weight: 800; color: #0f172a; text-decoration: none; letter-spacing: -0.02em; }
+        .logo span { color: #2563eb; }
+        .nav-links { display: flex; align-items: center; gap: 24px; }
+        .nav-links a { color: #475569; font-size: 0.88rem; font-weight: 500; text-decoration: none; }
+        .nav-links a:hover { color: #2563eb; }
+        .nav-cta { background: #2563eb; color: white !important; padding: 9px 20px; border-radius: 40px; font-weight: 600 !important; }
+
+        .page-hero { background: linear-gradient(135deg, #f0f4ff, #e8f0fe); padding: 72px 0 60px; }
+        .page-hero-inner { display: grid; grid-template-columns: auto 1fr; gap: 48px; align-items: center; }
+        .avatar { width: 120px; height: 120px; border-radius: 50%; background: #1e293b; border: 4px solid #2563eb; display: flex; align-items: center; justify-content: center; font-size: 3rem; flex-shrink: 0; }
+        .page-hero h1 { margin-bottom: 10px; }
+        .tagline { font-size: 1.05rem; color: #475569; max-width: 480px; margin-bottom: 20px; }
+        .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+        .chip { background: white; border: 1px solid #e2e8f0; color: #475569; padding: 6px 14px; border-radius: 40px; font-size: 0.78rem; font-weight: 500; }
+
+        .story-section { background: white; }
+        .story-inner { max-width: 700px; }
+        .story-inner p { margin-bottom: 18px; font-size: 0.95rem; }
+        .story-inner strong { color: #0f172a; }
+        .quote-block { border-left: 4px solid #2563eb; padding: 16px 20px; background: #f0f4ff; border-radius: 0 12px 12px 0; margin: 28px 0; }
+        .quote-block p { font-size: 1rem; font-style: italic; color: #1e40af; margin: 0; line-height: 1.7; }
+
+        .services-section { background: #f8fafc; }
+        .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+        .scard { border-radius: 18px; padding: 30px 26px; border: 2px solid #e2e8f0; background: white; transition: all 0.2s; }
+        .scard.primary { border-color: #2563eb; }
+        .scard:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+        .scard-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 3px 10px; border-radius: 40px; margin-bottom: 14px; display: inline-block; }
+        .scard-label.primary { background: #eff6ff; color: #2563eb; }
+        .scard-label.secondary { background: #f8fafc; color: #64748b; border: 1px solid #e2e8f0; }
+        .scard h3 { font-size: 1.05rem; margin-bottom: 10px; }
+        .scard p { font-size: 0.86rem; line-height: 1.65; margin-bottom: 14px; }
+        .scard ul { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+        .scard ul li { font-size: 0.84rem; color: #374151; display: flex; gap: 8px; }
+        .scard ul li::before { content: "→"; color: #2563eb; font-weight: 700; flex-shrink: 0; }
+
+        .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .vcard { background: #f8fafc; border-radius: 14px; padding: 24px 20px; border: 1px solid #e2e8f0; }
+        .vcard-icon { font-size: 1.8rem; margin-bottom: 12px; }
+        .vcard h3 { font-size: 0.92rem; margin-bottom: 7px; }
+        .vcard p { font-size: 0.82rem; line-height: 1.6; }
+
+        .cta-section { background: linear-gradient(135deg, #1e3a8a, #2563eb); padding: 76px 0; text-align: center; }
+        .cta-section h2 { color: white; margin-bottom: 12px; }
+        .cta-section p { color: #bfdbfe; margin-bottom: 28px; }
+        .btn-white { background: white; color: #2563eb; padding: 14px 34px; border-radius: 40px; font-weight: 700; font-size: 0.95rem; display: inline-block; text-decoration: none; transition: all 0.2s; }
+        .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.18); }
+
+        .footer { background: #0f172a; padding: 40px 0 24px; }
+        .footer-inner { display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; gap: 32px; margin-bottom: 28px; }
+        .footer-brand .logo { color: white; display: block; margin-bottom: 10px; }
+        .footer-brand p { font-size: 0.82rem; color: #64748b; max-width: 220px; }
+        .footer-col h4 { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #e2e8f0; margin-bottom: 12px; }
+        .footer-col a { display: block; font-size: 0.82rem; color: #64748b; text-decoration: none; margin-bottom: 6px; }
+        .footer-col a:hover { color: #60a5fa; }
+        .footer-bottom { border-top: 1px solid #1e293b; padding-top: 20px; }
+        .footer-bottom p { font-size: 0.8rem; color: #475569; }
+
+        @media (max-width: 768px) {
+            .page-hero-inner { grid-template-columns: 1fr; gap: 28px; }
+            .avatar { width: 80px; height: 80px; font-size: 2rem; }
+            .services-grid { grid-template-columns: 1fr; }
+            .values-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/index.html" class="logo">Page2<span>Lead</span></a>
+            <div class="nav-links">
+                <a href="/#how-it-works">How It Works</a>
+                <a href="/coaching-leads.html">Coaching Leads</a>
+                <a href="/websites.html">Websites</a>
+                <a href="/contact.html">Contact</a>
+                <a href="https://wa.me/917597256642" class="nav-cta" target="_blank" rel="noopener">WhatsApp Me</a>
+            </div>
+        </div>
+    </nav>
+    <main>
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-inner">
+                <div class="avatar">👨‍💻</div>
+                <div>
+                    <span class="label">The Person Behind Page2Lead</span>
+                    <h1>Hi, I'm Sohail Khan</h1>
+                    <p class="tagline">I run Page2Lead — a lead generation and website building service focused entirely on coaching businesses. Based in Ajmer, working remotely across India.</p>
+                    <div class="chips">
+                        <span class="chip">📍 Ajmer, Rajasthan</span>
+                        <span class="chip">🎓 Coaching Lead Generation</span>
+                        <span class="chip">🌐 Coaching Websites</span>
+                        <span class="chip">💬 Direct WhatsApp Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="story-section">
+        <div class="container">
+            <div class="story-inner">
+                <span class="label">My Story</span>
+                <h2 style="margin-bottom:24px;">Why I Built Page2Lead</h2>
+                <p>I started Page2Lead after noticing a frustrating pattern — <strong>coaching businesses with great teachers were struggling to find students</strong>, while less qualified institutes were growing simply because they had better marketing.</p>
+                <p>The problem wasn't the quality of teaching. It was that most coaching owners didn't know how to get consistent student enquiries. And the "solutions" out there — expensive agencies, complicated tools, overpriced packages — weren't built for someone running a coaching class or tutoring business.</p>
+                <div class="quote-block">
+                    <p>"A good teacher deserves a full batch. The system I built is my way of making that happen — directly, simply, without unnecessary complications."</p>
+                </div>
+                <p>So I built a focused, WhatsApp-first lead system — targeted ads, a clean landing page, direct enquiries on your phone. No CRM. No dashboard to learn. Just students reaching you on WhatsApp.</p>
+                <p>I also build websites for coaching businesses — because having a good landing page matters. Whether you need just a website or a complete lead generation system, <strong>I handle it personally.</strong></p>
+                <p>I work with a limited number of clients at a time. That's intentional — I'd rather do a small number of setups really well than spread thin across too many clients.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section">
+        <div class="container">
+            <div style="margin-bottom:40px;">
+                <span class="label">What I Do</span>
+                <h2>Two Services. One Focus — Coaching Businesses.</h2>
+            </div>
+            <div class="services-grid">
+                <div class="scard primary">
+                    <span class="scard-label primary">⭐ Primary</span>
+                    <h3>Coaching Lead Generation</h3>
+                    <p>I run targeted ad campaigns and set up landing pages + WhatsApp systems for coaching businesses — helping them get consistent student enquiries every month.</p>
+                    <ul>
+                        <li>Coaching institutes, online tutors</li>
+                        <li>Study abroad consultants</li>
+                        <li>Skill-based and hobby classes</li>
+                        <li>International targeting — AU, UK, CA</li>
+                    </ul>
+                    <p style="margin-top:14px;"><a href="/coaching-leads.html" style="color:#2563eb;font-weight:600;font-size:0.86rem;">Learn more →</a></p>
+                </div>
+                <div class="scard">
+                    <span class="scard-label secondary">Also Available</span>
+                    <h3>Coaching Websites</h3>
+                    <p>I build professional, mobile-friendly websites and landing pages for coaching businesses — one-time payment, no monthly fees.</p>
+                    <ul>
+                        <li>Landing pages from ₹5,000</li>
+                        <li>Multi-page websites from ₹10,000</li>
+                        <li>WhatsApp + enquiry form integrated</li>
+                        <li>Ready in 5–7 days</li>
+                    </ul>
+                    <p style="margin-top:14px;"><a href="/websites.html" style="color:#2563eb;font-weight:600;font-size:0.86rem;">See packages →</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background:white;">
+        <div class="container">
+            <div style="margin-bottom:40px;">
+                <span class="label">How I Work</span>
+                <h2>What You Can Expect</h2>
+            </div>
+            <div class="values-grid">
+                <div class="vcard"><div class="vcard-icon">🔒</div><h3>No Fake Promises</h3><p>I do a free strategy call before taking any client. If I think this won't work for your business, I'll tell you honestly.</p></div>
+                <div class="vcard"><div class="vcard-icon">💬</div><h3>Direct Communication</h3><p>You get my direct WhatsApp number. No support tickets, no account managers — you talk to the person doing the work.</p></div>
+                <div class="vcard"><div class="vcard-icon">📊</div><h3>Transparent Pricing</h3><p>Management fee and ad budget are always separate. I don't make money from your ad spend — it goes directly to Google or Meta.</p></div>
+                <div class="vcard"><div class="vcard-icon">🗓️</div><h3>Month-to-Month</h3><p>No long-term contracts for lead generation. If you're not happy, you can stop. I'd rather earn your trust than lock you in.</p></div>
+                <div class="vcard"><div class="vcard-icon">🎯</div><h3>Focused on Coaching</h3><p>I work specifically with coaching businesses. Not e-commerce, not SaaS. Focused expertise means better results for you.</p></div>
+                <div class="vcard"><div class="vcard-icon">⚡</div><h3>Fast Setup</h3><p>Lead system: live in 3–5 days. Website: ready in 5–7 days. No months of planning before results start coming in.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Want to Work Together?</h2>
+            <p>Free 15-minute call to see if I can help your coaching business get more students.</p>
+            <a href="https://wa.me/917597256642?text=Hi%20Sohail,%20I%20read%20your%20about%20page%20and%20want%20to%20discuss" class="btn-white" target="_blank" rel="noopener">💬 WhatsApp Me</a>
+            <p style="margin-top:12px;font-size:0.8rem;color:#93c5fd;">Or email: page2lead.contact@gmail.com</p>
+        </div>
+    </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <a href="/index.html" class="logo">Page2<span>Lead</span></a>
+                    <p>Coaching lead generation and website building. Run by Sohail Khan, Ajmer.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <a href="/coaching-leads.html">Coaching Leads</a>
+                    <a href="/coaching.html">Pricing</a>
+                    <a href="/websites.html">Websites</a>
+                    <a href="/contact.html">Book a Call</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="/about.html">About</a>
+                    <a href="/privacy.html">Privacy</a>
+                    <a href="/terms.html">Terms</a>
+                    <a href="mailto:page2lead.contact@gmail.com">page2lead.contact@gmail.com</a>
+                    <a href="tel:+917597256642">+91 75972 56642</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Page2Lead by Sohail Khan — Ajmer, Rajasthan, India</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Person","name":"Sohail Khan","url":"https://page2lead.in/about","jobTitle":"Lead Generation Specialist & Web Developer","worksFor":{"@type":"Organization","name":"Page2Lead","url":"https://page2lead.in"},"address":{"@type":"PostalAddress","addressLocality":"Ajmer","addressRegion":"Rajasthan","addressCountry":"IN"},"email":"page2lead.contact@gmail.com","telephone":"+917597256642","knowsAbout":["Lead Generation","Coaching Marketing","Google Ads","Meta Ads","WhatsApp Marketing","Student Leads","Web Development"]}
+    </script>
+    <script src="/js/consent.js"></script>
+</body>
+</html>
