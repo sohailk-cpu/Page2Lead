@@ -199,6 +199,7 @@
             .footer-grid { grid-template-columns: 1fr 1fr; }
         }
         @media (max-width: 768px) {
+            [style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
             .hero { padding: 52px 0 44px; }
             .hero-grid { grid-template-columns: 1fr; gap: 40px; }
             .hero-grid > div:last-child { order: -1; }
@@ -475,19 +476,42 @@
     </section>
 
     <!-- ALSO OFFER -->
-    <section class="also-section">
+    <!-- TWO SERVICES SECTION -->
+    <section style="background:#f8fafc; padding:80px 0;">
         <div class="container">
             <div class="sec-header">
-                <span class="label">Also Available</span>
-                <h2>Other Ways I Can Help</h2>
-                <p>Beyond lead generation, I also offer these services for coaching businesses and local clients.</p>
+                <span class="label">My Services</span>
+                <h2>Two Ways I Can Help Your Business</h2>
+                <p>Whether you need a website for your business or student leads for your coaching — I handle both personally.</p>
             </div>
-            <div class="also-grid">
-                <a href="/websites.html" class="also-card">
-                    <span class="also-tag blue">🌐 Website Design</span>
-                    <h3>Websites for Any Local Business</h3>
-                    <p>Restaurant, clinic, real estate, salon, coaching — I build fast, mobile-friendly websites for any local business in India. Starting ₹3,000 one-time. No monthly fee.</p>
-                    <span class="also-link blue">See all packages →</span>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+
+                <!-- Coaching Leads -->
+                <a href="/coaching-leads.html" style="display:block;background:white;border-radius:20px;padding:32px 28px;border:2px solid #2563eb;text-decoration:none;color:inherit;transition:all 0.25s;">
+                    <span style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;background:#eff6ff;color:#2563eb;padding:3px 12px;border-radius:40px;display:inline-block;margin-bottom:16px;">⭐ Coaching Lead Generation</span>
+                    <h3 style="font-size:1.1rem;color:#0f172a;margin:0 0 10px;">Get More Student Enquiries</h3>
+                    <p style="font-size:0.87rem;color:#64748b;line-height:1.65;margin-bottom:20px;">Targeted Google &amp; Meta ads that send student enquiries directly to your WhatsApp. For coaching institutes, online tutors and study abroad consultants.</p>
+                    <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:22px;">
+                        <span style="font-size:0.83rem;color:#374151;display:flex;gap:8px;align-items:flex-start;"><span style="color:#2563eb;font-weight:700;flex-shrink:0;">✓</span> Plans from ₹5,000/month</span>
+                        <span style="font-size:0.83rem;color:#374151;display:flex;gap:8px;align-items:flex-start;"><span style="color:#2563eb;font-weight:700;flex-shrink:0;">✓</span> Leads on WhatsApp — no dashboard needed</span>
+                        <span style="font-size:0.83rem;color:#374151;display:flex;gap:8px;align-items:flex-start;"><span style="color:#2563eb;font-weight:700;flex-shrink:0;">✓</span> India + international targeting</span>
+                        <span style="font-size:0.83rem;color:#374151;display:flex;gap:8px;align-items:flex-start;"><span style="color:#2563eb;font-weight:700;flex-shrink:0;">✓</span> Month-to-month, no lock-in</span>
+                    </div>
+                    <span style="color:#2563eb;font-weight:700;font-size:0.88rem;">See how it works →</span>
+                </a>
+
+                <!-- Website Design -->
+                <a href="/websites.html" style="display:block;background:white;border-radius:20px;padding:32px 28px;border:2px solid #e2e8f0;text-decoration:none;color:inherit;transition:all 0.25s;">
+                    <span style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;background:#f8fafc;color:#64748b;padding:3px 12px;border-radius:40px;display:inline-block;margin-bottom:16px;border:1px solid #e2e8f0;">🌐 Website Design</span>
+                    <h3 style="font-size:1.1rem;color:#0f172a;margin:0 0 10px;">Websites for Any Local Business</h3>
+                    <p style="font-size:0.87rem;color:#64748b;line-height:1.65;margin-bottom:20px;">Professional websites for restaurants, clinics, real estate, salons, coaching institutes and any other local business. One-time payment, no monthly fee.</p>
+                    <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:22px;">
+                        <span style="font-size:0.83rem;color:#374151;display:flex;gap:8px;align-items:flex-start;"><span style="color:#2563eb;font-weight:700;flex-shrink:0;">✓</span> Starting ₹3,000 one-time</span>
+                        <span style="font-size:0.83rem;color:#374151;display:flex;gap:8px;align-items:flex-start;"><span style="color:#2563eb;font-weight:700;flex-shrink:0;">✓</span> Mobile-friendly, fast loading</span>
+                        <span style="font-size:0.83rem;color:#374151;display:flex;gap:8px;align-items:flex-start;"><span style="color:#2563eb;font-weight:700;flex-shrink:0;">✓</span> WhatsApp + enquiry form</span>
+                        <span style="font-size:0.83rem;color:#374151;display:flex;gap:8px;align-items:flex-start;"><span style="color:#2563eb;font-weight:700;flex-shrink:0;">✓</span> SEO setup included</span>
+                    </div>
+                    <span style="color:#2563eb;font-weight:700;font-size:0.88rem;">See all packages →</span>
                 </a>
 
             </div>

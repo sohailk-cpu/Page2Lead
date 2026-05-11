@@ -138,7 +138,7 @@
                     <h2>Book a Free Strategy Call</h2>
                     <p>Tell me about your coaching and I'll honestly say if this system can work for you.</p>
                     <form id="coachingForm">
-                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+                        <input type="hidden" name="access_key" value="7daf9aca-572e-4987-a12d-9fd2964561ff">
                         <input type="hidden" name="subject" value="New Coaching Enquiry — Page2Lead">
                         <input type="hidden" name="from_name" value="Page2Lead Contact Form">
                         <input type="checkbox" name="botcheck" style="display:none;">
@@ -202,31 +202,33 @@
                     <h2>Tell Me About Your Website</h2>
                     <p>I'll suggest the right package and get back within 24 hours.</p>
                     <form id="websiteForm">
-                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+                        <input type="hidden" name="access_key" value="7daf9aca-572e-4987-a12d-9fd2964561ff">
                         <input type="hidden" name="subject" value="New Website Enquiry — Page2Lead">
                         <input type="hidden" name="from_name" value="Page2Lead Contact Form">
                         <input type="checkbox" name="botcheck" style="display:none;">
                         <div class="form-group"><label>Full Name *</label><input type="text" name="name" placeholder="e.g. Rahul Sharma" required></div>
                         <div class="form-group"><label>WhatsApp Number *</label><input type="tel" name="phone" placeholder="10 digit number" required maxlength="10"></div>
-                        <div class="form-group"><label>Coaching Type *</label>
-                            <select name="coaching_type" required>
-                                <option value="">Select</option>
-                                <option>Coaching Institute</option>
-                                <option>Online Tutor</option>
-                                <option>Study Abroad Consultant</option>
-                                <option>Skill-Based Classes</option>
-                                <option>Other</option>
+                        <div class="form-group"><label>Type of Business *</label>
+                            <select name="business_type" required>
+                                <option value="">Select your business type</option>
+                                <option>Coaching / Education</option>
+                                <option>Restaurant / Cafe / Food Business</option>
+                                <option>Real Estate / Property</option>
+                                <option>Clinic / Healthcare</option>
+                                <option>Salon / Wellness / Gym</option>
+                                <option>Travel / Event Management</option>
+                                <option>Other Local Business</option>
                             </select>
                         </div>
                         <div class="form-group"><label>Package Interest</label>
                             <select name="package">
-                                <option>Not sure yet</option>
-                                <option>Basic — ₹5,000 (1 page)</option>
-                                <option>Standard — ₹10,000 (3–5 pages)</option>
-                                <option>Custom — ₹15,000+</option>
+                                <option>Not sure yet — guide me</option>
+                                <option>Basic — ₹3,000–5,000 (1 page)</option>
+                                <option>Standard — ₹8,000–12,000 (3–5 pages)</option>
+                                <option>Premium — ₹15,000+ (fully custom)</option>
                             </select>
                         </div>
-                        <div class="form-group"><label>Specific requirements?</label><textarea name="message" placeholder="e.g. Multiple course pages, Hindi content..."></textarea></div>
+                        <div class="form-group"><label>What do you need on the website?</label><textarea name="message" placeholder="e.g. Menu, booking form, property listings, gallery, doctor profile..."></textarea></div>
                         <button type="submit" class="submit-btn blue" id="websiteBtn">Send Enquiry →</button>
                     </form>
                     <div class="form-msg" id="websiteMsg"></div>
@@ -259,7 +261,7 @@
                     <h2>Send Me a Message</h2>
                     <p>Any other question — feedback, partnership, anything.</p>
                     <form id="generalForm">
-                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+                        <input type="hidden" name="access_key" value="7daf9aca-572e-4987-a12d-9fd2964561ff">
                         <input type="hidden" name="subject" value="General Query — Page2Lead">
                         <input type="hidden" name="from_name" value="Page2Lead Contact Form">
                         <input type="checkbox" name="botcheck" style="display:none;">
@@ -344,7 +346,7 @@ function handleForm(formId,btnId,msgId,waRedirect){
                 msg.innerHTML='✅ Sent! I will get back to you on WhatsApp within 24 hours.';
                 form.reset();
                 if(waRedirect){
-                    var wa='Hi Sohail, I filled your coaching enquiry form.%0AName: '+encodeURIComponent(obj.name||'')+'%0AType: '+encodeURIComponent(obj.coaching_type||'');
+                    var wa='Hi Sohail, I filled your coaching enquiry form.%0AName: '+encodeURIComponent(obj.name||'')+'%0ACoaching Type: '+encodeURIComponent(obj.coaching_type||'');
                     setTimeout(function(){window.open('https://wa.me/917597256642?text='+wa,'_blank');},1000);
                 }
             } else { throw new Error(); }
