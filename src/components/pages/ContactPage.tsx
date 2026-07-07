@@ -40,7 +40,7 @@ export default function ContactPage() {
           'Accept': 'application/json',
         },
         body: JSON.stringify({
-          access_key: '7daf9aca-572e-4987-a12d-9fd2964561ff',
+          access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
           subject: `New Enquiry from ${data.name} — Page2Lead`,
           from_name: 'Page2Lead Contact Form',
           name: data.name,
