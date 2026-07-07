@@ -41,9 +41,9 @@ export function Navbar() {
             className="flex items-center gap-2.5 focus-ring rounded-lg"
           >
             <img
-              src="/assets/favicon.png"
+              src={scrolled ? "/assets/favicon-light.png" : "/assets/favicon-dark.png"}
               alt="Page2Lead"
-              className="w-10 h-10 object-contain"
+              className="w-10 h-10"
             />
           
            <span
