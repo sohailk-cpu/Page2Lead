@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Zap, Moon, Sun } from 'lucide-react'
+import { Menu, X, Moon, Sun } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { useTheme } from '@/hooks/useTheme'
 import { useScrolled } from '@/hooks/useScrolled'
