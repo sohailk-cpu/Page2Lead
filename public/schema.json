@@ -1,0 +1,24 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Page2Lead",
+  "description": "AI Automation Agency specializing in chatbots and lead generation",
+  "url": "https://page2lead.in",
+  "telephone": "+91-75972-56642",
+  "email": "page2lead.contact@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Ajmer",
+    "addressLocality": "Ajmer",
+    "addressRegion": "Rajasthan",
+    "postalCode": "305001",
+    "addressCountry": "IN"
+  },
+  "image": "https://page2lead.in/logo.jpg",
+  "priceRange": "₹25,000 - ₹60,000+",
+  "areaServed": ["IN", "Global"],
+  "sameAs": [
+    "https://wa.me/917597256642",
+    "https://linkedin.com/company/page2lead"
+  ]
+}

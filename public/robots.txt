@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /*.json$
+Disallow: /*?*sort=
+Crawl-delay: 1
+
+Sitemap: https://page2lead.in/sitemap.xml

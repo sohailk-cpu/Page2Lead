@@ -1,0 +1,57 @@
+import type { PricingPlan } from '@/types'
+
+export const pricingPlans: PricingPlan[] = [
+  {
+    id: 'starter',
+    name: 'Starter',
+    price: 25000,
+    period: 'one-time',
+    description: 'For businesses ready to automate one core process and see real results fast. Starting price — final cost depends on scope.',
+    features: [
+      'One automation system (chatbot, WhatsApp, or booking)',
+      'Up to 3 integrations',
+      'Training on your business data',
+      'Mobile-friendly dashboard',
+      '30-day post-launch support',
+      'Video documentation',
+    ],
+    cta: 'Get Started',
+  },
+  {
+    id: 'growth',
+    name: 'Growth',
+    price: 60000,
+    period: 'one-time',
+    description: 'For businesses serious about automation — multiple systems working together. Starting price — final cost depends on scope.',
+    features: [
+      'Up to 3 automation systems',
+      'Unlimited integrations',
+      'CRM setup & automation',
+      'Lead generation flows',
+      'Custom AI chatbot + WhatsApp',
+      '60-day post-launch support',
+      'Monthly performance review',
+      'Priority response',
+    ],
+    cta: 'Most Popular',
+    popular: true,
+  },
+  {
+    id: 'enterprise',
+    name: 'Enterprise',
+    price: 0,
+    period: 'custom',
+    description: 'Full-scale AI transformation tailored to complex operations.',
+    features: [
+      'Unlimited automation systems',
+      'Custom AI model development',
+      'Voice AI agents',
+      'Advanced analytics & reporting',
+      'Dedicated support',
+      'SLA-backed delivery',
+      'Team training & documentation',
+      'Quarterly strategy sessions',
+    ],
+    cta: 'Book a Call',
+  },
+]
