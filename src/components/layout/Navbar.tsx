@@ -53,7 +53,7 @@ export function Navbar() {
               )}
             >
               Page
-              <span className="text-cyan-400">2</span>
+              <span className="text-purple-500">2</span>
               Lead
             </span>
           </Link>
