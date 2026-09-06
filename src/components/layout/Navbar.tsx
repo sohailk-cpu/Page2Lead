@@ -37,26 +37,26 @@ export function Navbar() {
       <nav className="container-wide flex items-center justify-between h-16 lg:h-18">
         {/* Logo */}
         <Link
-            to="/"
-            className="flex items-center gap-2.5 focus-ring rounded-lg"
+          to="/"
+          className="flex items-center gap-2.5 focus-ring rounded-lg"
+        >
+          <img
+            src={!isDark && scrolled ? "/assets/favicon-dark.png" : "/assets/favicon-light.png"}
+            alt="Page2Lead"
+            className="w-10 h-10"
+          />
+
+          <span
+            className={cn(
+              "font-display font-bold text-2xl tracking-tight transition-colors",
+              isDark ? "text-white" : (scrolled ? "text-gray-900" : "text-white")
+            )}
           >
-            <img
-              src={scrolled ? "/assets/favicon-dark.png" : "/assets/favicon-light.png"}
-              alt="Page2Lead"
-              className="w-10 h-10"
-            />
-          
-           <span
-              className={cn(
-                "font-display font-bold text-2xl tracking-tight transition-colors",
-                scrolled ? "text-gray-900" : "text-white"
-              )}
-            >
-              Page
-              <span className="text-purple-500">2</span>
-              Lead
-            </span>
-          </Link>
+            Page
+            <span className="text-purple-500">2</span>
+            Lead
+          </span>
+        </Link>
 
         {/* Desktop nav */}
         <div className="hidden lg:flex items-center gap-1">
