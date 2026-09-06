@@ -19,7 +19,7 @@ export const faqs: FAQ[] = [
   },
   {
     question: 'How much does it cost?',
-    answer: "Projects start from ₹25,000 for basic automation setups and go up based on scope. I also offer monthly retainer plans for ongoing maintenance and improvements. Book a free call and I'll give you a fixed-price quote with no surprises.",
+    answer: "Projects start from ₹14,999 for basic automation setups and go up based on scope. I also offer monthly retainer plans for ongoing maintenance and improvements. Book a free call and I'll give you a fixed-price quote with no surprises.",
   },
   {
     question: 'Do you provide ongoing support after launch?',
