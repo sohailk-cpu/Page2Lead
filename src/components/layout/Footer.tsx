@@ -42,9 +42,11 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-2.5 mb-5">
-              <div className="w-8 h-8 rounded-lg bg-brand-500 flex items-center justify-center shadow-glow-sm">
-                <Zap className="w-4 h-4 text-white" />
-              </div>
+              <img
+                src="/assets/favicon-light.png"
+                alt="Page2Lead"
+                className="w-8 h-8"
+              />
               <span className="font-display font-bold text-xl tracking-tight text-white">
                 Page<span className="text-brand-400">2</span>Lead
               </span>
