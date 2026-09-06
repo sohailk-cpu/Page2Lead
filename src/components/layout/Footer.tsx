@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Zap, Mail, Phone, MapPin, Twitter, Linkedin, Instagram } from 'lucide-react'
+import { Mail, Phone, MapPin, Twitter, Linkedin, Instagram } from 'lucide-react'
 
 const footerLinks = {
   Services: [
