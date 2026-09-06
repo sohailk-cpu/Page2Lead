@@ -103,10 +103,10 @@ export default function AboutPage() {
                 </div>
               </div>
               <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
-                <p>🛠️ Self-taught developer & digital marketer</p>
-                <p>🤖 Specialising in AI automation systems for Indian businesses</p>
-                <p>🎯 Focused on real results, not demos</p>
-                <p>📍 Working with clients across India — remotely</p>
+                <p>Self-taught developer & digital marketer</p>
+                <p>Specialising in AI automation systems for Indian businesses</p>
+                <p>Focused on real results, not demos</p>
+                <p>Working with clients across India — remotely</p>
               </div>
               <div className="mt-6 pt-5 border-t border-border">
                 <a
