@@ -105,7 +105,7 @@ export default function ContactPage() {
 
               <div className="space-y-4">
                 {[
-                  { icon: Mail, label: 'Email', value: 'page2lead.contact@gmail.com', href: 'mailto:page2lead.contact@gmail.com' },
+                  { icon: Mail, label: 'Email', value: 'hello@page2lead.in', href: 'mailto:hello@page2lead.in' },
                   { icon: Phone, label: 'WhatsApp', value: '+91 75972 56642', href: 'https://wa.me/917597256642' },
                   { icon: MapPin, label: 'Location', value: 'Ajmer, Rajasthan, India', href: undefined },
                 ].map(({ icon: Icon, label, value, href }) => (
