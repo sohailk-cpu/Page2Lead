@@ -56,9 +56,9 @@ export function Footer() {
             </p>
             {/* Contact info */}
             <div className="space-y-2.5">
-              <a href="mailto:page2lead.contact@gmail.com" className="flex items-center gap-2.5 text-sm text-white/50 hover:text-white/80 transition-colors">
+              <a href="mailto:hello@page2lead.in" className="flex items-center gap-2.5 text-sm text-white/50 hover:text-white/80 transition-colors">
                 <Mail className="w-4 h-4 text-brand-400 shrink-0" />
-                page2lead.contact@gmail.com
+                hello@page2lead.in
               </a>
               <a href="https://wa.me/917597256642" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-sm text-white/50 hover:text-white/80 transition-colors">
                 <Phone className="w-4 h-4 text-brand-400 shrink-0" />
