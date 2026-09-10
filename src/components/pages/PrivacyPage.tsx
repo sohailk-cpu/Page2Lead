@@ -74,14 +74,14 @@ export default function PrivacyPage() {
                 <li>Request deletion of your data</li>
                 <li>Opt out of marketing communications at any time</li>
               </ul>
-              <p className="mt-3">To exercise these rights, email us at page2lead.contact@gmail.com.</p>
+              <p className="mt-3">To exercise these rights, email us at hello@page2lead.in.</p>
             </div>
 
             <div>
               <h2 className="text-xl font-bold text-foreground mb-3">7. Contact</h2>
               <p>
                 For any privacy-related questions, contact me at{' '}
-                <a href="mailto:page2lead.contact@gmail.com" className="text-brand-500 hover:underline">
+                <a href="mailto:hello@page2lead.in" className="text-brand-500 hover:underline">
                   privacy@page2lead
                 </a>
                 .
