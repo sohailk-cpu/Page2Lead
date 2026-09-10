@@ -17,6 +17,7 @@ const footerLinks = {
     { label: 'Blog', href: '/blog' },
     { label: 'Pricing', href: '/pricing' },
     { label: 'Contact', href: '/contact' },
+    { label: 'Careers', href: 'https://careers.page2lead.in/careers' },
   ],
   Industries: [
     { label: 'Real Estate', href: '/industries' },
