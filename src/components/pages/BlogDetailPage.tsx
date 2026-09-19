@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import { blogs } from '@/data/blogs'
 import { Button } from '@/components/ui/Button'
 import { CTASection } from '@/components/sections/CTASection'
+import { usePageMetadata } from '@/hooks/usePageMetadata'
 
 export default function BlogDetailPage() {
   const { slug } = useParams<{ slug: string }>()
@@ -24,6 +25,19 @@ export default function BlogDetailPage() {
       </div>
     )
   }
+
+  // Use the new hook instead of manual useEffect
+  usePageMetadata({
+    title: `${blog.title} - Page2Lead Blog`,
+    description: blog.excerpt,
+    canonical: `https://page2lead.in/blog/${blog.slug}`,
+    ogTitle: blog.title,
+    ogDescription: blog.excerpt,
+    ogImage: blog.image,
+    twitterTitle: blog.title,
+    twitterDescription: blog.excerpt,
+    twitterImage: blog.image
+  })
 
 // Add dynamic meta tags for each blog
 useEffect(() => {
