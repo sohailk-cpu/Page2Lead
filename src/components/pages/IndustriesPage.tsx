@@ -66,8 +66,11 @@ const industries = [
     results: ['40% faster quotation cycles', 'Vendor follow-up automated', 'B2B inquiry qualification'],
   },
 ]
+import { usePageMetadata } from '@/hooks/usePageMetadata'
+import { pageMetadata } from '@/data/pageMetadata'
 
 export default function IndustriesPage() {
+  usePageMetadata(pageMetadata.industries)
   return (
     <>
       {/* Hero */}
