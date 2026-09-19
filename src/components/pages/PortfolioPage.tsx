@@ -67,7 +67,11 @@ const projects = [
   },
 ]
 
+import { usePageMetadata } from '@/hooks/usePageMetadata'
+import { pageMetadata } from '@/data/pageMetadata'
+
 export default function PortfolioPage() {
+  usePageMetadata(pageMetadata.portfolio)
   return (
     <>
       {/* Hero */}
