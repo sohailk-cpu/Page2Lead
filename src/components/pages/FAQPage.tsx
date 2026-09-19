@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion'
 import { FAQSection } from '@/components/sections/FAQSection'
 import { CTASection } from '@/components/sections/CTASection'
+import { usePageMetadata } from '@/hooks/usePageMetadata'
+import { pageMetadata } from '@/data/pageMetadata'
 
 export default function FAQPage() {
+  usePageMetadata(pageMetadata.faq)
   return (
     <>
       {/* Hero */}
