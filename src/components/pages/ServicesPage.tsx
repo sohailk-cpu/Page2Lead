@@ -14,7 +14,11 @@ const iconMap: Record<string, React.ElementType> = {
   Database, Calendar, HeadphonesIcon, Globe, Cpu, BarChart3,
 }
 
+import { usePageMetadata } from '@/hooks/usePageMetadata'
+import { pageMetadata } from '@/data/pageMetadata'
+
 export default function ServicesPage() {
+  usePageMetadata(pageMetadata.services)
   return (
     <>
       {/* Hero */}
