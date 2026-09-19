@@ -19,8 +19,11 @@ const schema = z.object({
 })
 
 type FormData = z.infer<typeof schema>
+import { usePageMetadata } from '@/hooks/usePageMetadata'
+import { pageMetadata } from '@/data/pageMetadata'
 
 export default function ContactPage() {
+  usePageMetadata(pageMetadata.contact)
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
 
