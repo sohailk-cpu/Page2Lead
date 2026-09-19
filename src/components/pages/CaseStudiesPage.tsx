@@ -42,8 +42,11 @@ const caseStudies = [
     ],
   },
 ]
+import { usePageMetadata } from '@/hooks/usePageMetadata'
+import { pageMetadata } from '@/data/pageMetadata'
 
 export default function CaseStudiesPage() {
+  usePageMetadata(pageMetadata.caseStudies)
   return (
     <>
       {/* Hero */}
