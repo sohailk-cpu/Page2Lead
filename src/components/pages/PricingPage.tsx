@@ -7,8 +7,11 @@ import { FAQSection } from '@/components/sections/FAQSection'
 import { CTASection } from '@/components/sections/CTASection'
 import { formatPrice } from '@/lib/utils'
 import { cn } from '@/lib/utils'
+import { usePageMetadata } from '@/hooks/usePageMetadata'
+import { pageMetadata } from '@/data/pageMetadata'
 
 export default function PricingPage() {
+  usePageMetadata(pageMetadata.pricing)
   return (
     <>
       {/* Hero */}
