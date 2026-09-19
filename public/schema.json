@@ -1,3 +1,4 @@
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
@@ -15,10 +16,17 @@
     "addressCountry": "IN"
   },
   "image": "https://page2lead.in/logo.jpg",
-  "priceRange": "₹25,000 - ₹60,000+",
+  "priceRange": "₹14,999 - ₹49,999+",
   "areaServed": ["IN", "Global"],
   "sameAs": [
     "https://wa.me/917597256642",
     "https://linkedin.com/company/page2lead"
-  ]
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "09:00",
+    "closes": "18:00"
+  }
 }
+</script>
