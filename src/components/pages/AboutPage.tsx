@@ -26,8 +26,11 @@ const values = [
     description: "I don't disappear after delivery. Most clients work with me for years, not just a single project.",
   },
 ]
+import { usePageMetadata } from '@/hooks/usePageMetadata'
+import { pageMetadata } from '@/data/pageMetadata'
 
 export default function AboutPage() {
+  usePageMetadata(pageMetadata.about)
   return (
     <>
       {/* Hero */}
