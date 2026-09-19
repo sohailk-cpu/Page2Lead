@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion'
+import { usePageMetadata } from '@/hooks/usePageMetadata'
+import { pageMetadata } from '@/data/pageMetadata'
 
 export default function PrivacyPage() {
+  usePageMetadata(pageMetadata.privacy)
   return (
     <>
       <section className="pt-32 pb-20 bg-surface-950 relative overflow-hidden">
