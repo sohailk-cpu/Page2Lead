@@ -8,8 +8,11 @@ import { Testimonials } from '@/components/sections/Testimonials'
 import { PricingPreview } from '@/components/sections/PricingPreview'
 import { FAQSection } from '@/components/sections/FAQSection'
 import { CTASection } from '@/components/sections/CTASection'
+import { usePageMetadata } from '@/hooks/usePageMetadata'
+import { pageMetadata } from '@/data/pageMetadata'
 
 export default function HomePage() {
+  usePageMetadata(pageMetadata.home)
   return (
     <>
       <Hero />
