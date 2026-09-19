@@ -48,7 +48,7 @@ export function Footer() {
                 className="w-8 h-8"
               />
               <span className="font-display font-bold text-xl tracking-tight text-white">
-                Page<span className="text-brand-400">2</span>Lead
+                Page<span className="text-purple-500">2</span>Lead
               </span>
             </Link>
             <p className="text-sm text-white/50 leading-relaxed max-w-xs mb-6">
