@@ -39,19 +39,6 @@ export default function BlogDetailPage() {
     twitterImage: blog.image
   })
 
-// Add dynamic meta tags for each blog
-useEffect(() => {
-  document.title = `${blog.title} - Page2Lead Blog`
-  
-  // Meta description
-  const metaDesc = document.querySelector('meta[name="description"]')
-  if (metaDesc) metaDesc.setAttribute('content', blog.excerpt)
-  
-  // Open Graph
-  const ogTitle = document.querySelector('meta[property="og:title"]')
-  if (ogTitle) ogTitle.setAttribute('content', blog.title)
-}, [blog])
-
   // Parse markdown content with proper image handling
   const renderContent = (content: string) => {
     return content.split('\n\n').map((paragraph, i) => {
