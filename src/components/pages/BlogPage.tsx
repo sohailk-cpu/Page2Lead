@@ -4,8 +4,11 @@ import { Clock, Calendar } from 'lucide-react'
 import { blogs } from '@/data/blogs'
 import { CTASection } from '@/components/sections/CTASection'
 import { useState } from 'react'
+import { usePageMetadata } from '@/hooks/usePageMetadata'
+import { pageMetadata } from '@/data/pageMetadata'
 
 export default function BlogPage() {
+  usePageMetadata(pageMetadata.blog)
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
 
   const categories = Array.from(new Set(blogs.map((b) => b.category)))
