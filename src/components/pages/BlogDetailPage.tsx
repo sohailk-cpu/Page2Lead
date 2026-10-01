@@ -1,5 +1,4 @@
 import { useParams } from 'react-router-dom'
-import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Calendar, Clock, User, ArrowLeft } from 'lucide-react'
 import { Link } from 'react-router-dom'
