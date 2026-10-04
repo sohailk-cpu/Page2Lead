@@ -1,6 +1,6 @@
-# Page2Lead — AI Automation Agency Website
+# Page2Lead — AI Automation Studio
 
-A premium, conversion-optimized website for an AI Automation Agency. Built with React, TypeScript, Vite, and Tailwind CSS — designed to look and feel like a ₹5–10 lakh agency build.
+A premium, conversion-focused website for Page2Lead, a founder-led AI automation studio by Sohail Khan. Built with React, TypeScript, Vite, and Tailwind CSS 
 
 ## Tech Stack
 
