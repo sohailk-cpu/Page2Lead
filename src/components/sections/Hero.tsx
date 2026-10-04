@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/Button'
 const stats = [
   { value: '24/7', label: 'Lead capture', icon: Zap },
   { value: 'Fast', label: 'Delivery', icon: Clock },
-  { value: '100%', label: 'Dedicated support', icon: HeartHandshake },
+  { value: 'Direct', label: 'Founder support', icon: HeartHandshake },
 ]
 
 export function Hero() {
