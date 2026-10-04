@@ -40,7 +40,7 @@ export function Problems() {
             <span className="text-destructive">time and money every day</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Many businesses lose 20–40% of their potential revenue to problems that AI can solve in days — not months.
+            Manual processes can quietly cost businesses leads, time, and opportunities every day.
           </p>
         </div>
 
