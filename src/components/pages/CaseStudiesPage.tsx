@@ -55,13 +55,13 @@ export default function CaseStudiesPage() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[300px] rounded-full bg-brand-500/10 blur-[100px]" />
         <div className="container-wide relative z-10 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-            <p className="text-eyebrow mb-4">Case Studies</p>
+            <p className="text-eyebrow mb-4">AI Automation Demos</p>
             <h1 className="text-display text-4xl lg:text-6xl text-white mb-5 text-balance">
               Real problems.<br />
               <span className="gradient-text">Real solutions.</span>
             </h1>
             <p className="text-white/50 text-lg max-w-xl mx-auto">
-              A look at how I've approached and solved operational challenges for businesses using AI automation.
+              A look at how I've approached common operational challenges through AI automation demos and proof-of-concept builds.
             </p>
           </motion.div>
         </div>
@@ -72,7 +72,7 @@ export default function CaseStudiesPage() {
         <div className="flex items-start gap-3 p-4 rounded-xl border border-brand-500/20 bg-brand-500/5 max-w-2xl">
           <Info className="w-4 h-4 text-brand-500 shrink-0 mt-0.5" />
           <p className="text-sm text-muted-foreground">
-            More case studies coming soon. Reach out to see examples of my work directly —{' '}
+            These are demo and proof-of-concept projects, not client case studies. Reach out to see examples of my work directly —{' '}
             <a
               href="https://wa.me/917597256642"
               target="_blank"
