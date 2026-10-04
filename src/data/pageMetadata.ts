@@ -24,7 +24,7 @@ export const pageMetadata = {
   },
 
   portfolio: {
-    title: "Portfolio - AI Automation Projects | Page2Lead",
+    title: "AI Automation Demos - Page2Lead | Page2Lead",
     description: "Explore AI automation demos and proof-of-concept projects built by Page2Lead.",
     canonical: "https://page2lead.in/portfolio",
     ogTitle: "Portfolio - AI Automation Projects",
@@ -42,7 +42,7 @@ export const pageMetadata = {
     ogTitle: "Case Studies - AI Automation Results",
     ogDescription: "See how Page2Lead approaches real-world automation problems",
     ogImage: "https://page2lead.in/og-case-studies.jpg",
-    twitterTitle: "Case Studies - Page2Lead",
+    twitterTitle: "AI Demos - Page2Lead",
     twitterDescription: "See our proven AI automation results",
     twitterImage: "https://page2lead.in/og-case-studies.jpg"
   },
