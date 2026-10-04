@@ -13,7 +13,7 @@ const footerLinks = {
   Company: [
     { label: 'About', href: '/about' },
     { label: 'Portfolio', href: '/portfolio' },
-    { label: 'Case Studies', href: '/case-studies' },
+    { label: 'AI Demos', href: '/case-studies' }
     { label: 'Blog', href: '/blog' },
     { label: 'Pricing', href: '/pricing' },
     { label: 'Contact', href: '/contact' },
@@ -52,7 +52,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-sm text-white/50 leading-relaxed max-w-xs mb-6">
-              I build AI-powered business systems that generate leads, automate support, and save hundreds of hours every month.
+              I build AI-powered business systems that help generate leads, automate support, and reduce repetitive manual work.
             </p>
             {/* Contact info */}
             <div className="space-y-2.5">
