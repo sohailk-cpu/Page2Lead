@@ -88,7 +88,7 @@ export const services: Service[] = [
   {
     id: 'appointment-booking',
     title: 'Appointment Booking Automation',
-    description: 'Let clients book, reschedule, and cancel appointments themselves — with automated reminders that cut no-shows by 60%.',
+    description: 'Let clients book, reschedule, and cancel appointments themselves — with automated reminders and follow-ups that help reduce missed appointments.',
     icon: 'Calendar',
     features: [
       'Self-serve booking page',
@@ -102,7 +102,7 @@ export const services: Service[] = [
   {
     id: 'ai-customer-support',
     title: 'AI Customer Support',
-    description: 'Deflect 70% of support tickets with AI that instantly resolves common issues, escalating only complex ones to humans.',
+    description: 'Automate common support requests with AI, while escalating complex issues to humans when needed.',
     icon: 'HeadphonesIcon',
     features: [
       'Ticket classification',
