@@ -28,7 +28,7 @@ export default function BlogPage() {
               The Blog
             </h1>
             <p className="text-white/50 text-lg max-w-xl mx-auto">
-              Insights on AI automation, lead generation, and how to save your team hundreds of hours every month.
+              Insights on AI automation, lead generation, and practical ways to reduce repetitive work.
             </p>
           </motion.div>
         </div>
