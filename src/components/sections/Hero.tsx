@@ -30,7 +30,7 @@ export function Hero() {
           >
             <span className="w-1.5 h-1.5 rounded-full bg-brand-400 animate-pulse2" />
             <span className="text-xs font-semibold text-brand-400 uppercase tracking-wider">
-              AI Automation Agency
+              AI Automation Studio
             </span>
           </motion.div>
 
@@ -53,7 +53,7 @@ export function Hero() {
             transition={{ duration: 0.55, delay: 0.2 }}
             className="text-lg lg:text-xl text-white/50 max-w-2xl mx-auto mb-10 leading-relaxed text-balance"
           >
-            I build AI-powered business systems that capture leads 24/7, automate your support, and eliminate hundreds of hours of manual work — so you can focus on growth.
+            I build AI-powered business systems that capture leads, automate repetitive work, and help you focus on growth.
           </motion.p>
 
           {/* CTAs */}
