@@ -82,11 +82,11 @@ export default function PortfolioPage() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <p className="text-eyebrow mb-4">My Work</p>
             <h1 className="text-display text-4xl lg:text-6xl text-white mb-5 text-balance">
-              Real projects.<br />
+              AI automation demos.<br />
               <span className="gradient-text">Real systems.</span>
             </h1>
             <p className="text-white/50 text-lg max-w-xl mx-auto">
-              A sample of the AI automation systems I've built for businesses across India.
+              A selection of AI automation demos and proof-of-concept systems I've built across different industries.
             </p>
           </motion.div>
         </div>
@@ -97,7 +97,7 @@ export default function PortfolioPage() {
         <div className="flex items-start gap-3 p-4 rounded-xl border border-brand-500/20 bg-brand-500/5 max-w-2xl">
           <Info className="w-4 h-4 text-brand-500 shrink-0 mt-0.5" />
           <p className="text-sm text-muted-foreground">
-            More case studies coming soon. Reach out to see live demos and examples of my work directly —{' '}
+            These are demo and proof-of-concept projects, not client case studies. Reach out to see live demos and discuss how a similar system could fit your business —{' '}
             <a href="https://wa.me/917597256642" target="_blank" rel="noopener noreferrer" className="text-brand-500 hover:underline font-medium">
               WhatsApp me here
             </a>.
