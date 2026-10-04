@@ -1,12 +1,12 @@
 export const pageMetadata = {
   home: {
-    title: "Page2Lead - AI Automation Agency | Custom AI Chatbots & Lead Generation",
+    title: "Page2Lead - AI Automation Studio | Custom AI Chatbots & Lead Generation",
     description: "Build AI-powered chatbots, automate customer support, and generate qualified leads with Page2Lead's custom AI automation solutions.",
     canonical: "https://page2lead.in/",
-    ogTitle: "Page2Lead - AI Automation Agency",
+    ogTitle: "Page2Lead - AI Automation Studio",
     ogDescription: "Custom AI chatbots & lead generation for your business",
     ogImage: "https://page2lead.in/og-image.jpg",
-    twitterTitle: "Page2Lead - AI Automation Agency",
+    twitterTitle: "Page2Lead - AI Automation Studio",
     twitterDescription: "Custom AI chatbots & lead generation for your business",
     twitterImage: "https://page2lead.in/og-image.jpg"
   },
@@ -25,10 +25,10 @@ export const pageMetadata = {
 
   portfolio: {
     title: "Portfolio - AI Automation Projects | Page2Lead",
-    description: "See our AI automation projects and success stories. Custom chatbots and lead generation systems built for real clients.",
+    description: "Explore AI automation demos and proof-of-concept projects built by Page2Lead.",
     canonical: "https://page2lead.in/portfolio",
     ogTitle: "Portfolio - AI Automation Projects",
-    ogDescription: "See our successful AI automation projects for various industries",
+    ogDescription: "Explore AI automation demos across different industries",
     ogImage: "https://page2lead.in/og-portfolio.jpg",
     twitterTitle: "Portfolio - Page2Lead",
     twitterDescription: "See our AI automation projects",
@@ -36,11 +36,11 @@ export const pageMetadata = {
   },
 
   caseStudies: {
-    title: "Case Studies - AI Automation Success Stories | Page2Lead",
-    description: "Real results from our AI automation projects. See how we've helped businesses generate more leads and automate operations.",
+    title: "AI Automation Demos & Projects | Page2Lead",
+    description: "Explore AI automation demos and proof-of-concept projects built by Page2Lead.",
     canonical: "https://page2lead.in/case-studies",
     ogTitle: "Case Studies - AI Automation Results",
-    ogDescription: "See proven results from our AI automation projects",
+    ogDescription: "See how Page2Lead approaches real-world automation problems",
     ogImage: "https://page2lead.in/og-case-studies.jpg",
     twitterTitle: "Case Studies - Page2Lead",
     twitterDescription: "See our proven AI automation results",
@@ -60,20 +60,20 @@ export const pageMetadata = {
   },
 
   about: {
-    title: "About Page2Lead - AI Automation Agency in Ajmer",
-    description: "Page2Lead is an AI automation agency founded by Sohail Khan. We build custom chatbots and lead generation systems for businesses.",
+    title: "About Page2Lead - AI Automation Studio in Ajmer",
+    description: "Page2Lead is a founder-led AI automation studio by Sohail Khan. I build custom chatbots and business automation systems.",
     canonical: "https://page2lead.in/about",
     ogTitle: "About Page2Lead",
     ogDescription: "Learn about Page2Lead and our AI automation expertise",
     ogImage: "https://page2lead.in/og-about.jpg",
     twitterTitle: "About Page2Lead",
-    twitterDescription: "Meet the Page2Lead team",
+    twitterDescription: "Meet Sohail Khan, founder of Page2Lead",
     twitterImage: "https://page2lead.in/og-about.jpg"
   },
 
   contact: {
     title: "Contact Page2Lead - AI Chatbot & Automation Solutions",
-    description: "Ready to automate your business? Contact Page2Lead for custom AI solutions. Get a free consultation from our team.",
+    description: "Ready to automate your business? Contact Page2Lead for custom AI solutions. Get a free consultation directly with Sohail Khan.",
     canonical: "https://page2lead.in/contact",
     ogTitle: "Contact Page2Lead",
     ogDescription: "Get in touch for custom AI automation solutions",
@@ -85,7 +85,7 @@ export const pageMetadata = {
 
   blog: {
     title: "Blog - AI Automation & Lead Generation Insights | Page2Lead",
-    description: "Learn about AI chatbots, lead generation, WhatsApp automation & business automation strategies from Page2Lead experts.",
+    description: "Learn about AI chatbots, lead generation, WhatsApp automation, and business automation strategies from Page2Lead.",
     canonical: "https://page2lead.in/blog",
     ogTitle: "Blog - AI Automation Insights",
     ogDescription: "Read our guides on AI chatbots, lead generation & automation",
