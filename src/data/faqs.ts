@@ -15,7 +15,7 @@ export const faqs: FAQ[] = [
   },
   {
     question: 'Will this work for my industry specifically?',
-    answer: "Yes. I've built systems for real estate, clinics, gyms, coaching, ecommerce, law firms, restaurants, and more. Every system is built around your specific business processes — not a generic template. I start with a discovery call to understand your exact operations before writing a single line of code.",
+    answer: "Yes. I can build systems for real estate, clinics, gyms, coaching, ecommerce, law firms, restaurants, and more. Every system is built around your specific business processes — not a generic template. I start with a discovery call to understand your exact operations before writing a single line of code.",
   },
   {
     question: 'How much does it cost?',
@@ -23,7 +23,7 @@ export const faqs: FAQ[] = [
   },
   {
     question: 'Do you provide ongoing support after launch?',
-    answer: "Yes. All projects include a 30-day post-launch support period at no extra cost. After that, you can choose a monthly maintenance retainer. I don't disappear after delivery — most of my clients stay with me long-term.",
+    answer: "Yes. All projects include a 30-day post-launch support period at no extra cost. After that, you can choose a monthly maintenance retainer. I don't disappear after delivery — ongoing maintenance and improvements are available when needed.",
   },
   {
     question: 'Can the AI integrate with software I already use?',
