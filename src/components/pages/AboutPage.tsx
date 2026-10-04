@@ -23,7 +23,7 @@ const values = [
   {
     icon: Heart,
     title: 'Long-term relationships',
-    description: "I don't disappear after delivery. Most clients work with me for years, not just a single project.",
+    description: "I don't disappear after delivery. I aim to build long-term relationships with the businesses I work with.",
   },
 ]
 import { usePageMetadata } from '@/hooks/usePageMetadata'
@@ -73,10 +73,10 @@ export default function AboutPage() {
                   I watched local business owners and coaching institutes burn out managing the same repetitive tasks month after month — chasing leads that went cold, manually sending reminders, updating spreadsheets instead of serving customers.
                 </p>
                 <p>
-                  The technology to fix all of this existed. But most AI agencies either built toy demos that didn't work in the real world, or charged enterprise prices that small businesses couldn't afford.
+                  The technology to fix all of this existed. I wanted to make practical AI automation more accessible to small and growing businesses.
                 </p>
                 <p>
-                  So I started Page2Lead to fill that gap: production-ready AI systems built specifically for Indian businesses — at prices that make the ROI obvious from month one.
+                  So I started Page2Lead to fill that gap: production-ready AI systems built specifically for Indian businesses — with practical scopes and transparent pricing.
                 </p>
               </div>
               <div className="mt-8">
@@ -109,7 +109,7 @@ export default function AboutPage() {
                 <p>Self-taught developer & digital marketer</p>
                 <p>Specialising in AI automation systems for Indian businesses</p>
                 <p>Focused on real results, not demos</p>
-                <p>Working with clients across India — remotely</p>
+                <p>Available to work with businesses across India — remotely</p>
               </div>
               <div className="mt-6 pt-5 border-t border-border">
                 <a
