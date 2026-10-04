@@ -14,56 +14,56 @@ const industries = [
     label: 'Real Estate',
     headline: 'Never miss a property inquiry again',
     description: 'Real estate moves fast. My AI captures inquiries 24/7, qualifies leads by budget and timeline, schedules site visits automatically, and follows up until they convert — or politely disqualify.',
-    results: ['3x more qualified leads', 'Site visits booked automatically', 'Follow-up sequences that close'],
+    results: ['24/7 lead capture', 'Site visits can be booked automatically', 'Automated follow-up sequences'],
   },
   {
     icon: Heart,
     label: 'Clinics & Healthcare',
     headline: 'Fill your calendar without lifting a phone',
     description: 'Patients book at midnight. My AI handles appointment scheduling, sends WhatsApp reminders, handles prescription refill requests, and answers FAQs — so your staff focuses on care, not admin.',
-    results: ['58% fewer no-shows', '24/7 appointment booking', 'Auto-reminders via WhatsApp'],
+    results: ['24/7 appointment booking', 'Automated reminders via WhatsApp', 'Routine inquiries can be automated'],
   },
   {
     icon: GraduationCap,
     label: 'Education & Coaching',
     headline: 'Convert more enquiries into enrolled students',
     description: 'From first message to paid enrollment — my AI answers course queries, qualifies intent, books counselling calls, and follows up with prospects who didn\'t convert immediately.',
-    results: ['78% show-up rate on calls', '3x more enrolments', 'Zero cold enquiries wasted'],
+    results: ['Instant enquiry responses', 'Automated counselling booking', 'Follow-up for unconverted enquiries'],
   },
   {
     icon: ShoppingBag,
     label: 'Ecommerce',
     headline: 'Resolve 70% of support tickets automatically',
-    description: 'Order status, return requests, refund updates, tracking queries — your AI handles all of it instantly, escalating only complex issues to ymy.',
-    results: ['72% tickets auto-resolved', 'CSAT scores up 23%', 'Support team refocused on complex issues'],
+    description: 'Order status, return requests, refund updates, tracking queries — your AI handles all of it instantly, escalating complex issues to your team.',
+    results: ['Common support requests automated', 'Faster first responses', 'Complex issues escalated to your team'],
   },
   {
     icon: Dumbbell,
     label: 'Gyms & Fitness',
     headline: 'Fill your trial slots without paid ads',
     description: 'Instagram DM to booked trial in under 2 minutes. My AI captures leads across all channels, sends programme information, books free trials, and follows up until they join.',
-    results: ['20 → 90 trials per month', 'Multi-channel lead capture', 'Auto follow-up sequences'],
+    results: ['Multi-channel lead capture', 'Automated trial booking', 'Follow-up sequences'],
   },
   {
     icon: Scale,
     label: 'Law Firms',
     headline: 'Automate client intake and focus on casework',
-    description: 'Complex intake processes that took 2 hours of staff time now take 10 minutes — fully automated. Clients complete everything online, documents are collected, and ymy just reviews.',
-    results: ['2hr → 10min intake', 'Automated document collection', 'Instant conflict checking'],
+    description: 'Complex intake processes that took 2 hours of staff time now take 10 minutes — fully automated. Clients complete everything online, documents are collected, and your team reviews the final information.',
+    results: ['Structured client intake', 'Automated document collection', 'Workflow-based conflict checks'],
   },
   {
     icon: UtensilsCrossed,
     label: 'Restaurants',
     headline: 'Never miss a reservation or catering inquiry',
     description: 'WhatsApp-based reservation system, automated table confirmations, catering inquiry qualification, and event booking — all without a phone call.',
-    results: ['Zero missed reservations', 'Catering leads auto-qualified', 'WhatsApp-native booking'],
+    results: ['WhatsApp-native booking', 'Catering enquiry qualification', 'Automated confirmations'],
   },
   {
     icon: Factory,
     label: 'Manufacturing',
     headline: 'Automate your B2B inquiry and quotation process',
     description: 'B2B inquiries qualified by volume, product type, and timeline. Quotation request routing, vendor follow-up, and procurement automation to cut cycle times.',
-    results: ['40% faster quotation cycles', 'Vendor follow-up automated', 'B2B inquiry qualification'],
+    results: ['B2B enquiry qualification', 'Quotation request routing', 'Vendor follow-up automation'],
   },
 ]
 import { usePageMetadata } from '@/hooks/usePageMetadata'
@@ -125,7 +125,7 @@ export default function IndustriesPage() {
                 </div>
 
                 <div style={{ direction: 'ltr' }} className="p-7 rounded-2xl border border-border bg-card">
-                  <p className="text-sm font-semibold text-foreground mb-4">Typical results</p>
+                  <p className="text-sm font-semibold text-foreground mb-4">Typical automation opportunities</p>
                   <div className="space-y-3">
                     {industry.results.map((r) => (
                       <div key={r} className="flex items-center gap-3 p-3 rounded-xl bg-brand-500/5 border border-brand-500/10">
