@@ -72,24 +72,38 @@ export function Footer() {
             {/* Social */}
             <div className="flex items-center gap-3 mt-6">
               {[
-                { type: 'x', href: '#', label: 'X' },
-                { type: 'linkedin', href: '#', label: 'LinkedIn' },
+                { type: 'x', href: 'https://x.com/page2lead/', label: 'X' },
+                { type: 'linkedin', href: 'https://www.linkedin.com/company/page2lead/', label: 'LinkedIn' },
+                { type: 'instagram', href: 'https://www.instagram.com/page2lead/', label: 'Instagram' },
               ].map(({ type, href, label }) => (
                 <a
                   key={label}
                   href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={label}
                   className="w-9 h-9 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center transition-colors"
                 >
                   {type === 'linkedin' ? (
                     <Linkedin className="w-4 h-4 text-white/60" />
+                  ) : type === 'instagram' ? (
+                    <svg
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                      className="w-4 h-4 fill-none stroke-white/60"
+                      strokeWidth="1.8"
+                    >
+                      <rect x="3" y="3" width="18" height="18" rx="5" />
+                      <circle cx="12" cy="12" r="4.2" />
+                      <circle cx="17.4" cy="6.7" r="1" fill="currentColor" stroke="none" />
+                    </svg>
                   ) : (
                     <svg
                       viewBox="0 0 24 24"
                       aria-hidden="true"
                       className="w-4 h-4 fill-white/60"
                     >
-                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.657l-5.214-6.817-5.964 6.817H1.684l7.73-8.835L1.254 2.25H8.05l4.713 6.231 5.481-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z" />
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.657l-5.214-6.817-5.964 6.817H1.684l7.73-8.835L1.254 2.25H8.05l4.713 6.231 5.481-6.231Z" />
                     </svg>
                   )}
                 </a>
