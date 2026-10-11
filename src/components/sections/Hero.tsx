@@ -70,7 +70,9 @@ export function Hero() {
               </Button>
             </Link>
             <a
-              href="#demo"
+                href="https://youtu.be/oRsbdbcOHes?si=jf8YF6g1ml0XQqcg"
+                target="_blank"
+                rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 px-6 py-3 text-base font-medium text-white/60 hover:text-white transition-colors"
             >
               <div className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:border-brand-500/50 transition-colors">
