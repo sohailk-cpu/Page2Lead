@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { ArrowRight, Bot, Check, CheckCircle2, Clock3, Mic, Play, Plus, Send, ShoppingBag, Workflow } from 'lucide-react'
 import type { Service } from '@/types'
 
@@ -55,7 +55,22 @@ function WebsiteCustomDemo() {
 
 export default function ServiceDemo({service}:Props) {
  const [videoAvailable, setVideoAvailable] = useState(false)
+ const videoRef = useRef<HTMLVideoElement>(null)
  useEffect(() => { fetch('/videos/whatsapp-automation-demo.mp4', { method: 'HEAD' }).then(response => setVideoAvailable(response.ok)).catch(() => setVideoAvailable(false)) }, [])
+ useEffect(() => {
+  const video = videoRef.current
+  if (!video || !videoAvailable || service.id !== 'whatsapp-automation') return
+  const observer = new IntersectionObserver(([entry]) => {
+   if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+    video.play().catch(() => {})
+   } else {
+    video.pause()
+    video.currentTime = 0
+   }
+  }, { threshold: [0, 0.5, 1] })
+  observer.observe(video)
+  return () => { observer.disconnect(); video.pause() }
+ }, [videoAvailable, service.id])
  const demo = service.id==='ai-chatbots' ? <ChatDemo/> : service.id==='whatsapp-automation' ? <WhatsAppDemo/> : service.id==='voice-ai-agents' ? <VoiceDemo/> : service.id==='lead-crm-automation' ? <LeadCrmDemo/> : service.id==='workflow-automation' ? <WorkflowDemo/> : service.id==='appointment-booking' ? <BookingDemo/> : <WebsiteCustomDemo/>
- return <section id="live-demo" className="section bg-background"><div className="container-wide"><div className="mx-auto mb-10 max-w-3xl text-center"><p className="text-eyebrow mb-3">Explore before you enquire</p><h2 className="text-display text-3xl lg:text-4xl text-foreground">Try the {service.title} demo</h2><p className="mx-auto mt-3 max-w-2xl text-muted-foreground">A hands-on sample of the workflow, so you can see what the system could do for your business.</p></div><div className="mx-auto max-w-5xl">{demo}</div>{service.id==='whatsapp-automation'&&<div className="mx-auto mt-6 max-w-5xl rounded-xl border border-border p-4 sm:p-5"><div className="flex flex-col gap-3 sm:flex-row sm:items-center"><div className="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-brand-500/10 text-brand-500"><Play size={19}/></div><div className="flex-1"><h3 className="font-semibold">WhatsApp automation walkthrough</h3><p className="mt-1 text-sm text-muted-foreground">Video walkthrough slot ready. Add the recorded MP4 to <code className="rounded bg-muted px-1.5 py-0.5 text-xs">public/videos/whatsapp-automation-demo.mp4</code> to enable playback.</p></div></div>{videoAvailable ? <video className="mt-4 w-full rounded-lg bg-black" controls preload="metadata" poster="/blog/Whatsapp-automation.png" src="/videos/whatsapp-automation-demo.mp4">Your browser does not support video playback.</video> : <div className="mt-4 flex min-h-36 items-center gap-4 rounded-lg border border-dashed border-border bg-muted/30 p-5"><img src="/blog/Whatsapp-automation.png" alt="WhatsApp automation walkthrough preview" className="h-20 w-28 rounded-md object-cover sm:h-24 sm:w-40"/><div><p className="font-medium">Video asset not included yet</p><p className="mt-1 text-sm text-muted-foreground">Add the finished MP4 at the path above and the player will appear automatically.</p></div></div>}<p className="mt-3 text-xs text-muted-foreground">The actual video file was not included in the supplied project, so no fake or unrelated video is shown.</p></div>}</div></section>
+ return <section id="live-demo" className="section bg-background"><div className="container-wide"><div className="mx-auto mb-10 max-w-3xl text-center"><p className="text-eyebrow mb-3">Explore before you enquire</p><h2 className="text-display text-3xl lg:text-4xl text-foreground">Try the {service.title} demo</h2><p className="mx-auto mt-3 max-w-2xl text-muted-foreground">A hands-on sample of the workflow, so you can see what the system could do for your business.</p></div><div className="mx-auto max-w-5xl">{demo}</div>{service.id==='whatsapp-automation'&&<div className="mx-auto mt-6 max-w-5xl rounded-xl border border-border p-4 sm:p-5"><div className="flex flex-col gap-3 sm:flex-row sm:items-center"><div className="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-brand-500/10 text-brand-500"><Play size={19}/></div><div className="flex-1"><h3 className="font-semibold">WhatsApp automation walkthrough</h3><p className="mt-1 text-sm text-muted-foreground">Watch how the WhatsApp ordering workflow works.</p></div></div>{videoAvailable ? <video ref={videoRef} className="mt-4 w-full rounded-lg bg-black" muted playsInline controls preload="metadata" poster="/blog/Whatsapp-automation.png" src="/videos/whatsapp-automation-demo.mp4">Your browser does not support video playback.</video> : <div className="mt-4 flex min-h-36 items-center gap-4 rounded-lg border border-dashed border-border bg-muted/30 p-5"><img src="/blog/Whatsapp-automation.png" alt="WhatsApp automation walkthrough preview" className="h-20 w-28 rounded-md object-cover sm:h-24 sm:w-40"/><div><p className="font-medium">Walkthrough video coming soon</p><p className="mt-1 text-sm text-muted-foreground">The video is temporarily unavailable. Please check back soon.</p></div></div>}</div>}</div></section>
 }
