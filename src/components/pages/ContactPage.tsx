@@ -210,15 +210,11 @@ export default function ContactPage() {
                       <option value="" disabled>Select a service</option>
                       <option value="ai-chatbots">AI Chatbots</option>
                       <option value="whatsapp-automation">WhatsApp Automation</option>
-                      <option value="voice-ai">Voice AI Agents</option>
-                      <option value="lead-generation">Lead Generation Automation</option>
+                      <option value="voice-ai-agents">Voice AI Agents</option>
+                      <option value="lead-crm-automation">Lead Generation & CRM</option>
                       <option value="workflow-automation">Business Workflow Automation</option>
-                      <option value="crm-automation">CRM Automation</option>
                       <option value="appointment-booking">Appointment Booking Automation</option>
-                      <option value="ai-customer-support">AI Customer Support</option>
-                      <option value="website-development">Website Development</option>
-                      <option value="custom-ai">Custom AI Solutions</option>
-                      <option value="consulting">Automation Consulting</option>
+                      <option value="website-custom-ai">Website & Custom AI Solutions</option>
                       <option value="not-sure">Not sure yet — help me decide</option>
                     </Select>
                     {errors.service && <p className="text-xs text-destructive mt-1">{errors.service.message}</p>}

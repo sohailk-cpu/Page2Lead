@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import { Layout } from '@/components/layout/Layout'
 import HomePage from '@/components/pages/HomePage'
 import ServicesPage from '@/components/pages/ServicesPage'
@@ -23,6 +23,12 @@ function App() {
       <Route element={<Layout />}>
         <Route path="/" element={<HomePage />} />
         <Route path="/services" element={<ServicesPage />} />
+        <Route path="/services/lead-generation" element={<Navigate to="/services/lead-crm-automation" replace />} />
+        <Route path="/services/crm-automation" element={<Navigate to="/services/lead-crm-automation" replace />} />
+        <Route path="/services/ai-customer-support" element={<Navigate to="/services/ai-chatbots" replace />} />
+        <Route path="/services/website-development" element={<Navigate to="/services/website-custom-ai" replace />} />
+        <Route path="/services/custom-ai-solutions" element={<Navigate to="/services/website-custom-ai" replace />} />
+        <Route path="/services/automation-consulting" element={<Navigate to="/services/workflow-automation" replace />} />
         <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
         <Route path="/industries" element={<IndustriesPage />} />
         <Route path="/portfolio" element={<PortfolioPage />} />

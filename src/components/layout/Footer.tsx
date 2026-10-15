@@ -6,10 +6,12 @@ const footerLinks = {
     { label: 'AI Chatbots', href: '/services/ai-chatbots' },
     { label: 'WhatsApp Automation', href: '/services/whatsapp-automation' },
     { label: 'Voice AI Agents', href: '/services/voice-ai-agents' },
-    { label: 'Lead Generation', href: '/services/lead-generation' },
-    { label: 'CRM Automation', href: '/services/crm-automation' },
-    { label: 'Workflow Automation', href: '/services/workflow-automation' },
+    { label: 'Lead Generation & CRM', href: '/services/lead-crm-automation' },
+    { label: 'Business Workflow Automation', href: '/services/workflow-automation' },
+    { label: 'Appointment Booking', href: '/services/appointment-booking' },
+    { label: 'Website & Custom AI', href: '/services/website-custom-ai' },
   ],
+
   Company: [
     { label: 'About', href: '/about' },
     { label: 'Portfolio', href: '/portfolio' },
