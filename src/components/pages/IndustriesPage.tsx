@@ -12,57 +12,57 @@ const industries = [
   {
     icon: Building2,
     label: 'Real Estate',
-    headline: 'Never miss a property inquiry again',
-    description: 'Real estate moves fast. My AI captures inquiries 24/7, qualifies leads by budget and timeline, schedules site visits automatically, and follows up until they convert — or politely disqualify.',
-    results: ['24/7 lead capture', 'Site visits can be booked automatically', 'Automated follow-up sequences'],
+    headline: 'Respond to property enquiries faster',
+    description: 'Capture property enquiries from supported channels, collect budget and location preferences, coordinate site-visit requests and keep follow-up tasks organised for agents.',
+    results: ['Structured property enquiry capture', 'Site-visit requests and agent handoff', 'Consistent follow-up task tracking'],
   },
   {
     icon: Heart,
     label: 'Clinics & Healthcare',
-    headline: 'Fill your calendar without lifting a phone',
-    description: 'Patients book at midnight. My AI handles appointment scheduling, sends WhatsApp reminders, handles prescription refill requests, and answers FAQs — so your staff focuses on care, not admin.',
-    results: ['24/7 appointment booking', 'Automated reminders via WhatsApp', 'Routine inquiries can be automated'],
+    headline: 'Make appointment requests easier to manage',
+    description: 'Patients may send questions outside clinic hours. A scoped workflow can collect appointment requests, share clinic-approved FAQs, send configured reminders and route clinical questions to staff.',
+    results: ['Appointment request capture', 'Configured reminders', 'Staff handoff for clinical questions'],
   },
   {
     icon: GraduationCap,
     label: 'Education & Coaching',
-    headline: 'Convert more enquiries into enrolled students',
-    description: 'From first message to paid enrollment — my AI answers course queries, qualifies intent, books counselling calls, and follows up with prospects who didn\'t convert immediately.',
-    results: ['Instant enquiry responses', 'Automated counselling booking', 'Follow-up for unconverted enquiries'],
+    headline: 'Organise course enquiries and counselling follow-ups',
+    description: 'Answer approved course FAQs, collect student preferences, route counselling requests and track follow-up tasks using the institute’s agreed process.',
+    results: ['Approved course information', 'Counselling request routing', 'Follow-up task tracking'],
   },
   {
     icon: ShoppingBag,
     label: 'Ecommerce',
-    headline: 'Resolve 70% of support tickets automatically',
-    description: 'Order status, return requests, refund updates, tracking queries — your AI handles all of it instantly, escalating complex issues to your team.',
+    headline: 'Organise common customer support requests',
+    description: 'With an authorised store integration, a workflow can help organise order-status questions, return requests and shipping queries while routing exceptions to your team.',
     results: ['Common support requests automated', 'Faster first responses', 'Complex issues escalated to your team'],
   },
   {
     icon: Dumbbell,
     label: 'Gyms & Fitness',
-    headline: 'Fill your trial slots without paid ads',
-    description: 'Instagram DM to booked trial in under 2 minutes. My AI captures leads across all channels, sends programme information, books free trials, and follows up until they join.',
+    headline: 'Organise trial and membership enquiries',
+    description: 'Capture trial enquiries, share approved programme information, collect preferred times and create follow-up tasks for your team.',
     results: ['Multi-channel lead capture', 'Automated trial booking', 'Follow-up sequences'],
   },
   {
     icon: Scale,
     label: 'Law Firms',
-    headline: 'Automate client intake and focus on casework',
-    description: 'Complex intake processes that took 2 hours of staff time now take 10 minutes — fully automated. Clients complete everything online, documents are collected, and your team reviews the final information.',
+    headline: 'Structure client intake and document requests',
+    description: 'A structured intake workflow can collect initial client details and document requests for staff review. Conflict checks and legal decisions must remain subject to the firm’s approved process.',
     results: ['Structured client intake', 'Automated document collection', 'Workflow-based conflict checks'],
   },
   {
     icon: UtensilsCrossed,
     label: 'Restaurants',
-    headline: 'Never miss a reservation or catering inquiry',
-    description: 'WhatsApp-based reservation system, automated table confirmations, catering inquiry qualification, and event booking — all without a phone call.',
-    results: ['WhatsApp-native booking', 'Catering enquiry qualification', 'Automated confirmations'],
+    headline: 'Organise reservations and catering enquiries',
+    description: 'A WhatsApp workflow can collect reservation or catering details, send a request to staff and confirm bookings only when availability and acceptance are verified.',
+    results: ['Reservation request capture', 'Catering enquiry details', 'Confirmation after staff approval'],
   },
   {
     icon: Factory,
     label: 'Manufacturing',
-    headline: 'Automate your B2B inquiry and quotation process',
-    description: 'B2B inquiries qualified by volume, product type, and timeline. Quotation request routing, vendor follow-up, and procurement automation to cut cycle times.',
+    headline: 'Organise B2B enquiries and quotation requests',
+    description: 'Capture product requirements, volume, timeline and contact details, then route quotation requests to the appropriate team for review.',
     results: ['B2B enquiry qualification', 'Quotation request routing', 'Vendor follow-up automation'],
   },
 ]
@@ -117,9 +117,17 @@ export default function IndustriesPage() {
                     {industry.headline}
                   </h2>
                   <p className="text-muted-foreground leading-relaxed mb-6">{industry.description}</p>
-                  <Link to="/contact">
+                  <Link to={
+                    industry.label === 'Real Estate' ? '/industries/real-estate' :
+                    industry.label === 'Clinics & Healthcare' ? '/industries/clinics-healthcare' :
+                    industry.label === 'Education & Coaching' ? '/industries/education-coaching' :
+                    industry.label === 'Ecommerce' ? '/industries/ecommerce' :
+                    industry.label === 'Restaurants' ? '/industries/restaurants' :
+                    industry.label === 'Gyms & Fitness' ? '/industries/gym-fitness' :
+                    industry.label === 'Law Firms' ? '/industries/law-firms' : '/contact'
+                  }>
                     <Button className="gap-2">
-                      Talk to me about {industry.label} <ArrowRight className="w-4 h-4" />
+                      Explore {industry.label} automation <ArrowRight className="w-4 h-4" />
                     </Button>
                   </Link>
                 </div>

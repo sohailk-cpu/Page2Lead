@@ -11,6 +11,19 @@ export default function BlogDetailPage() {
   const { slug } = useParams<{ slug: string }>()
   const blog = blogs.find((b) => b.slug === slug)
 
+  usePageMetadata({
+    title: blog ? `${blog.title} | Page2Lead Blog` : 'Article Not Found | Page2Lead Blog',
+    description: blog ? blog.excerpt : 'The requested article could not be found.',
+    canonical: blog ? `https://page2lead.in/blog/${blog.slug}` : `https://page2lead.in/blog/${slug ?? ''}`,
+    ogTitle: blog?.title ?? 'Article Not Found | Page2Lead Blog',
+    ogDescription: blog?.excerpt ?? 'The requested article could not be found.',
+    ogImage: blog ? `https://page2lead.in${blog.image}` : undefined,
+    twitterTitle: blog?.title ?? 'Article Not Found | Page2Lead Blog',
+    twitterDescription: blog?.excerpt ?? 'The requested article could not be found.',
+    twitterImage: blog ? `https://page2lead.in${blog.image}` : undefined,
+    robots: blog ? 'index, follow' : 'noindex, follow',
+  })
+
   if (!blog) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-background">
@@ -24,19 +37,6 @@ export default function BlogDetailPage() {
       </div>
     )
   }
-
-  // Use the new hook instead of manual useEffect
-  usePageMetadata({
-    title: `${blog.title} - Page2Lead Blog`,
-    description: blog.excerpt,
-    canonical: `https://page2lead.in/blog/${blog.slug}`,
-    ogTitle: blog.title,
-    ogDescription: blog.excerpt,
-    ogImage: blog.image,
-    twitterTitle: blog.title,
-    twitterDescription: blog.excerpt,
-    twitterImage: blog.image
-  })
 
   // Parse markdown content with proper image handling
   const renderContent = (content: string) => {
@@ -296,9 +296,9 @@ export default function BlogDetailPage() {
             transition={{ duration: 0.5 }}
             className="mt-16 p-8 rounded-2xl border border-brand-500/20 bg-brand-500/5 text-center"
           >
-            <h3 className="text-2xl font-bold text-foreground mb-3">Ready to automate your business?</h3>
+            <h3 className="text-2xl font-bold text-foreground mb-3">Have a project in mind?</h3>
             <p className="text-muted-foreground mb-6 text-lg">
-              Book a free 30-minute strategy call and let's discuss what AI can do for you.
+              Share your requirements and discuss a practical website, web app or automation project.
             </p>
             <Link to="/contact">
               <Button className="px-8">Get Started</Button>

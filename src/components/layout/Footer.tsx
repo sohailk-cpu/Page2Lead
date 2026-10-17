@@ -21,12 +21,13 @@ const footerLinks = {
     { label: 'Contact', href: '/contact' },
   ],
   Industries: [
-    { label: 'Real Estate', href: '/industries' },
-    { label: 'Clinics & Healthcare', href: '/industries' },
-    { label: 'Education & Coaching', href: '/industries' },
-    { label: 'Ecommerce', href: '/industries' },
-    { label: 'Gyms & Fitness', href: '/industries' },
-    { label: 'Law Firms', href: '/industries' },
+    { label: 'Real Estate', href: '/industries/real-estate' },
+    { label: 'Clinics & Healthcare', href: '/industries/clinics-healthcare' },
+    { label: 'Education & Coaching', href: '/industries/education-coaching' },
+    { label: 'Ecommerce', href: '/industries/ecommerce' },
+    { label: 'Gyms & Fitness', href: '/industries/gym-fitness' },
+    { label: 'Restaurants', href: '/industries/restaurants' },
+    { label: 'Law Firms', href: '/industries/law-firms' },
   ],
   Legal: [
     { label: 'Privacy Policy', href: '/privacy' },
@@ -143,7 +144,7 @@ export function Footer() {
             © 2026 Page2Lead by Sohail Khan. All rights reserved.
           </p>
           <p className="text-xs text-white/30">
-            Built with ❤️ in Ajmer, India — Automating businesses worldwide.
+            Freelance web development and automation by Sohail Khan.
           </p>
         </div>
       </div>

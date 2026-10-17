@@ -18,12 +18,12 @@ export function ServicesGrid() {
         <div className="text-center mb-16">
           <p className="text-eyebrow mb-3">What I build</p>
           <h2 className="text-display text-3xl lg:text-5xl text-foreground mb-4 text-balance">
-            Automation built around
+            Web development & automation built around
             <br />
-            real business problems
+            practical business needs
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Explore focused services with hands-on demos that show how each system works.
+            Explore website, web app and automation services, with demos that illustrate possible approaches.
           </p>
         </div>
 

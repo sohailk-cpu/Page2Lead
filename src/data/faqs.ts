@@ -3,34 +3,34 @@ import type { FAQ } from '@/types'
 export const faqs: FAQ[] = [
   {
     question: 'How long does it take to build and launch an AI system?',
-    answer: 'Most projects go live within 2–6 weeks depending on complexity. A basic AI chatbot or WhatsApp automation can be live in 7–10 days. Custom AI solutions and full workflow automations typically take 4–6 weeks including testing and training.',
+    answer: 'Timelines depend on the requirements, third-party access, integrations and testing. I provide an estimate after reviewing the scope; no fixed timeline is promised before that review.',
   },
   {
     question: 'Do I need technical knowledge to use the systems you build?',
-    answer: "No. I build everything with non-technical teams in mind. You get a clean dashboard, training sessions, and video documentation. If anything needs updating — like adding a new FAQ or changing a price — I either do it for you or show you exactly how in under 2 minutes.",
+    answer: "The handover depends on the project. We agree whether it includes a dashboard, documentation, a walkthrough or instructions for routine updates before work begins.", 
   },
   {
     question: 'What happens if the AI gives a wrong answer to a customer?',
-    answer: "I train the AI only on information you approve and verify. For edge cases, the system is designed to escalate to a human rather than guess. You also get full conversation logs so you can review and improve over time. Wrong answers become rarer with each iteration.",
+    answer: "The system can be configured to use approved information and route uncertain or sensitive questions to a person. Accuracy, logging and escalation behaviour must be tested for the specific build; AI answers cannot be guaranteed error-free.", 
   },
   {
     question: 'Will this work for my industry specifically?',
-    answer: "Yes. I can build systems for real estate, clinics, gyms, coaching, ecommerce, law firms, restaurants, and more. Every system is built around your specific business processes — not a generic template. I start with a discovery call to understand your exact operations before writing a single line of code.",
+    answer: "I can assess a project for your industry and define a suitable scope. The right solution depends on your process, budget, data and available integrations; I confirm feasibility before promising specific functionality.", 
   },
   {
     question: 'How much does it cost?',
-    answer: "Projects start from ₹14,999 for basic automation setups and go up based on scope. I also offer monthly retainer plans for ongoing maintenance and improvements. Book a free call and I'll give you a fixed-price quote with no surprises.",
+    answer: "Pricing depends on scope, integrations, hosting and third-party API costs. After discussing requirements, I can propose a written estimate with deliverables and exclusions. Any ongoing support is agreed separately.", 
   },
   {
     question: 'Do you provide ongoing support after launch?',
-    answer: "Yes. All projects include a 30-day post-launch support period at no extra cost. After that, you can choose a monthly maintenance retainer. I don't disappear after delivery — ongoing maintenance and improvements are available when needed.",
+    answer: "Post-launch support and maintenance depend on the written project agreement. Any included support period, response expectations and ongoing fees should be confirmed before the project starts.", 
   },
   {
     question: 'Can the AI integrate with software I already use?',
-    answer: "Almost certainly yes. I integrate with all major CRMs (HubSpot, Zoho, Salesforce, Pipedrive), booking tools (Calendly, Cal.com), WhatsApp Business API, Razorpay, Stripe, Google Sheets, and hundreds more via Zapier/Make. Tell me what you use and I'll confirm compatibility.",
+    answer: "Integration depends on the specific product, API or connector, permissions and plan limits. Tell me what you use and I will check compatibility before confirming the scope. Third-party subscriptions or usage charges may be separate.", 
   },
   {
     question: 'Is my business data safe?',
-    answer: "Completely. All data is processed and stored securely, with access controls that mean only your team can see it. I never use your business data to train models for other clients. You own your data entirely.",
+    answer: "Data handling depends on the hosting, APIs and third-party services selected for the project. Before implementation, we should identify what data is sent to each provider, review its terms and permissions, and agree access, retention and deletion practices. I do not promise absolute security.", 
   },
 ]

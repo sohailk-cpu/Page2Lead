@@ -13,7 +13,7 @@ const schema = z.object({
   name: z.string().min(2, 'Name is required'),
   email: z.string().email('Valid email required'),
   phone: z.string().min(10, 'Valid phone number required'),
-  company: z.string().min(1, 'Company name is required'),
+  company: z.string().optional(),
   service: z.string().min(1, 'Please select a service'),
   message: z.string().min(10, 'Tell me a bit more (min 10 characters)'),
 })
@@ -35,6 +35,13 @@ export default function ContactPage() {
 
   const onSubmit = async (data: FormData) => {
     setLoading(true)
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY
+    if (!accessKey) {
+      const message = `Hi Sohail, I want to discuss a Page2Lead project. Name: ${data.name}; Email: ${data.email}; Phone: ${data.phone}; Business: ${data.company}; Service: ${data.service}; Details: ${data.message}`
+      window.location.href = `https://wa.me/917597256642?text=${encodeURIComponent(message)}`
+      setLoading(false)
+      return
+    }
     try {
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
@@ -43,7 +50,7 @@ export default function ContactPage() {
           'Accept': 'application/json',
         },
         body: JSON.stringify({
-          access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
+          access_key: accessKey,
           subject: `New Enquiry from ${data.name} — Page2Lead`,
           from_name: 'Page2Lead Contact Form',
           name: data.name,
@@ -78,11 +85,11 @@ export default function ContactPage() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <p className="text-eyebrow mb-4">Get in touch</p>
             <h1 className="text-display text-4xl lg:text-6xl text-white mb-5">
-              Book your free<br />
-              <span className="gradient-text">strategy call</span>
+              Discuss your project<br />
+              <span className="gradient-text">let’s plan the next step</span>
             </h1>
             <p className="text-white/50 text-lg max-w-xl mx-auto">
-              30 minutes. No sales pitch. Just a clear picture of how AI can transform your specific business.
+              Tell me what you want to build. We can discuss scope, budget, integrations and practical next steps.
             </p>
           </motion.div>
         </div>
@@ -102,7 +109,7 @@ export default function ContactPage() {
               <div>
                 <h2 className="text-2xl font-bold text-foreground mb-2">Let's talk</h2>
                 <p className="text-muted-foreground">
-                  Fill in the form and I'll get back to you within 24 hours on WhatsApp.
+                  Share a few project details and I’ll reply as soon as I can.
                 </p>
               </div>
 
@@ -134,10 +141,10 @@ export default function ContactPage() {
                 <p className="text-sm font-semibold text-foreground mb-1">What to expect</p>
                 <ul className="space-y-1.5">
                   {[
-                    'Response within 24 hours on WhatsApp',
-                    'Free 30-min strategy call',
-                    'Custom automation roadmap',
-                    'Fixed-price quote — no surprises',
+                    'Direct contact with the developer',
+                    'Discuss scope and priorities',
+                    'Check integration feasibility',
+                    'Written estimate before work starts',
                   ].map((item) => (
                     <li key={item} className="flex items-center gap-2 text-sm text-muted-foreground">
                       <CheckCircle2 className="w-3.5 h-3.5 text-brand-500 shrink-0" />
@@ -164,7 +171,7 @@ export default function ContactPage() {
                     </div>
                     <h3 className="text-xl font-bold text-foreground mb-2">Message received!</h3>
                     <p className="text-muted-foreground mb-4">
-                      I'll get back to you within 24 hours on WhatsApp at +91 75972 56642
+                      Thanks for reaching out. I’ll reply as soon as I can.
                     </p>
                     <a
                       href="https://wa.me/917597256642?text=Hi%20Sohail,%20I%20just%20filled%20your%20contact%20form"

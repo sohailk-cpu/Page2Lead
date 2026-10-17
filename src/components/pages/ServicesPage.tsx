@@ -26,11 +26,11 @@ export default function ServicesPage() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <p className="text-eyebrow mb-4">My Services</p>
             <h1 className="text-display text-4xl lg:text-6xl text-white mb-5 text-balance">
-              Automation built around<br />
-              <span className="gradient-text">real business problems</span>
+              Web development & automation<br />
+              <span className="gradient-text">for practical business needs</span>
             </h1>
             <p className="text-white/50 text-lg max-w-2xl mx-auto">
-              Seven focused services. Practical demos. Clear scope before we build.
+              Websites, web apps and automation projects. Explore concept demos, then discuss your requirements and scope directly with me.
             </p>
           </motion.div>
         </div>
@@ -69,7 +69,7 @@ export default function ServicesPage() {
                     <div className="mt-auto pt-2">
                       <Link to={service.href}>
                         <Button variant="outline" className="gap-2">
-                          Explore demo <ArrowRight className="w-4 h-4" />
+                          View service <ArrowRight className="w-4 h-4" />
                         </Button>
                       </Link>
                     </div>

@@ -7,8 +7,8 @@ const problems = [
     description: 'Every missed call, slow reply, or ignored form submission is a paying customer gone to your competitor.',
   },
   {
-    title: 'Ymy drowns in repetitive tasks',
-    description: 'Sending reminders, updating spreadsheets, copying data between tools — ymy is too expensive for this work.',
+    title: 'Your team drowns in repetitive tasks',
+    description: 'Sending reminders, updating spreadsheets, copying data between tools — your team is too valuable for this work.',
   },
   {
     title: 'No-shows kill your revenue',

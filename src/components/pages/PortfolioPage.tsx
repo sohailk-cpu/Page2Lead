@@ -7,9 +7,9 @@ import { CTASection } from '@/components/sections/CTASection'
 const projects = [
   {
     id: 'smilecare',
-    title: 'SmilePro Dental — AI Receptionist',
+    title: 'Dental Clinic — AI Receptionist Demo',
     category: 'Healthcare',
-    description: 'AI receptionist system handling appointment booking, patient FAQs, and WhatsApp follow-ups for a dental clinic.',
+    description: 'Concept demo showing how a clinic could collect appointment requests, answer approved FAQs and route WhatsApp follow-ups.',
     stack: ['AI Chatbot', 'WhatsApp API', 'Appointment Booking', 'CRM Integration'],
     demoUrl: 'https://smilepro-dental-alpha.vercel.app/',
     color: 'from-emerald-500/10 to-teal-500/5',
@@ -17,9 +17,9 @@ const projects = [
   },
   {
     id: 'fitforge',
-    title: 'FitForge Gyms — Lead Machine',
+    title: 'Gym — Lead Capture Demo',
     category: 'Fitness',
-    description: 'Multi-channel lead capture system pulling from Instagram DMs, website, and Google — all funnelled into one CRM with automated nurture sequences.',
+    description: 'Concept demo showing how website and supported social enquiries could be organised into a lead record with follow-up tasks.',
     stack: ['Lead Generation', 'CRM Automation', 'Instagram DM Bot', 'Email Sequences'],
     demoUrl: 'https://fitforge-gray.vercel.app/',
     color: 'from-orange-500/10 to-amber-500/5',
@@ -27,9 +27,9 @@ const projects = [
   },
   {
     id: 'legaledge',
-    title: 'LegalEdge LLP — Client Intake Automation',
+    title: 'Law Firm — Client Intake Demo',
     category: 'Legal',
-    description: 'End-to-end client intake flow replacing a lengthy manual process with an automated pipeline — document collection, conflict checks, and CRM population included.',
+    description: 'Concept demo for structured client intake, document checklists and staff review. Legal decisions and conflict checks require appropriate human oversight.',
     stack: ['Workflow Automation', 'Document Collection', 'CRM Setup', 'E-signature'],
     demoUrl: 'https://legaledge-eight.vercel.app/',
     color: 'from-blue-500/10 to-indigo-500/5',
@@ -37,9 +37,9 @@ const projects = [
   },
   {
     id: 'buildfast',
-    title: 'BuildFast Ecommerce — AI Support',
+    title: 'Ecommerce Store — AI Support Demo',
     category: 'Ecommerce',
-    description: 'AI customer support system trained on product FAQs, order policies, and return workflows — resolving the majority of tickets without human involvement.',
+    description: 'Concept demo illustrating how approved product FAQs and store policies could be used to answer routine questions and route exceptions to staff.',
     stack: ['AI Customer Support', 'Ticket Classification', 'Knowledge Base AI', 'Escalation Routing'],
     demoUrl: 'https://buildfast-pi.vercel.app/',
     color: 'from-purple-500/10 to-violet-500/5',
@@ -47,9 +47,9 @@ const projects = [
   },
   {
     id: 'kapoor-academy',
-    title: 'Kapoor Coaching — Enrolment Funnel',
+    title: 'Coaching Institute — Enquiry Funnel Demo',
     category: 'Education',
-    description: 'WhatsApp-first lead nurturing system that immediately engages course enquiries, answers questions, and books counselling calls automatically.',
+    description: 'Concept demo showing a WhatsApp-first flow for approved course FAQs, enquiry capture and counselling callback requests.',
     stack: ['WhatsApp Automation', 'Lead Nurturing', 'Appointment Booking', 'Follow-up Sequences'],
     demoUrl: 'https://kapoor-academy.vercel.app/',
     color: 'from-pink-500/10 to-rose-500/5',
@@ -57,9 +57,9 @@ const projects = [
   },
   {
     id: 'sharma-realty',
-    title: 'Sharma Realty — Lead Qualification Bot',
+    title: 'Real Estate — Lead Qualification Demo',
     category: 'Real Estate',
-    description: 'AI chatbot on website + WhatsApp that qualifies leads by budget, location preference, and timeline — passing only sales-ready leads to agents.',
+    description: 'Concept demo for collecting property budget, preferred area and timeline, then sending a structured enquiry summary to an agent.',
     stack: ['AI Chatbot', 'Lead Qualification', 'WhatsApp Bot', 'CRM Integration'],
     demoUrl: 'https://sharma-realty.vercel.app/',
     color: 'from-brand-500/10 to-indigo-500/5',
@@ -82,11 +82,11 @@ export default function PortfolioPage() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <p className="text-eyebrow mb-4">My Work</p>
             <h1 className="text-display text-4xl lg:text-6xl text-white mb-5 text-balance">
-              AI automation demos.<br />
-              <span className="gradient-text">Real systems.</span>
+              Web and automation demos.<br />
+              <span className="gradient-text">Illustrative builds.</span>
             </h1>
             <p className="text-white/50 text-lg max-w-xl mx-auto">
-              A selection of AI automation demos and proof-of-concept systems I've built across different industries.
+              A selection of concept demos and proof-of-concept builds showing possible approaches to web development and business automation.
             </p>
           </motion.div>
         </div>

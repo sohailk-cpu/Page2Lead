@@ -19,21 +19,21 @@ export function CTASection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <p className="text-eyebrow mb-5">Ready to automate?</p>
+          <p className="text-eyebrow mb-5">Have a project in mind?</p>
           <h2 className="text-display text-4xl lg:text-6xl text-white mb-6 text-balance leading-tight">
-            Stop losing leads.
+            Build the right tool.
             <br />
-            <span className="gradient-text">Start automating.</span>
+            <span className="gradient-text">Keep the scope clear.</span>
           </h2>
           <p className="text-white/50 text-lg max-w-lg mx-auto mb-10 leading-relaxed">
-            Book a free 30-minute strategy call. I'll analyse your business, identify your top automation opportunities, and give you a clear plan — no sales pitch.
+            Tell me what you want to build. We can discuss your requirements, available integrations, budget and a practical next step — with no obligation.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
               <Button size="xl" className="gap-2 group">
                 <Calendar className="w-5 h-5" />
-                Book Free Strategy Call
+                Discuss Your Project
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
               </Button>
             </a>
@@ -45,7 +45,7 @@ export function CTASection() {
           </div>
 
           <p className="mt-6 text-sm text-white/30">
-            Free call · No commitment · Results-focused
+            Direct contact · Clear scope · No guaranteed outcomes
           </p>
         </motion.div>
       </div>

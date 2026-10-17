@@ -1,145 +1,136 @@
 export const pageMetadata = {
   home: {
-    title: "Page2Lead - AI Automation Studio | Custom AI Chatbots & Lead Generation",
-    description: "Build AI-powered chatbots, automate customer support, and generate qualified leads with Page2Lead's custom AI automation solutions.",
+    title: "Page2Lead | Freelance Web Development & Business Automation",
+    description: "Sohail Khan builds business websites, web apps, AI chatbots and WhatsApp automation for small businesses. Freelance development with direct communication and clear scope.",
     canonical: "https://page2lead.in/",
-    ogTitle: "Page2Lead - AI Automation Studio",
-    ogDescription: "Custom AI chatbots & lead generation for your business",
-    ogImage: "https://page2lead.in/og-image.jpg",
-    twitterTitle: "Page2Lead - AI Automation Studio",
-    twitterDescription: "Custom AI chatbots & lead generation for your business",
-    twitterImage: "https://page2lead.in/og-image.jpg"
+    ogTitle: "Page2Lead | Freelance Web Developer & Automation",
+    ogDescription: "Business websites, custom web apps, AI chatbots and WhatsApp workflows built by freelance developer Sohail Khan.",
+    ogImage: "https://page2lead.in/assets/page2lead-og.png",
+    twitterTitle: "Page2Lead | Freelance Web Developer & Automation",
+    twitterDescription: "Business websites, custom web apps, AI chatbots and WhatsApp workflows built by freelance developer Sohail Khan.",
+    twitterImage: "https://page2lead.in/assets/page2lead-og.png"
   },
-  
   services: {
-    title: "AI Chatbot & Lead Generation Services | Page2Lead",
-    description: "Explore custom AI chatbot solutions, WhatsApp automation & lead generation services. Perfect for agencies, coaching institutes & medical clinics.",
+    title: "Website, Web App & Automation Services | Page2Lead",
+    description: "Freelance development services for business websites, web apps, AI chatbots, WhatsApp automation and custom workflows. Discuss scope directly with Sohail Khan.",
     canonical: "https://page2lead.in/services",
-    ogTitle: "AI Chatbot & Lead Generation Services",
-    ogDescription: "Custom AI solutions for your business - chatbots, lead generation, WhatsApp automation",
-    ogImage: "https://page2lead.in/og-services.jpg",
-    twitterTitle: "AI Services - Page2Lead",
-    twitterDescription: "Custom AI chatbots & lead generation solutions",
-    twitterImage: "https://page2lead.in/og-services.jpg"
+    ogTitle: "Freelance Website, Web App & Automation Services",
+    ogDescription: "Explore custom web development, chatbots and business automation services from Page2Lead.",
+    ogImage: "https://page2lead.in/assets/page2lead-og.png",
+    twitterTitle: "Development Services | Page2Lead",
+    twitterDescription: "Websites, web apps and practical business automation built to a clear scope.",
+    twitterImage: "https://page2lead.in/assets/page2lead-og.png"
   },
-
   portfolio: {
-    title: "AI Automation Demos - Page2Lead | Page2Lead",
-    description: "Explore AI automation demos and proof-of-concept projects built by Page2Lead.",
+    title: "Web Development & Automation Portfolio Demos | Page2Lead",
+    description: "Explore concept demos and proof-of-concept websites, web apps, AI chatbots and automation workflows built by freelance developer Sohail Khan.",
     canonical: "https://page2lead.in/portfolio",
-    ogTitle: "Portfolio - AI Automation Projects",
-    ogDescription: "Explore AI automation demos across different industries",
-    ogImage: "https://page2lead.in/og-portfolio.jpg",
-    twitterTitle: "Portfolio - Page2Lead",
-    twitterDescription: "See our AI automation projects",
-    twitterImage: "https://page2lead.in/og-portfolio.jpg"
+    ogTitle: "Page2Lead Portfolio Demos",
+    ogDescription: "Concept projects showing possible web development and automation approaches.",
+    ogImage: "https://page2lead.in/assets/page2lead-og.png",
+    twitterTitle: "Portfolio Demos | Page2Lead",
+    twitterDescription: "Explore concept projects and proof-of-concept builds.",
+    twitterImage: "https://page2lead.in/assets/page2lead-og.png"
   },
-
   caseStudies: {
-    title: "AI Automation Demos & Projects | Page2Lead",
-    description: "Explore AI automation demos and proof-of-concept projects built by Page2Lead.",
+    title: "Automation Workflow Examples | Page2Lead",
+    description: "Illustrative workflow examples for websites, chatbots, WhatsApp and business automation. These are concepts, not claimed client results.",
     canonical: "https://page2lead.in/case-studies",
-    ogTitle: "Case Studies - AI Automation Results",
-    ogDescription: "See how Page2Lead approaches real-world automation problems",
-    ogImage: "https://page2lead.in/og-case-studies.jpg",
-    twitterTitle: "AI Demos - Page2Lead",
-    twitterDescription: "See our proven AI automation results",
-    twitterImage: "https://page2lead.in/og-case-studies.jpg"
+    ogTitle: "Automation Workflow Examples | Page2Lead",
+    ogDescription: "See how common business processes could be supported by carefully scoped automation.",
+    ogImage: "https://page2lead.in/assets/page2lead-og.png",
+    twitterTitle: "Workflow Examples | Page2Lead",
+    twitterDescription: "Illustrative concepts, not client case studies or promised outcomes.",
+    twitterImage: "https://page2lead.in/assets/page2lead-og.png"
   },
-
   pricing: {
-    title: "Pricing - AI Chatbot & Automation Solutions | Page2Lead",
-    description: "Transparent pricing for AI chatbots, lead generation, and WhatsApp automation. Custom packages for businesses of all sizes.",
+    title: "Freelance Web Development & Automation Pricing | Page2Lead",
+    description: "Discuss a clear project scope and estimate for a business website, web app, chatbot or automation workflow with freelance developer Sohail Khan.",
     canonical: "https://page2lead.in/pricing",
-    ogTitle: "Pricing - AI Automation Services",
-    ogDescription: "Affordable AI chatbot and automation solutions",
-    ogImage: "https://page2lead.in/og-pricing.jpg",
-    twitterTitle: "Pricing - Page2Lead",
-    twitterDescription: "See our AI automation pricing",
-    twitterImage: "https://page2lead.in/og-pricing.jpg"
+    ogTitle: "Project Pricing | Page2Lead",
+    ogDescription: "Scope-based estimates for website development, web apps and business automation.",
+    ogImage: "https://page2lead.in/assets/page2lead-og.png",
+    twitterTitle: "Pricing | Page2Lead",
+    twitterDescription: "Discuss scope, deliverables and project estimates directly.",
+    twitterImage: "https://page2lead.in/assets/page2lead-og.png"
   },
-
   about: {
-    title: "About Page2Lead - AI Automation Studio in Ajmer",
-    description: "Page2Lead is a founder-led AI automation studio by Sohail Khan. I build custom chatbots and business automation systems.",
+    title: "About Sohail Khan | Freelance Developer at Page2Lead",
+    description: "Meet Sohail Khan, a self-taught freelance developer from Rajasthan building websites, web apps and practical business automation through Page2Lead.",
     canonical: "https://page2lead.in/about",
-    ogTitle: "About Page2Lead",
-    ogDescription: "Learn about Page2Lead and our AI automation expertise",
-    ogImage: "https://page2lead.in/og-about.jpg",
-    twitterTitle: "About Page2Lead",
-    twitterDescription: "Meet Sohail Khan, founder of Page2Lead",
-    twitterImage: "https://page2lead.in/og-about.jpg"
+    ogTitle: "About Sohail Khan | Page2Lead",
+    ogDescription: "A freelance developer focused on useful, clearly scoped web and automation projects.",
+    ogImage: "https://page2lead.in/assets/page2lead-og.png",
+    twitterTitle: "About Sohail Khan | Page2Lead",
+    twitterDescription: "Meet the developer behind Page2Lead.",
+    twitterImage: "https://page2lead.in/assets/page2lead-og.png"
   },
-
   contact: {
-    title: "Contact Page2Lead - AI Chatbot & Automation Solutions",
-    description: "Ready to automate your business? Contact Page2Lead for custom AI solutions. Get a free consultation directly with Sohail Khan.",
+    title: "Contact Sohail Khan | Page2Lead Development Projects",
+    description: "Discuss your website, web app, AI chatbot or WhatsApp automation project directly with freelance developer Sohail Khan.",
     canonical: "https://page2lead.in/contact",
     ogTitle: "Contact Page2Lead",
-    ogDescription: "Get in touch for custom AI automation solutions",
-    ogImage: "https://page2lead.in/og-contact.jpg",
-    twitterTitle: "Contact - Page2Lead",
-    twitterDescription: "Contact us for AI solutions",
-    twitterImage: "https://page2lead.in/og-contact.jpg"
+    ogDescription: "Share your project goals and get a clear discussion about scope and next steps.",
+    ogImage: "https://page2lead.in/assets/page2lead-og.png",
+    twitterTitle: "Contact Page2Lead",
+    twitterDescription: "Discuss a development or automation project directly.",
+    twitterImage: "https://page2lead.in/assets/page2lead-og.png"
   },
-
   blog: {
-    title: "Blog - AI Automation & Lead Generation Insights | Page2Lead",
-    description: "Learn about AI chatbots, lead generation, WhatsApp automation, and business automation strategies from Page2Lead.",
+    title: "Web Development & Business Automation Guides | Page2Lead",
+    description: "Practical guides to business websites, web apps, AI chatbots, WhatsApp automation and workflow design from Page2Lead.",
     canonical: "https://page2lead.in/blog",
-    ogTitle: "Blog - AI Automation Insights",
-    ogDescription: "Read our guides on AI chatbots, lead generation & automation",
-    ogImage: "https://page2lead.in/og-blog.jpg",
-    twitterTitle: "Blog - Page2Lead",
-    twitterDescription: "Read our AI automation guides",
-    twitterImage: "https://page2lead.in/og-blog.jpg"
+    ogTitle: "Page2Lead Guides",
+    ogDescription: "Practical web development and automation articles.",
+    ogImage: "https://page2lead.in/assets/page2lead-og.png",
+    twitterTitle: "Page2Lead Guides",
+    twitterDescription: "Learn about websites, chatbots and business automation.",
+    twitterImage: "https://page2lead.in/assets/page2lead-og.png"
   },
-
   faq: {
-    title: "FAQ - AI Chatbots & Lead Generation Questions Answered | Page2Lead",
-    description: "Frequently asked questions about AI chatbots, WhatsApp automation, lead generation & implementation. Get answers from Page2Lead.",
+    title: "Website Development & Automation FAQs | Page2Lead",
+    description: "Answers to common questions about freelance development, website projects, AI chatbots, WhatsApp automation and implementation scope.",
     canonical: "https://page2lead.in/faq",
-    ogTitle: "FAQ - AI Chatbots & Lead Generation",
-    ogDescription: "Answers to common questions about AI automation",
-    ogImage: "https://page2lead.in/og-faq.jpg",
-    twitterTitle: "FAQ - Page2Lead",
-    twitterDescription: "Common questions about AI chatbots",
-    twitterImage: "https://page2lead.in/og-faq.jpg"
+    ogTitle: "Page2Lead FAQs",
+    ogDescription: "Common questions about development and automation projects.",
+    ogImage: "https://page2lead.in/assets/page2lead-og.png",
+    twitterTitle: "Page2Lead FAQs",
+    twitterDescription: "Answers about projects, scope and automation.",
+    twitterImage: "https://page2lead.in/assets/page2lead-og.png"
   },
-
   industries: {
-    title: "Industries - AI Automation Solutions for Your Business | Page2Lead",
-    description: "Custom AI chatbots and lead generation for coaching institutes, medical clinics, agencies and more. Industry-specific solutions.",
+    title: "Business Website & Automation Use Cases | Page2Lead",
+    description: "Explore example website and automation workflows for real estate, clinics, coaching, restaurants, ecommerce, gyms and law firms.",
     canonical: "https://page2lead.in/industries",
-    ogTitle: "Industries - AI Solutions",
-    ogDescription: "AI automation solutions for your industry",
-    ogImage: "https://page2lead.in/og-industries.jpg",
-    twitterTitle: "Industries - Page2Lead",
-    twitterDescription: "AI solutions for your industry",
-    twitterImage: "https://page2lead.in/og-industries.jpg"
+    ogTitle: "Business Use Cases | Page2Lead",
+    ogDescription: "Examples of how web development and automation can support different business workflows.",
+    ogImage: "https://page2lead.in/assets/page2lead-og.png",
+    twitterTitle: "Business Use Cases | Page2Lead",
+    twitterDescription: "Explore industry-specific website and automation ideas.",
+    twitterImage: "https://page2lead.in/assets/page2lead-og.png"
   },
-
   privacy: {
-    title: "Privacy Policy - Page2Lead",
-    description: "Privacy policy for Page2Lead. How we collect, use and protect your data.",
+    title: "Privacy Policy | Page2Lead",
+    description: "Read how Page2Lead handles information submitted through this website and project enquiries.",
     canonical: "https://page2lead.in/privacy",
-    ogTitle: "Privacy Policy",
-    ogDescription: "Page2Lead Privacy Policy",
-    ogImage: "https://page2lead.in/og-image.jpg",
-    twitterTitle: "Privacy Policy",
-    twitterDescription: "Page2Lead Privacy Policy",
-    twitterImage: "https://page2lead.in/og-image.jpg"
+    ogTitle: "Privacy Policy | Page2Lead",
+    ogDescription: "Privacy information for Page2Lead.",
+    ogImage: "https://page2lead.in/assets/page2lead-og.png",
+    twitterTitle: "Privacy Policy | Page2Lead",
+    twitterDescription: "Privacy information for Page2Lead.",
+    twitterImage: "https://page2lead.in/assets/page2lead-og.png",
+    robots: "noindex, follow"
   },
-
   terms: {
-    title: "Terms of Service - Page2Lead",
-    description: "Terms of service for Page2Lead. Legal agreement for using our AI automation services.",
+    title: "Terms of Service | Page2Lead",
+    description: "Terms for using the Page2Lead website and discussing development projects.",
     canonical: "https://page2lead.in/terms",
-    ogTitle: "Terms of Service",
-    ogDescription: "Page2Lead Terms of Service",
-    ogImage: "https://page2lead.in/og-image.jpg",
-    twitterTitle: "Terms of Service",
-    twitterDescription: "Page2Lead Terms of Service",
-    twitterImage: "https://page2lead.in/og-image.jpg"
+    ogTitle: "Terms of Service | Page2Lead",
+    ogDescription: "Terms for Page2Lead.",
+    ogImage: "https://page2lead.in/assets/page2lead-og.png",
+    twitterTitle: "Terms of Service | Page2Lead",
+    twitterDescription: "Terms for Page2Lead.",
+    twitterImage: "https://page2lead.in/assets/page2lead-og.png",
+    robots: "noindex, follow"
   }
 }

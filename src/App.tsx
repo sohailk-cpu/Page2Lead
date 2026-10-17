@@ -15,6 +15,7 @@ import TermsPage from '@/components/pages/TermsPage'
 import NotFoundPage from '@/components/pages/NotFoundPage'
 import BlogPage from '@/components/pages/BlogPage'
 import BlogDetailPage from '@/components/pages/BlogDetailPage'
+import IndustryLandingPage from '@/components/pages/IndustryLandingPage'
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
         <Route path="/services/automation-consulting" element={<Navigate to="/services/workflow-automation" replace />} />
         <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
         <Route path="/industries" element={<IndustriesPage />} />
+        <Route path="/industries/:industrySlug" element={<IndustryLandingPage />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
         <Route path="/case-studies" element={<CaseStudiesPage />} />
         <Route path="/pricing" element={<PricingPage />} />
@@ -40,9 +42,8 @@ function App() {
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/terms" element={<TermsPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-        <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:slug" element={<BlogDetailPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
   )

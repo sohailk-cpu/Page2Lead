@@ -6,39 +6,39 @@ import { CTASection } from '@/components/sections/CTASection'
 
 const caseStudies = [
   {
-    id: 'smilecare-dental',
-    client: 'Dental Clinic — AI Receptionist',
+    id: 'clinic-workflow-example',
+    client: 'Example workflow — Clinic enquiries',
     industry: 'Healthcare',
-    challenge: 'The clinic was losing patients to slow phone response times. Staff spent most of their day on appointment booking calls, leading to missed new-patient inquiries after hours and high no-show rates.',
-    solution: 'I built an AI receptionist system combining a website chatbot and WhatsApp automation. The AI handles appointment booking, sends automated reminders before visits, answers FAQs about procedures and pricing, and escalates complex cases to staff.',
+    challenge: 'A clinic may receive appointment requests and common questions through several channels, making it difficult to keep requests organised.',
+    solution: 'A possible solution is a website enquiry form or chatbot that collects contact details and preferred appointment times, then sends a structured request to staff for confirmation.',
     outcomes: [
-      'Significant reduction in no-shows after automated reminders were implemented',
-      'After-hours inquiries now captured and responded to instantly',
-      'Staff time freed from routine booking calls',
+      'Potentially clearer enquiry records and fewer missed details',
+      'Staff remain responsible for clinical questions and confirming appointments',
+      'Any time savings must be measured after a real implementation',
     ],
   },
   {
-    id: 'gym-lead-machine',
-    client: 'Fitness Studio — Lead Capture System',
+    id: 'gym-workflow-example',
+    client: 'Example workflow — Gym trial enquiries',
     industry: 'Fitness',
-    challenge: 'The studio was running paid ads generating Instagram DM inquiries, but most leads went cold because responses took hours. Their CRM was disconnected from their lead sources, making follow-up inconsistent.',
-    solution: 'I built a unified lead capture system pulling from Instagram, the website, and Google Ads into one CRM. An AI chatbot instantly engages every inquiry, answers membership questions, and books free trials — with automated nurture sequences for those who don\'t convert immediately.',
+    challenge: 'A gym may receive questions about fees, classes and trial sessions across its website and messaging channels.',
+    solution: 'A scoped workflow could answer approved FAQs, collect a prospect’s preferences and create a follow-up task or trial request for the gym team.',
     outcomes: [
-      'Response time dropped from hours to seconds',
-      'Free trial bookings increased substantially after automation',
-      'Zero manual follow-ups needed for initial lead engagement',
+      'More structured enquiry details for staff to review',
+      'Trial bookings should only be confirmed after availability is checked',
+      'Lead conversion impact is unknown until measured with real data',
     ],
   },
   {
-    id: 'coaching-enrollment',
-    client: 'Coaching Institute — Enrolment Funnel',
+    id: 'coaching-workflow-example',
+    client: 'Example workflow — Coaching course enquiries',
     industry: 'Education',
-    challenge: 'Course enquiries came in via WhatsApp and Instagram DMs. Most were manually handled hours later — by which time prospects had lost interest or enrolled elsewhere.',
-    solution: 'I built a WhatsApp-first automation that instantly responds to every enquiry, answers course questions, qualifies the lead, and books a counselling call — all without any manual intervention.',
+    challenge: 'A coaching institute may receive repeated questions about courses, timings, fees and demo classes.',
+    solution: 'A workflow could share institute-approved information, collect course interest and route counselling or demo-class requests to staff.',
     outcomes: [
-      'Every enquiry now gets an instant, personalised response',
-      'Counselling call show-up rates improved significantly',
-      'Manual outreach effort reduced to near zero',
+      'Consistent answers to approved, frequently asked questions',
+      'Staff can review and respond to requests needing personal guidance',
+      'Admissions and revenue outcomes are not guaranteed',
     ],
   },
 ]
@@ -57,8 +57,8 @@ export default function CaseStudiesPage() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <p className="text-eyebrow mb-4">AI Automation Demos</p>
             <h1 className="text-display text-4xl lg:text-6xl text-white mb-5 text-balance">
-              Real problems.<br />
-              <span className="gradient-text">Real solutions.</span>
+              Illustrative workflows.<br />
+              <span className="gradient-text">Possible approaches.</span>
             </h1>
             <p className="text-white/50 text-lg max-w-xl mx-auto">
               A look at how I've approached common operational challenges through AI automation demos and proof-of-concept builds.
@@ -121,10 +121,10 @@ export default function CaseStudiesPage() {
                   </div>
                 </div>
 
-                {/* Outcomes */}
+                {/* Potential benefits (not measured results) */}
                 <div className="pt-6 border-t border-border">
                   <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-4">
-                    Outcomes
+                    Potential benefits (not measured results)
                   </h3>
                   <ul className="space-y-2">
                     {study.outcomes.map((o) => (

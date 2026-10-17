@@ -4,27 +4,27 @@ import { Search, Code2, Rocket, BarChart3 } from 'lucide-react'
 const steps = [
   {
     icon: Search,
-    title: 'Discovery Call',
-    description: 'I audit your current operations, identify the highest-ROI automation opportunities, and map your exact customer journey.',
-    duration: '1 hour',
+    title: 'Discuss the Project',
+    description: 'We discuss your goals, existing tools, constraints and what a successful first version should do.',
+    duration: 'Scope first',
   },
   {
     icon: Code2,
     title: 'Build & Train',
-    description: 'I design, build, and train your AI systems using your actual data, processes, and business logic — nothing generic.',
-    duration: '2–6 weeks',
+    description: 'I implement the agreed features and integrations. Timeline depends on scope, access and testing requirements.',
+    duration: 'Agreed timeline',
   },
   {
     icon: Rocket,
     title: 'Launch & Test',
-    description: 'I go live carefully — testing edge cases, training ymy, and refining until everything runs exactly as expected.',
-    duration: '1 week',
+    description: 'We test the agreed flows, handle edge cases and document any known limitations before launch.',
+    duration: 'Testing included in scope',
   },
   {
     icon: BarChart3,
     title: 'Measure & Improve',
-    description: 'You get a live dashboard showing leads captured, hours saved, and ROI. I iterate based on real data, not guesses.',
-    duration: 'Ongoing',
+    description: 'If analytics or monitoring are included in the project, we review available data and agree any follow-up improvements separately.',
+    duration: 'Optional support',
   },
 ]
 
@@ -35,12 +35,12 @@ export function HowItWorks() {
         <div className="text-center mb-16">
           <p className="text-eyebrow mb-3">My process</p>
           <h2 className="text-display text-3xl lg:text-5xl text-foreground mb-4 text-balance">
-            From discovery to results
+            From clear requirements
             <br />
-            in weeks, not months
+            to a tested delivery
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            A clear, proven process that gets you live fast and delivers measurable ROI from day one.
+            A straightforward freelance process: agree the scope, build the required features, test them and confirm what is included before launch.
           </p>
         </div>
 

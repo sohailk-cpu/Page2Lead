@@ -18,7 +18,7 @@ const values = [
   {
     icon: Zap,
     title: 'Speed without cutting corners',
-    description: "Most AI projects go live in 2–6 weeks. I move fast and build right — they're not mutually exclusive.",
+    description: "Timelines depend on the scope, integrations and testing needed. I agree on milestones before work begins.",
   },
   {
     icon: Heart,
@@ -45,7 +45,7 @@ export default function AboutPage() {
                 I'm a builder who thinks like a business owner
               </h1>
               <p className="text-white/50 text-lg leading-relaxed">
-                Page2Lead was started with a simple belief: most businesses are sitting on enormous untapped potential that AI can unlock — if it's implemented by someone who understands both technology and real operations.
+                Page2Lead is my freelance development business. I build practical websites, web apps and automation workflows around a business’s actual needs, with direct communication and a clearly agreed scope.
               </p>
             </motion.div>
           </div>
@@ -73,10 +73,10 @@ export default function AboutPage() {
                   I watched local business owners and coaching institutes burn out managing the same repetitive tasks month after month — chasing leads that went cold, manually sending reminders, updating spreadsheets instead of serving customers.
                 </p>
                 <p>
-                  The technology to fix all of this existed. I wanted to make practical AI automation more accessible to small and growing businesses.
+                  I became interested in building practical digital tools that make repetitive business tasks easier to manage.
                 </p>
                 <p>
-                  So I started Page2Lead to fill that gap: production-ready AI systems built specifically for Indian businesses — with practical scopes and transparent pricing.
+                  I started Page2Lead to offer freelance website development, custom web applications and automation projects, while being clear about what is a demo and what has been delivered for a client.
                 </p>
               </div>
               <div className="mt-8">
@@ -107,8 +107,8 @@ export default function AboutPage() {
               </div>
               <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
                 <p>Self-taught developer & digital marketer</p>
-                <p>Specialising in AI automation systems for Indian businesses</p>
-                <p>Focused on real results, not demos</p>
+                <p>Building websites, web apps and business automation workflows</p>
+                <p>Demos are clearly labelled; client results are never invented</p>
                 <p>Available to work with businesses across India — remotely</p>
               </div>
               <div className="mt-6 pt-5 border-t border-border">

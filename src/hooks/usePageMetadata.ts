@@ -11,70 +11,46 @@ interface PageMetadata {
   twitterTitle?: string
   twitterDescription?: string
   twitterImage?: string
+  robots?: string
+}
+
+function setMeta(selector: string, attribute: 'name' | 'property', key: string, content: string) {
+  let element = document.head.querySelector<HTMLMetaElement>(selector)
+  if (!element) {
+    element = document.createElement('meta')
+    element.setAttribute(attribute, key)
+    document.head.appendChild(element)
+  }
+  element.content = content
 }
 
 export function usePageMetadata(metadata: PageMetadata) {
   const { pathname } = useLocation()
 
   useEffect(() => {
-    // Update title
     document.title = metadata.title
+    setMeta('meta[name="description"]', 'name', 'description', metadata.description)
+    setMeta('meta[name="robots"]', 'name', 'robots', metadata.robots ?? 'index, follow')
 
-    // Update meta description
-    const metaDescription = document.querySelector('meta[name="description"]')
-    if (metaDescription) {
-      metaDescription.setAttribute('content', metadata.description)
+    const canonicalUrl = metadata.canonical ?? `https://page2lead.in${pathname === '/' ? '/' : pathname}`
+    let canonical = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]')
+    if (!canonical) {
+      canonical = document.createElement('link')
+      canonical.rel = 'canonical'
+      document.head.appendChild(canonical)
     }
+    canonical.href = canonicalUrl
 
-    // Update canonical
-    if (metadata.canonical) {
-      const canonical = document.querySelector('link[rel="canonical"]')
-      if (canonical) {
-        canonical.setAttribute('href', metadata.canonical)
-      }
-    }
+    setMeta('meta[property="og:type"]', 'property', 'og:type', 'website')
+    setMeta('meta[property="og:url"]', 'property', 'og:url', canonicalUrl)
+    setMeta('meta[property="og:title"]', 'property', 'og:title', metadata.ogTitle ?? metadata.title)
+    setMeta('meta[property="og:description"]', 'property', 'og:description', metadata.ogDescription ?? metadata.description)
+    setMeta('meta[property="og:image"]', 'property', 'og:image', metadata.ogImage ?? 'https://page2lead.in/assets/page2lead-og.png')
 
-    // Update OG tags
-    if (metadata.ogTitle) {
-      const ogTitle = document.querySelector('meta[property="og:title"]')
-      if (ogTitle) ogTitle.setAttribute('content', metadata.ogTitle)
-    }
-
-    if (metadata.ogDescription) {
-      const ogDesc = document.querySelector('meta[property="og:description"]')
-      if (ogDesc) ogDesc.setAttribute('content', metadata.ogDescription)
-    }
-
-    if (metadata.ogImage) {
-      const ogImage = document.querySelector('meta[property="og:image"]')
-      if (ogImage) ogImage.setAttribute('content', metadata.ogImage)
-    }
-
-    // Update Twitter tags
-    if (metadata.twitterTitle) {
-      const twitterTitle = document.querySelector('meta[property="twitter:title"]')
-      if (twitterTitle) twitterTitle.setAttribute('content', metadata.twitterTitle)
-    }
-
-    if (metadata.twitterDescription) {
-      const twitterDesc = document.querySelector('meta[property="twitter:description"]')
-      if (twitterDesc) twitterDesc.setAttribute('content', metadata.twitterDescription)
-    }
-
-    if (metadata.twitterImage) {
-      const twitterImage = document.querySelector('meta[property="twitter:image"]')
-      if (twitterImage) twitterImage.setAttribute('content', metadata.twitterImage)
-    }
-
-    // Update og:url and twitter:url to match current page
-    const ogUrl = document.querySelector('meta[property="og:url"]')
-    if (ogUrl) {
-      ogUrl.setAttribute('content', `https://page2lead.in${pathname}`)
-    }
-
-    const twitterUrl = document.querySelector('meta[property="twitter:url"]')
-    if (twitterUrl) {
-      twitterUrl.setAttribute('content', `https://page2lead.in${pathname}`)
-    }
+    setMeta('meta[name="twitter:card"]', 'name', 'twitter:card', 'summary_large_image')
+    setMeta('meta[name="twitter:url"]', 'name', 'twitter:url', canonicalUrl)
+    setMeta('meta[name="twitter:title"]', 'name', 'twitter:title', metadata.twitterTitle ?? metadata.title)
+    setMeta('meta[name="twitter:description"]', 'name', 'twitter:description', metadata.twitterDescription ?? metadata.description)
+    setMeta('meta[name="twitter:image"]', 'name', 'twitter:image', metadata.twitterImage ?? metadata.ogImage ?? 'https://page2lead.in/assets/page2lead-og.png')
   }, [metadata, pathname])
 }

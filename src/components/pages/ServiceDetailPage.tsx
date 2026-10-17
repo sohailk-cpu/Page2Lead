@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/Button'
 import { CTASection } from '@/components/sections/CTASection'
 import ServiceDemo from './ServiceDemo'
 import NotFoundPage from './NotFoundPage'
+import { usePageMetadata } from '@/hooks/usePageMetadata'
 
 const iconMap: Record<string, React.ElementType> = {
   MessageSquare, Phone, Mic, TrendingUp, Zap, Calendar, Globe,
@@ -14,6 +15,26 @@ const iconMap: Record<string, React.ElementType> = {
 export default function ServiceDetailPage() {
   const { serviceId } = useParams()
   const service = services.find((s) => s.id === serviceId)
+
+  const serviceTitles: Record<string, string> = {
+    'ai-chatbots': 'AI Chatbot Development for Business | Page2Lead',
+    'whatsapp-automation': 'WhatsApp Automation for Business | Page2Lead',
+    'voice-ai-agents': 'Voice AI Assistant Development | Page2Lead',
+    'lead-crm-automation': 'Lead Follow-Up & CRM Automation | Page2Lead',
+    'workflow-automation': 'Business Workflow Automation | Page2Lead',
+    'appointment-booking': 'Appointment Booking Automation | Page2Lead',
+    'website-custom-ai': 'Website & Web App Development | Page2Lead',
+  }
+
+  usePageMetadata({
+    title: service ? serviceTitles[service.id] : 'Page Not Found | Page2Lead',
+    description: service ? `${service.description} View the concept demo and discuss project scope, integrations and delivery requirements.` : 'The requested service page could not be found.',
+    canonical: service ? `https://page2lead.in/services/${service.id}` : `https://page2lead.in/services/${serviceId ?? ''}`,
+    ogTitle: service ? serviceTitles[service.id] : 'Page Not Found | Page2Lead',
+    ogDescription: service ? service.description : 'The requested service page could not be found.',
+    ogImage: 'https://page2lead.in/assets/page2lead-og.png',
+    robots: service ? 'index, follow' : 'noindex, follow',
+  })
 
   if (!service) return <NotFoundPage />
 
@@ -102,11 +123,11 @@ export default function ServiceDetailPage() {
               <div className="p-6 sm:p-7 rounded-xl border border-brand-500/20 bg-brand-500/5">
                 <h3 className="font-bold text-lg text-foreground mb-2">Ready to get started?</h3>
                 <p className="text-muted-foreground text-sm mb-5">
-                  Book a free 30-minute call. I'll map out exactly how this would work for your specific business — no fluff, no obligation.
+                  Tell me what you need to build. We can review feasibility, scope and next steps before committing.
                 </p>
                 <Link to="/contact">
                   <Button className="w-full gap-2">
-                    Book Free Strategy Call <ArrowRight className="w-4 h-4" />
+                    Discuss Your Project <ArrowRight className="w-4 h-4" />
                   </Button>
                 </Link>
               </div>

@@ -12,7 +12,7 @@ export default function PrivacyPage() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <p className="text-eyebrow mb-4">Legal</p>
             <h1 className="text-display text-4xl lg:text-5xl text-white mb-5">Privacy Policy</h1>
-            <p className="text-white/40 text-sm">Last updated: March 2025</p>
+            <p className="text-white/40 text-sm">Last updated: October 17, 2026</p>
           </motion.div>
         </div>
       </section>
@@ -22,7 +22,7 @@ export default function PrivacyPage() {
           <div className="prose prose-sm dark:prose-invert max-w-none space-y-8 text-muted-foreground leading-relaxed">
             <div>
               <h2 className="text-xl font-bold text-foreground mb-3">1. Information We Collect</h2>
-              <p>When you use our website or services, we may collect the following types of information:</p>
+              <p>When you use this website or contact me about a project, the following information may be collected depending on the feature you use:</p>
               <ul className="list-disc pl-5 space-y-1 mt-3">
                 <li>Name, email address, phone number, and company name when you submit a contact form</li>
                 <li>Usage data such as pages visited, time spent, and referral source</li>
@@ -45,26 +45,21 @@ export default function PrivacyPage() {
             <div>
               <h2 className="text-xl font-bold text-foreground mb-3">3. Data Sharing</h2>
               <p>
-                I do not sell, trade, or rent your personal information to third parties. I may share data
-                with trusted service providers (such as email platforms or CRM tools) who assist in our operations,
-                under strict confidentiality agreements. I may disclose information if required by law.
+                I do not intend to sell your personal information. Information may be processed by service providers used by this website or by a communication channel you choose (for example, analytics, form delivery or WhatsApp). Their own privacy terms also apply. Information may be disclosed where required by law.
               </p>
             </div>
 
             <div>
               <h2 className="text-xl font-bold text-foreground mb-3">4. Client Data</h2>
               <p>
-                For clients whose AI systems we build and manage: all business data used to train AI models
-                remains your property. I do not use your data to train models for other clients. Data is
-                stored securely with access controls limited to ymy and authorised Page2Lead personnel.
+                If a project involves business or customer data, the data flows, hosting provider, third-party APIs, access permissions, retention period and deletion process should be agreed before implementation. The handling of data by third-party providers is also subject to their own terms and policies. Avoid sending sensitive personal or health information unless the project has been specifically assessed and configured for it.
               </p>
             </div>
 
             <div>
               <h2 className="text-xl font-bold text-foreground mb-3">5. Cookies</h2>
               <p>
-                I use essential cookies to ensure the website functions correctly, and analytics cookies
-                to understand how visitors use our site. You can disable non-essential cookies in your browser settings.
+                This site includes Google Analytics. Analytics technologies may collect usage and device information according to Google’s settings and policies. You can use browser controls or available Google opt-out controls to limit analytics collection.
               </p>
             </div>
 
@@ -85,7 +80,7 @@ export default function PrivacyPage() {
               <p>
                 For any privacy-related questions, contact me at{' '}
                 <a href="mailto:hello@page2lead.in" className="text-brand-500 hover:underline">
-                  privacy@page2lead
+                  hello@page2lead.in
                 </a>
                 .
               </p>

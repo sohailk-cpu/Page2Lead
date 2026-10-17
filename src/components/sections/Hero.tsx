@@ -4,9 +4,9 @@ import { ArrowRight, Play, Zap, HeartHandshake, Clock } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 
 const stats = [
-  { value: '24/7', label: 'Lead capture', icon: Zap },
-  { value: 'Fast', label: 'Delivery', icon: Clock },
-  { value: 'Direct', label: 'Founder support', icon: HeartHandshake },
+  { value: '1:1', label: 'Direct developer contact', icon: HeartHandshake },
+  { value: 'Clear', label: 'Scope & deliverables', icon: Clock },
+  { value: 'Custom', label: 'Built for your needs', icon: Zap },
 ]
 
 export function Hero() {
@@ -30,7 +30,7 @@ export function Hero() {
           >
             <span className="w-1.5 h-1.5 rounded-full bg-brand-400 animate-pulse2" />
             <span className="text-xs font-semibold text-brand-400 uppercase tracking-wider">
-              AI Automation Studio
+              Freelance Web Development & Automation
             </span>
           </motion.div>
 
@@ -41,9 +41,9 @@ export function Hero() {
             transition={{ duration: 0.55, delay: 0.1 }}
             className="text-display text-4xl sm:text-5xl lg:text-7xl text-white mb-6 text-balance leading-[1.08]"
           >
-            Turn Every Page
+            Websites, Web Apps
             <br />
-            <span className="gradient-text">Into a Lead.</span>
+            <span className="gradient-text">& Business Automation.</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -53,7 +53,7 @@ export function Hero() {
             transition={{ duration: 0.55, delay: 0.2 }}
             className="text-lg lg:text-xl text-white/50 max-w-2xl mx-auto mb-10 leading-relaxed text-balance"
           >
-            I build AI-powered business systems that capture leads, automate repetitive work, and help you focus on growth.
+            I build business websites, custom web apps, AI chatbots and WhatsApp workflows — with direct communication, clear scope and practical delivery.
           </motion.p>
 
           {/* CTAs */}
@@ -65,7 +65,7 @@ export function Hero() {
           >
             <Link to="/contact">
               <Button size="xl" className="gap-2 group">
-                Book a Free Strategy Call
+                Discuss Your Project
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
               </Button>
             </Link>
@@ -78,7 +78,7 @@ export function Hero() {
               <div className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:border-brand-500/50 transition-colors">
                 <Play className="w-3.5 h-3.5 fill-current ml-0.5" />
               </div>
-              See how it works
+              Explore project demos
             </a>
           </motion.div>
 
@@ -117,7 +117,7 @@ export function Hero() {
               <div className="w-3 h-3 rounded-full bg-amber-500/60" />
               <div className="w-3 h-3 rounded-full bg-emerald-500/60" />
               <div className="ml-4 flex-1 h-6 rounded-md bg-white/5 flex items-center px-3">
-                <span className="text-xs text-white/20">page2lead.in/dashboard</span>
+                <span className="text-xs text-white/20">Concept preview · Page2Lead</span>
               </div>
             </div>
 
@@ -125,9 +125,9 @@ export function Hero() {
             <div className="p-6 grid grid-cols-3 gap-4">
               {/* Stat cards */}
               {[
-                { label: 'New Leads Today', value: '↑', change: 'Captured via AI', color: 'text-emerald-400' },
-                { label: 'Appointments Booked', value: '✓', change: 'Automated', color: 'text-emerald-400' },
-                { label: 'Hours Saved', value: '∞', change: 'This month', color: 'text-brand-400' },
+                { label: 'Enquiry form', value: 'Form', change: 'Concept preview', color: 'text-emerald-400' },
+                { label: 'Booking request', value: 'Request', change: 'Example state', color: 'text-emerald-400' },
+                { label: 'Follow-up task', value: 'Task', change: 'Illustrative only', color: 'text-brand-400' },
               ].map((stat) => (
                 <div key={stat.label} className="rounded-xl border border-white/5 bg-white/3 p-4">
                   <p className="text-xs text-white/40 mb-2">{stat.label}</p>
@@ -138,11 +138,11 @@ export function Hero() {
 
               {/* Chat widget preview */}
               <div className="col-span-2 rounded-xl border border-white/5 bg-white/3 p-4">
-                <p className="text-xs text-white/40 mb-3">AI Chat — Live Conversations</p>
+                <p className="text-xs text-white/40 mb-3">Sample chatbot conversation</p>
                 <div className="space-y-2">
                   {[
                     { msg: "Hi! I'm interested in your dental packages. Can you tell me the pricing?", from: 'user' },
-                    { msg: "Hello! I'd love to help. I have packages starting from ₹2,999. Would you like to book a free consultation?", from: 'ai' },
+                    { msg: "Thanks for reaching out. I can share the available services and help you send an enquiry to the team.", from: 'ai' },
                     { msg: "Yes please! I'm free this Saturday.", from: 'user' },
                   ].map((m, i) => (
                     <div key={i} className={`flex ${m.from === 'user' ? 'justify-end' : 'justify-start'}`}>
@@ -160,13 +160,13 @@ export function Hero() {
 
               {/* Activity feed */}
               <div className="rounded-xl border border-white/5 bg-white/3 p-4">
-                <p className="text-xs text-white/40 mb-3">Live Activity</p>
+                <p className="text-xs text-white/40 mb-3">Example workflow activity</p>
                 <div className="space-y-2.5">
                   {[
-                    { action: 'Lead captured', source: 'WhatsApp', time: '2m ago' },
-                    { action: 'Appointment booked', source: 'Chatbot', time: '8m ago' },
-                    { action: 'Follow-up sent', source: 'CRM', time: '15m ago' },
-                    { action: 'Lead qualified', source: 'AI', time: '22m ago' },
+                    { action: 'Lead captured', source: 'WhatsApp', time: 'Example' },
+                    { action: 'Appointment booked', source: 'Chatbot', time: 'Example' },
+                    { action: 'Follow-up sent', source: 'CRM', time: 'Example' },
+                    { action: 'Lead qualified', source: 'AI', time: '2Example' },
                   ].map((item) => (
                     <div key={item.action} className="flex items-center gap-2">
                       <div className="w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0" />

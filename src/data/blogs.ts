@@ -9,7 +9,7 @@ excerpt: 'Discover how an AI chatbot can transform your business, generate leads
 date: '2026-07-06',
 author: 'Sohail Khan',
 category: 'AI Chatbots',
-image: '/blog/ai-chatbot.jpg',
+image: '/blog/ai-assistant-automation.png',
 readTime: 18,
 content: `
 
@@ -207,7 +207,7 @@ AI chatbot pricing varies wildly based on complexity, traffic volume, and the un
 
 * **SaaS Subscriptions (DIY):** Platforms like Intercom, Drift, or Tidio typically charge a monthly subscription ranging from $50 to $1,000+ per month, heavily dependent on the number of "seats" (human agents) and the volume of chats.
 * **API Consumption (LLMs):** If you are building a custom OpenAI chatbot, you will pay for API usage (tokens). This is often extremely cheap (fractions of a cent per query) but requires significant upfront development costs.
-* **Custom Agency Implementation:** Hiring an implementation partner to design, build, integrate, and maintain a bespoke AI chatbot for your business typically involves a setup fee (ranging from $2,000 to $10,000+) and a monthly retainer for maintenance and optimization.
+* **Custom development:** A freelance developer or specialist can scope, build and integrate a chatbot for your business. Costs depend on integrations, data preparation, testing and ongoing maintenance; request a written scope rather than relying on a generic price range.
 
 When evaluating costs, you must calculate the ROI. If a custom chatbot costs you $1,000 a month but generates 50 extra qualified leads (valued at $100 each) and saves your support team 40 hours of labor, the system pays for itself multiple times over.
 
@@ -383,7 +383,7 @@ Contact Sohail Khan and the expert team at Page2Lead today. Let's build an AI ch
   date: '2026-07-06',
   author: 'Sohail Khan',
   category: 'WhatsApp Automation',
-  image: '/blog/whatsapp-automation.jpg',
+  image: '/blog/Whatsapp-automation.png',
   readTime: 18,
   content: `
  The Ultimate Guide to WhatsApp Automation for Business: Scaling Growth, Support, and Operations
@@ -403,7 +403,7 @@ This guide is a complete blueprint for WhatsApp Business automation. Whether you
 As an experienced implementation partner, Page2Lead has built and deployed these systems for diverse business models. We will bypass the surface-level marketing fluff and look directly at the underlying mechanics, concrete frameworks, and real-world architectures required to make WhatsApp your highest-ROI channel.
 
 ---
- <img src="/blog/WhatsApp-chatbot.png" alt="Description" style="width: 100%; margin: 20px 0; border-radius: 8px;" />
+ <img src="/blog/WhatsApp-chatbot.png" alt="WhatsApp and AI automation workflow illustration" style="width: 100%; margin: 20px 0; border-radius: 8px;" />
 ---
 
  Table of Contents
@@ -504,7 +504,7 @@ Patient intake and follow-up are heavy operational burdens. Automated clinics us
 
 ---
 
- <img src="/blog/Whatsapp-automation.png" alt="Description" style="width: 100%; margin: 20px 0; border-radius: 8px;" />
+ <img src="/blog/Whatsapp-automation.png" alt="WhatsApp and AI automation workflow illustration" style="width: 100%; margin: 20px 0; border-radius: 8px;" />
 
 ---
 
@@ -514,7 +514,7 @@ Property management companies and real estate agencies deal with massive lead vo
 
 ---
 
-<img src="/blog/real-estate-automation.png" alt="Description" style="width: 100%; margin: 20px 0; border-radius: 8px;" />
+<img src="/blog/real-estate-automation.png" alt="WhatsApp and AI automation workflow illustration" style="width: 100%; margin: 20px 0; border-radius: 8px;" />
 
 ---
 
@@ -530,7 +530,7 @@ Instead of forcing customers to download slow mobile apps or navigate third-part
 
 ---
 
-<img src="/blog/restaurant-automation.png" alt="Description" style="width: 100%; margin: 20px 0; border-radius: 8px;" />
+<img src="/blog/restaurant-automation.png" alt="WhatsApp and AI automation workflow illustration" style="width: 100%; margin: 20px 0; border-radius: 8px;" />
 
 ---
 
@@ -546,7 +546,7 @@ With a WhatsApp lead generation framework, the ad click opens WhatsApp instantly
 
 ---
 
-<img src="/blog/lead-crm-automation.png" alt="Description" style="width: 100%; margin: 20px 0; border-radius: 8px;" />
+<img src="/blog/lead-crm-automation.png" alt="WhatsApp and AI automation workflow illustration" style="width: 100%; margin: 20px 0; border-radius: 8px;" />
 
 ---
 
@@ -556,7 +556,7 @@ Integrating your WhatsApp Business API with your calendar layer (such as Google 
 
 ---
 
-<img src="/blog/clinic-automation.png" alt="Description" style="width: 100%; margin: 20px 0; border-radius: 8px;" />
+<img src="/blog/clinic-automation.png" alt="WhatsApp and AI automation workflow illustration" style="width: 100%; margin: 20px 0; border-radius: 8px;" />
 
 ---
 
@@ -583,7 +583,7 @@ When an inquiry requires human nuance, the system executes a smooth routing prot
 
 ---
 
-<img src="/blog/ai-assistant-automation.png" alt="Description" style="width: 100%; margin: 20px 0; border-radius: 8px;" />
+<img src="/blog/ai-assistant-automation.png" alt="WhatsApp and AI automation workflow illustration" style="width: 100%; margin: 20px 0; border-radius: 8px;" />
 
 ---
 
@@ -615,7 +615,7 @@ A high-performance WhatsApp CRM configuration ensures that every message, conver
 
 ---
 
-<img src="/blog/crm-architecture.png" alt="Description" style="width: 100%; margin: 20px 0; border-radius: 8px;" />
+<img src="/blog/crm-architecture.png" alt="WhatsApp and AI automation workflow illustration" style="width: 100%; margin: 20px 0; border-radius: 8px;" />
 
 ---
 
@@ -651,7 +651,7 @@ Many marketing teams confuse running a WhatsApp broadcast with true marketing au
 
 ---
 
-<img src="/blog/comparison-automation.png" alt="Description" style="width: 100%; margin: 20px 0; border-radius: 8px;" />
+<img src="/blog/comparison-automation.png" alt="WhatsApp and AI automation workflow illustration" style="width: 100%; margin: 20px 0; border-radius: 8px;" />
 
 ---
 
@@ -693,7 +693,7 @@ Meta does not bill on a per-message basis; instead, it utilizes a **24-hour conv
 To manage your API channels, design workflows, and access team chat interfaces, you will utilize a specialized business software platform. Pricing typically ranges from $30 to $500+ per month, based on features, team seat requirements, and monthly active user volumes.
 
  3. Implementation Partner Retainers
-Designing sophisticated, custom integrations with your CRMs and engineering custom RAG-based AI layers requires professional technical development. Working with an agency partner like Page2Lead involves an initial architectural setup fee followed by an optimization retainer to maintain, update, and audit your automated systems.
+Designing sophisticated, custom integrations with your CRMs and engineering custom RAG-based AI layers requires professional technical development. Working with a freelance developer can involve an initial setup fee and, if needed, a separately agreed maintenance arrangement to update and review the system.
 
 ---
 
@@ -804,7 +804,7 @@ Implementing a professional WhatsApp automation strategy transforms your client 
 
 ---
 
-<img src="/blog/blueprint-automation.png" alt="Description" style="width: 100%; margin: 20px 0; border-radius: 8px;" />
+<img src="/blog/blueprint-automation.png" alt="WhatsApp and AI automation workflow illustration" style="width: 100%; margin: 20px 0; border-radius: 8px;" />
 
 ---
 
